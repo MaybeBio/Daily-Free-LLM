@@ -18,9 +18,9 @@ jobs:
   refresh:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v7
         with:
           python-version: "3.12"
 
@@ -30,7 +30,6 @@ jobs:
 
       - name: Probe configured providers
         run: python -m shovel probe --timeout 20 --workers 8
-        continue-on-error: true
         env:
           ZHIPU_KEY: ${{ secrets.ZHIPU_KEY }}
           MOONSHOT_KEY: ${{ secrets.MOONSHOT_KEY }}
@@ -62,7 +61,7 @@ jobs:
       - name: Regenerate catalog, README, CSV and dashboard
         run: python -m shovel report
 
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v5
         with:
           path: site
 
@@ -74,4 +73,4 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5

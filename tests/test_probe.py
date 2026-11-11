@@ -1,4 +1,6 @@
+import tempfile
 import unittest
+from pathlib import Path
 from unittest import mock
 
 from shovel import probe
@@ -39,6 +41,7 @@ class ProbeModelTest(unittest.TestCase):
             {"id": "m"},
         )
         self.assertEqual(result["status"], "skipped")
+        self.assertEqual(result["model"], "m")
 
     def test_placeholder_base_url_skips(self):
         result = probe.probe_model(
@@ -74,6 +77,30 @@ class ProbeModelTest(unittest.TestCase):
         with mock.patch.object(probe.util, "http_request", return_value=(200, body, {})):
             result = probe.probe_model(provider, {"id": "m"}, tools=True)
         self.assertTrue(result["tools"])
+
+
+class RunProbeTest(unittest.TestCase):
+    def test_missing_keys_do_not_crash(self):
+        tmp = Path(tempfile.mkdtemp())
+        registry = {
+            "providers": [
+                {
+                    "id": "p",
+                    "name": "P",
+                    "env": "MISSING_KEY",
+                    "base_url": "https://x/v1",
+                    "models": [{"id": "m1"}],
+                }
+            ]
+        }
+        doc = probe.run_probe(
+            registry,
+            status_path=tmp / "status.json",
+            uptime_path=tmp / "uptime.jsonl",
+        )
+        self.assertEqual(
+            doc["providers"]["p"]["models"]["m1"]["status"], "skipped"
+        )
 
 
 if __name__ == "__main__":

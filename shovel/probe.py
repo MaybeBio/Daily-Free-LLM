@@ -100,12 +100,14 @@ def probe_model(provider: dict, model: dict, timeout: float = 15.0, tools: bool 
             "status": "skipped",
             "message": f"未配置 {provider.get('env') or '密钥'}",
             "checked_at": util.now_utc(),
+            "model": model_id,
         }
     if not base or re.search(r"\{[A-Z0-9_]+\}", base):
         return {
             "status": "skipped",
             "message": "base_url 含未解析占位符",
             "checked_at": util.now_utc(),
+            "model": model_id,
         }
     payload = {
         "model": model_id,
@@ -213,7 +215,16 @@ def run_probe(
                 for model in models
             }
             for future in as_completed(futures):
-                result = future.result()
+                model = futures[future]
+                try:
+                    result = future.result()
+                except Exception as exc:
+                    result = {
+                        "status": "error",
+                        "message": str(exc)[:180],
+                        "checked_at": util.now_utc(),
+                        "model": model.get("id", ""),
+                    }
                 entries[result["model"]] = result
                 all_results.append({**result, "provider": provider["id"]})
         provider_results[provider["id"]] = {
