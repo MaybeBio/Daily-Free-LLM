@@ -4,6 +4,8 @@ import csv
 import html
 import io
 import json
+import re
+import subprocess
 from datetime import datetime, timezone
 from email.utils import format_datetime
 from pathlib import Path
@@ -35,6 +37,38 @@ def status_of(provider: dict) -> str:
 def status_label(provider_or_status) -> str:
     status = status_of(provider_or_status) if isinstance(provider_or_status, dict) else provider_or_status
     return STATUS_LABELS.get(status, "⚪ 未测")
+
+
+_STATUS_SHORT = {
+    "ok": "✅ 可用",
+    "rate_limited": "⚠️ 限流",
+    "auth_error": "🔑 鉴权",
+    "not_found": "❌ 下架",
+    "bad_request": "🟠 拒绝",
+    "server_error": "🌐 异常",
+    "network_error": "📡 断网",
+    "skipped": "⏭️ 跳过",
+    "error": "❓ 错误",
+}
+
+
+def short_status(provider: dict) -> str:
+    return _STATUS_SHORT.get(status_of(provider), "⚪ 未测")
+
+
+def pages_url() -> str | None:
+    try:
+        result = subprocess.run(
+            ["git", "-C", str(util.ROOT), "config", "--get", "remote.origin.url"],
+            capture_output=True, text=True, timeout=3,
+        )
+    except (OSError, subprocess.SubprocessError):
+        return None
+    match = re.search(r"github\.com[:/]([^/]+)/([^/]+?)(?:\.git)?$", result.stdout.strip())
+    if not match:
+        return None
+    owner, repo = match.groups()
+    return f"https://{owner.lower()}.github.io/{repo}/"
 
 
 def model_text(provider: dict) -> str:
@@ -133,42 +167,61 @@ def render_readme(
     data = apply_status(registry, status)
     stats = data.get("stats", {})
     generated = util.now_cst()
+    counts = (stats.get("providers", 0), stats.get("models", 0),
+              stats.get("gateway_providers", 0))
+    badge_specs = [
+        ("Python 3.10+", "Python-3.10%2B-3776AB?logo=python&logoColor=white"),
+        ("dependencies: 0", "dependencies-0-34d399"),
+        ("OpenAI compatible", "API-OpenAI%20compatible-10a37f?logo=openai&logoColor=white"),
+        (f"providers: {counts[0]}", f"providers-{counts[0]}-3b82f6"),
+        (f"models: {counts[1]}", f"models-{counts[1]}-8b5cf6"),
+        (f"gateway: {counts[2]}", f"gateway-{counts[2]}-f59e0b"),
+    ]
+    panel = pages_url()
+    panel_badge = (
+        f'<a href="{panel}"><img alt="panel: live" '
+        'src="https://img.shields.io/badge/panel-live-5eead4?style=flat-square"></a>'
+        if panel else ""
+    )
+    badges = " ".join(
+        filter(None, [panel_badge] + [
+            f'<img alt="{alt}" src="https://img.shields.io/badge/{path}'
+            f'{"&" if "?" in path else "?"}style=flat-square">'
+            for alt, path in badge_specs
+        ])
+    )
     lines = [
-        "# 免费 LLM API 金铲子",
+        '<h1 align="center">⛏️ 免费 LLM API 金铲子</h1>',
         "",
-        f"> 自动生成于 {generated}（UTC+8）。数据源：`config/providers.json`"
-        "（唯一事实源）+ `data/status.json`（最近探活）。",
+        '<p align="center">收集、探活、追踪免费 LLM API，聚合成一个本地 OpenAI 兼容端点。</p>',
         "",
-        "一个自用的免费 LLM 资源收集、追踪与统一网关：把各家免费额度聚合成"
-        " **一个 OpenAI 兼容端点**，客户端只改 `base_url` 就能用。",
+        f'<p align="center">{badges}</p>',
         "",
-        "## 30 秒上手",
+        '<p align="center"><code>free-llm</code> · <code>openai-api</code> · '
+        '<code>gateway</code> · <code>zero-dependency</code> · <code>self-hosted</code></p>',
+        "",
+        "## 快速开始",
         "",
         "```bash",
-        "# 0) 可选：本地有 refers_template 时补种目录；已带 config/providers.json 可跳过",
-        "python -m shovel bootstrap",
-        "",
-        "# 1) 抓公开源 + 探活 + 生成面板/README/CSV",
-        "python -m shovel update",
-        "python -m shovel probe                 # 只探已配置 key 的渠道 + 免 key 渠道",
-        "",
-        "# 2) 启动统一网关（同时托管面板）",
-        "python -m shovel serve",
-        "",
-        "# 3) 任意 OpenAI 客户端指向本地网关",
-        "export OPENAI_BASE_URL=http://127.0.0.1:8756/v1",
-        "export OPENAI_API_KEY=local",
+        "python -m shovel update    # 抓取公开源并做差异追踪",
+        "python -m shovel probe     # 探活已配置 key + 免 key 渠道",
+        "python -m shovel serve     # 网关和面板都在 127.0.0.1:8756",
         "```",
         "",
-        "密钥只从环境变量读取；复制 `.env.example` 为 `.env` 并填写，或直接 `export`。",
-        "不想申请任何 key 也能先用下面的免 key 渠道；拿到 key 后网关会自动把它们加入候选。",
+        "- 网关：`http://127.0.0.1:8756/v1`（OpenAI 兼容）",
+        (
+            f"- 面板：[在线]({panel}) / [本地](http://127.0.0.1:8756/)"
+            if panel else "- 面板：`http://127.0.0.1:8756/`"
+        ),
+        "- 密钥只从环境变量读取，参考 `.env.example`",
         "",
-        "## 免 key 开箱即用",
+        "没有 key 也能先用：Pollinations `https://text.pollinations.ai/openai`，"
+        "AI Horde `https://oai.aihorde.net/v1`。",
         "",
-        "- **Pollinations（匿名层）**：`https://text.pollinations.ai/openai`，OpenAI 兼容、无需注册。",
-        "  无 SLA、限流随时变化，适合原型。",
-        "- **AI Horde**：`https://oai.aihorde.net/v1`，社区众包推理，匿名免 key；",
-        "  排队优先级低，最小生成长度 16 tokens。",
+        "## 客户端",
+        "",
+        "base URL 填 `http://127.0.0.1:8756/v1`，API key 任意填（设了 `SHOVEL_TOKEN` 就填它）。"
+        "model 可用 `auto`、家族别名（如 `qwen`）、精确模型名，或 `provider/model`。",
         "",
         "```bash",
         "curl http://127.0.0.1:8756/v1/chat/completions \\",
@@ -176,123 +229,49 @@ def render_readme(
         "  -d '{\"model\":\"auto\",\"messages\":[{\"role\":\"user\",\"content\":\"ping\"}],\"max_tokens\":16}'",
         "```",
         "",
-        "## 常用命令",
+        "其他命令：`report` 重建 README/CSV/面板，`doctor` 检查配置，"
+        "`bootstrap` 补种目录，`python -m unittest discover -s tests` 跑测试。",
         "",
-        "| 命令 | 作用 |",
-        "|---|---|",
-        "| `python -m shovel init` | 创建 `config/` 与 `data/` 默认配置 |",
-        "| `python -m shovel bootstrap` | 从参考语料播种注册表；只补缺，不覆盖手改字段 |",
-        "| `python -m shovel update` | 抓 OpenRouter / Pollinations / AI Horde 等公开源并做快照 diff |",
-        "| `python -m shovel probe [--only ID]` | 逐模型探活，写 `data/status.json` 与 uptime |",
-        "| `python -m shovel report` | 由 `config/providers.json` 重建 README / CSV / 面板 / RSS |",
-        "| `python -m shovel serve [--port 8756]` | 启动 OpenAI 兼容网关 + 本地面板 |",
-        "| `python -m shovel doctor [--network]` | 检查密钥、配置、状态新鲜度与外部源可达性 |",
-        "| `python -m unittest discover -s tests` | 跑单元测试（零第三方依赖） |",
+        "## 概览",
         "",
-        "## 目录",
+        f"**{counts[0]}** 渠道 · **{counts[1]}** 模型 · **{counts[2]}** 可网关",
         "",
-        "| 路径 | 说明 |",
-        "|---|---|",
-        "| `config/providers.json` | **唯一事实源**，可手工编辑；bootstrap 只补缺 |",
-        "| `config/aliases.json` | 模型家族别名（自动生成 + `manual` 手写覆盖） |",
-        "| `config/gateway.json` | 网关绑定、默认模型、冷却、候选上限、优先级 |",
-        "| `config/sources.json` | 外部发现源（enabled=false 即关闭） |",
-        "| `data/` | 可再生运行数据：registry/status/uptime/changes/snapshots（已 gitignore） |",
-        "| `site/` | 单文件面板 `index.html` 与 RSS `feed.xml`（已 gitignore，由 report/CI 生成） |",
-        "| `free_llm_api.csv` | 可导入 Excel 的扁平目录（已 gitignore，由 report 生成） |",
-        "",
-        "## 接入客户端",
-        "",
-        "任何支持自定义 OpenAI Base URL 的客户端都可用：`http://127.0.0.1:8756/v1`，",
-        "API key 任意填（若设置了 `SHOVEL_TOKEN`，则填该值）。模型名可以用：",
-        "",
-        "- `auto`：按健康状态与优先级自动选择；",
-        "- 家族别名（如 `qwen`、`deepseek`、`gemini`，见 `config/aliases.json`）；",
-        "- 精确模型名（如 `glm-4.7-flash`）；",
-        "- `provider/model`（如 `openrouter/qwen/qwen3.8-27b:free`）。",
-        "",
-        "## 统计",
-        "",
-        f"- 渠道：**{stats.get('providers', 0)}** 个（可网关 {stats.get('gateway_providers', 0)} 个）",
-        f"- 模型：**{stats.get('models', 0)}** 条",
-        f"- 分类：" + "，".join(
-            f"{CATEGORY_LABELS[key]} {value}"
+        " · ".join(
+            f"`{key}` {value}"
             for key, value in (stats.get("categories") or {}).items()
             if value
         ),
         "",
-        "## 渠道目录",
-        "",
     ]
-    grouped: dict[str, list[dict]] = {}
-    for provider in data.get("providers", []):
-        grouped.setdefault(primary_category(provider), []).append(provider)
-    for category, label in CATEGORY_LABELS.items():
-        items = grouped.get(category)
-        if not items:
-            continue
-        lines += [
-            f"### {label}",
-            "",
-            "| 渠道 | 提供方 | 地区 | 免费性质 | 免费模型 / 内容 | 限额 | 门槛 | 核实 | 状态 |",
-            "|---|---|---|---|---|---|---|---|---|",
-        ]
-        for provider in sorted(items, key=lambda p: p.get("name", "")):
-            lines.append(
-                "| {name} | {company} | {region} | {nature} | {models} | {limits} | "
-                "{access} | {verified} | {status} |".format(
-                    name=esc(provider.get("name")),
-                    company=esc(provider.get("provider_company") or "—"),
-                    region=esc(provider.get("region")),
-                    nature=esc(FREE_NATURE_LABELS.get(
-                        provider.get("free_nature", "unknown"), "未知")),
-                    models=esc(model_text(provider)),
-                    limits=esc(limit_text(provider)),
-                    access=esc(access_text(provider)),
-                    verified=esc(provider.get("verified_at") or "—"),
-                    status=esc(status_label(provider)),
-                )
-            )
-        lines.append("")
-
     lines += [
-        "## 统一网关",
+        "## 完整目录在哪",
         "",
-        "`python -m shovel serve` 后：",
+        "- 面板：可搜索、按分类/地区/状态筛选，并直接复制客户端配置",
+        "- `free_llm_api.csv`：扁平表，适合 Excel 或脚本处理",
+        "- `site/feed.xml`：新增/移除订阅",
         "",
-        "- `GET /v1/models`：列出已登记模型与别名。",
-        "- `POST /v1/chat/completions`：支持 `stream: true`；按别名或 `provider/model` 路由，"
-        "遇到 429/5xx/超时自动切换下一家。",
-        "- `GET /`：本地面板；`GET /healthz`：健康检查。",
+        "## 说明",
         "",
-        "模型别名示例（自动生成，见 `config/aliases.json`）："
-        + "，".join(
-            f"`{name}`" for name in sorted(
-                (util.read_json(util.CONFIG_DIR / "aliases.json", default={})
-                 .get("aliases") or {}).keys()
-            )[:20]
-        ),
-        "",
-        "## 数据口径",
-        "",
-        "- 每条渠道保留自己的 `verified_at`；表格里不存在「全表最后核实日」这种伪口径。",
-        "- 派生产物（README / CSV / 面板 / RSS）全部由 `config/providers.json` 与 "
-        "`data/status.json` 生成，可随时重建。",
-        "- 灰色/公益中转渠道仅记录与标注风险，不进入网关、不推荐使用。",
-        "",
-        "## 最近变更",
+        "- README 只做入口；全量渠道与实时状态以上面的面板/CSV 为准。",
+        "- `verified_at` 按渠道记录，没有全表统一的核实日期。",
+        "- 灰色渠道只做风险记录，不进入网关。",
+        "- `config/providers.json` 是唯一事实源；README、CSV、面板、RSS 都由 `report` 重建。",
         "",
     ]
-    recent = (changes or [])[-10:]
+    recent = (changes or [])[-5:]
     if recent:
+        lines += ["## 最近变更", ""]
         for change in reversed(recent):
             lines.append(
-                f"- `{change.get('at', '')}` **{change.get('name', change.get('source'))}**："
+                f"- `{change.get('at', '')}` {change.get('name', change.get('source'))}："
                 f"+{change.get('added_count', 0)} / -{change.get('removed_count', 0)}"
             )
-    else:
-        lines.append("- 暂无变更记录。")
-    lines.append("")
+        lines.append("")
+    lines += [
+        f"<sub>自动生成于 {generated}（UTC+8）· 数据源 `config/providers.json` + "
+        "`data/status.json`</sub>",
+        "",
+    ]
 
     text = "\n".join(lines) + "\n"
     util.atomic_write(path, text)

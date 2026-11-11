@@ -70,11 +70,12 @@ class RenderTest(unittest.TestCase):
         for name in ("README.md", "free_llm_api.csv", "site/index.html", "site/feed.xml"):
             self.assertTrue((self.tmp / name).exists(), name)
 
-    def test_readme_contains_usage_and_catalog(self):
+    def test_readme_is_a_compact_landing_page(self):
         text = (self.tmp / "README.md").read_text(encoding="utf-8")
         self.assertIn("python -m shovel serve", text)
-        self.assertIn("Alpha", text)
-        self.assertIn("2026-10-30", text)
+        self.assertIn("127.0.0.1:8756", text)
+        self.assertIn("完整目录在哪", text)
+        self.assertNotIn("| 渠道 | 地区 | 性质 |", text)
 
     def test_csv_rows_match_providers(self):
         with (self.tmp / "free_llm_api.csv").open(encoding="utf-8") as fh:
@@ -103,7 +104,7 @@ class RenderTest(unittest.TestCase):
         self.assertEqual(len(items), 1)
         self.assertIn("OpenRouter", items[0].findtext("title"))
 
-    def test_status_applied(self):
+    def test_status_applied_to_dashboard_payload(self):
         status = {
             "generated_at": "2026-11-11T00:00:00Z",
             "providers": {
@@ -114,8 +115,14 @@ class RenderTest(unittest.TestCase):
             },
         }
         tmp = Path(tempfile.mkdtemp())
-        text = render.render_readme(REGISTRY, status, CHANGES, tmp / "README.md")
-        self.assertIn("正常可用", text)
+        path = render.render_site(REGISTRY, status, CHANGES, tmp)
+        html = path.read_text(encoding="utf-8")
+        marker = 'type="application/json">'
+        start = html.index(marker) + len(marker)
+        payload = json.loads(html[start:html.index("</script>", start)])
+        alpha = next(p for p in payload["providers"] if p["id"] == "alpha")
+        self.assertEqual(alpha["status"], "ok")
+        self.assertEqual(alpha["status_label"], "✅ 正常可用")
 
 
 if __name__ == "__main__":
