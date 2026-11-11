@@ -1,0 +1,14 @@
+refers_template/
+
+# 本地密钥与运行产物
+.env
+data/
+site/
+free_llm_api.csv
+*.tmp
+*.log
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/

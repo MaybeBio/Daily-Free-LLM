@@ -1,0 +1,346 @@
+{
+  "generated_at": "2026-11-11T15:53:41Z",
+  "note": "aliases 由 bootstrap 生成并随更新刷新；manual 中的同名别名优先。",
+  "aliases": {
+    "gpt-oss": [
+      {
+        "provider": "cerebras",
+        "model": "gpt-oss-120b"
+      },
+      {
+        "provider": "cloudflare",
+        "model": "@cf/openai/gpt-oss-120b"
+      },
+      {
+        "provider": "groq",
+        "model": "openai/gpt-oss-120b"
+      },
+      {
+        "provider": "groq",
+        "model": "openai/gpt-oss-20b"
+      },
+      {
+        "provider": "nvidia",
+        "model": "openai/gpt-oss-20b"
+      },
+      {
+        "provider": "pollinations",
+        "model": "gpt-oss"
+      },
+      {
+        "provider": "pollinations",
+        "model": "gpt-oss-20b"
+      },
+      {
+        "provider": "sambanova",
+        "model": "gpt-oss-120b"
+      }
+    ],
+    "llama": [
+      {
+        "provider": "aihorde",
+        "model": "koboldcpp/Llama-3-Lumimaid-8B-v0.1"
+      },
+      {
+        "provider": "aihorde",
+        "model": "koboldcpp/Llama-3.2-1B-Instruct"
+      },
+      {
+        "provider": "aihorde",
+        "model": "koboldcpp/Llama-3.2-3B-Instruct"
+      },
+      {
+        "provider": "cloudflare",
+        "model": "@cf/meta/llama-3.3-70b-instruct-fp8-fast"
+      },
+      {
+        "provider": "sambanova",
+        "model": "Meta-Llama-3.3-70B-Instruct"
+      }
+    ],
+    "gemma": [
+      {
+        "provider": "aihorde",
+        "model": "koboldcpp/Gemma-4-E4B-Uncensored-HauhauCS-Aggressive-Q4_K_M"
+      },
+      {
+        "provider": "aihorde",
+        "model": "koboldcpp/Gemma-4-E4B-it-Ultra-Uncensored-Heretic"
+      },
+      {
+        "provider": "aihorde",
+        "model": "koboldcpp/debug-gemma-4-E2B-Queen-it-qat-q4_0-unquantized.i1-Q4_K_M"
+      },
+      {
+        "provider": "aihorde",
+        "model": "koboldcpp/gemma-4-31B-it"
+      },
+      {
+        "provider": "openrouter",
+        "model": "google/gemma-4-26b-a4b-it:free"
+      },
+      {
+        "provider": "openrouter",
+        "model": "google/gemma-4-31b-it:free"
+      }
+    ],
+    "qwen": [
+      {
+        "provider": "aihorde",
+        "model": "koboldcpp/Qwen3.5-4B"
+      },
+      {
+        "provider": "aihorde",
+        "model": "lmstudio/Qwen3.5-9B"
+      },
+      {
+        "provider": "cerebras",
+        "model": "qwen-3.8-27b"
+      },
+      {
+        "provider": "cloudflare",
+        "model": "@cf/qwen/qwen3.8-27b"
+      },
+      {
+        "provider": "dashscope",
+        "model": "qwen-long"
+      },
+      {
+        "provider": "dashscope",
+        "model": "qwen-plus"
+      },
+      {
+        "provider": "dashscope",
+        "model": "qwen-turbo"
+      },
+      {
+        "provider": "dashscope",
+        "model": "qwen3.8-flash"
+      },
+      {
+        "provider": "dashscope",
+        "model": "qwen3.8-max"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3.8-27b"
+      },
+      {
+        "provider": "modelscope",
+        "model": "Qwen/Qwen3.8-27B"
+      },
+      {
+        "provider": "nebius",
+        "model": "Qwen/Qwen3-235B-A22B"
+      },
+      {
+        "provider": "openrouter",
+        "model": "qwen/qwen3.8-27b:free"
+      },
+      {
+        "provider": "siliconflow",
+        "model": "Qwen/Qwen3-8B"
+      },
+      {
+        "provider": "siliconflow",
+        "model": "Qwen/Qwen3.5-4B"
+      }
+    ],
+    "glm": [
+      {
+        "provider": "cloudflare",
+        "model": "@cf/zai-org/glm-4.7-flash"
+      },
+      {
+        "provider": "modelscope",
+        "model": "ZhipuAI/GLM-4.7-Flash"
+      },
+      {
+        "provider": "nvidia",
+        "model": "z-ai/glm-5-3"
+      },
+      {
+        "provider": "siliconflow",
+        "model": "THUDM/GLM-Z1-9B-0414"
+      },
+      {
+        "provider": "volc-ark",
+        "model": "glm-5-3-flash-260828"
+      },
+      {
+        "provider": "zhipu",
+        "model": "glm-4-flash-250414"
+      },
+      {
+        "provider": "zhipu",
+        "model": "glm-4.7-flash"
+      },
+      {
+        "provider": "zhipu",
+        "model": "glm-4v-flash"
+      },
+      {
+        "provider": "zhipu",
+        "model": "glm-z1-flash"
+      }
+    ],
+    "kimi": [
+      {
+        "provider": "moonshot",
+        "model": "kimi-k2.5"
+      },
+      {
+        "provider": "moonshot",
+        "model": "kimi-k2.7-code"
+      },
+      {
+        "provider": "moonshot",
+        "model": "kimi-k3"
+      },
+      {
+        "provider": "nebius",
+        "model": "moonshotai/Kimi-K2.5"
+      },
+      {
+        "provider": "nvidia",
+        "model": "moonshotai/kimi-k3"
+      },
+      {
+        "provider": "qianfan",
+        "model": "Kimi-K2-Instruct"
+      },
+      {
+        "provider": "volc-ark",
+        "model": "kimi-k3-1-pro-261024"
+      }
+    ],
+    "deepseek": [
+      {
+        "provider": "modelscope",
+        "model": "deepseek-ai/DeepSeek-V4.1-Flash"
+      },
+      {
+        "provider": "nvidia",
+        "model": "deepseek-ai/deepseek-v4.1-flash"
+      },
+      {
+        "provider": "qianfan",
+        "model": "DeepSeek-R1"
+      },
+      {
+        "provider": "sambanova",
+        "model": "DeepSeek-V3.1"
+      },
+      {
+        "provider": "sambanova",
+        "model": "DeepSeek-V3.2"
+      },
+      {
+        "provider": "siliconflow",
+        "model": "deepseek-ai/DeepSeek-R1-0528-Qwen3-8B"
+      },
+      {
+        "provider": "volc-ark",
+        "model": "deepseek-v4-1-flash-261017"
+      }
+    ],
+    "step": [
+      {
+        "provider": "modelscope",
+        "model": "stepfun-ai/Step-3.7-Flash"
+      },
+      {
+        "provider": "stepfun",
+        "model": "step-gui"
+      }
+    ],
+    "hunyuan": [
+      {
+        "provider": "hunyuan",
+        "model": "hy3-preview"
+      },
+      {
+        "provider": "hunyuan",
+        "model": "hy4-preview"
+      }
+    ],
+    "ernie": [
+      {
+        "provider": "openrouter",
+        "model": "baidu/ernie-5.5-flash-preview:free"
+      },
+      {
+        "provider": "qianfan",
+        "model": "ERNIE-4.5-Turbo-128K"
+      },
+      {
+        "provider": "qianfan",
+        "model": "ERNIE-4.5-Turbo-32K"
+      }
+    ],
+    "minimax": [
+      {
+        "provider": "minimax",
+        "model": "MiniMax-M2.5"
+      },
+      {
+        "provider": "minimax",
+        "model": "MiniMax-M2.7"
+      },
+      {
+        "provider": "minimax",
+        "model": "MiniMax-M3"
+      }
+    ],
+    "nemotron": [
+      {
+        "provider": "nvidia",
+        "model": "nvidia/nemotron-3-ultra-550b-a55b"
+      },
+      {
+        "provider": "openrouter",
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
+      },
+      {
+        "provider": "openrouter",
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free"
+      },
+      {
+        "provider": "openrouter",
+        "model": "nvidia/nemotron-3.5-lightning:free"
+      },
+      {
+        "provider": "openrouter",
+        "model": "nvidia/nemotron-3.5-super-vl:free"
+      }
+    ],
+    "gemini": [
+      {
+        "provider": "gemini",
+        "model": "gemini-2.5-flash"
+      },
+      {
+        "provider": "gemini",
+        "model": "gemini-3.1-flash-lite"
+      },
+      {
+        "provider": "gemini",
+        "model": "gemini-3.5-flash"
+      },
+      {
+        "provider": "gemini",
+        "model": "gemini-3.8-flash"
+      }
+    ],
+    "mistral": [
+      {
+        "provider": "mistral",
+        "model": "mistral-moderation-2603"
+      },
+      {
+        "provider": "mistral",
+        "model": "mistral-small-2603"
+      }
+    ]
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "note": "外部发现源。enabled=false 的源不会抓取。",
+  "sources": [
+    {
+      "id": "openrouter-models",
+      "name": "OpenRouter 免费模型目录",
+      "kind": "openrouter_models",
+      "url": "https://openrouter.ai/api/v1/models",
+      "enabled": true
+    },
+    {
+      "id": "pollinations-models",
+      "name": "Pollinations 匿名模型目录",
+      "kind": "pollinations_models",
+      "url": "https://text.pollinations.ai/models",
+      "tier": "anonymous",
+      "enabled": true,
+      "provider": {
+        "id": "pollinations",
+        "name": "Pollinations (匿名)",
+        "base_url": "https://text.pollinations.ai/openai",
+        "keyless": true,
+        "homepage": "https://pollinations.ai",
+        "free_nature": "permanent",
+        "notes": "匿名层免 key，直接走 OpenAI 兼容端点；无 SLA，适合原型与轻量使用。"
+      }
+    },
+    {
+      "id": "aihorde-models",
+      "name": "AI Horde 免 key 模型目录",
+      "kind": "openai_models",
+      "url": "https://oai.aihorde.net/v1/models",
+      "enabled": true,
+      "provider": {
+        "id": "aihorde",
+        "name": "AI Horde",
+        "base_url": "https://oai.aihorde.net/v1",
+        "keyless": true,
+        "homepage": "https://aihorde.net",
+        "free_nature": "permanent",
+        "probe_max_tokens": 16,
+        "notes": "社区众包推理，匿名免 key；排队优先级低，最小生成长度 16 tokens。"
+      }
+    },
+    {
+      "id": "freellm-home",
+      "name": "freellm.net 首页",
+      "kind": "html",
+      "url": "https://freellm.net",
+      "enabled": false
+    }
+  ]
+}
