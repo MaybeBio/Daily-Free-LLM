@@ -12,3 +12,6 @@ free_llm_api.csv
 __pycache__/
 *.py[cod]
 .venv/
+
+
+CLAUDE.md
