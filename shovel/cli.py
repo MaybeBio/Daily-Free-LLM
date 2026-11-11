@@ -289,7 +289,7 @@ def cmd_doctor(args) -> int:
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         prog="shovel",
-        description="免费 LLM API 金铲子：追踪、探活、统一 OpenAI 兼容网关。",
+        description="免费 LLM API：追踪、探活、统一 OpenAI 兼容网关。",
     )
     sub = parser.add_subparsers(dest="command", required=True)
 

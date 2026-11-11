@@ -1,4 +1,4 @@
-<h1 align="center">⛏️ 免费 LLM API 金铲子</h1>
+<h1 align="center">⛏️ 免费 LLM API</h1>
 
 <p align="center">收集、探活、追踪免费 LLM API，聚合成一个本地 OpenAI 兼容端点。</p>
 
@@ -55,5 +55,5 @@ curl http://127.0.0.1:8756/v1/chat/completions \
 
 - `2026-11-11T15:53:41Z` AI Horde 免 key 模型目录：+2 / -0
 
-<sub>自动生成于 2026-11-12 00:27:13（UTC+8）· 数据源 `config/providers.json` + `data/status.json`</sub>
+<sub>自动生成于 2026-11-12 00:42:18（UTC+8）· 数据源 `config/providers.json` + `data/status.json`</sub>
 

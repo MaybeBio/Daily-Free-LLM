@@ -191,7 +191,7 @@ def render_readme(
         ])
     )
     lines = [
-        '<h1 align="center">⛏️ 免费 LLM API 金铲子</h1>',
+        '<h1 align="center">⛏️ 免费 LLM API</h1>',
         "",
         '<p align="center">收集、探活、追踪免费 LLM API，聚合成一个本地 OpenAI 兼容端点。</p>',
         "",
@@ -335,7 +335,7 @@ _HTML = """<!doctype html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>免费 LLM API 金铲子</title>
+<title>免费 LLM API</title>
 <style>
 :root{
   --bg:#0b1020;--panel:#121a33;--panel2:#0f1730;--line:#22304f;
@@ -404,7 +404,7 @@ pointer-events:none}
 <div class="wrap">
 <header>
   <div>
-    <h1>免费 LLM API <span>金铲子</span></h1>
+    <h1>免费 LLM <span>API</span></h1>
     <div class="sub" id="sub"></div>
   </div>
   <div class="sub" id="gen"></div>
@@ -582,7 +582,7 @@ def render_feed(changes: list[dict] | None, path: Path) -> str:
     xml = (
         '<?xml version="1.0" encoding="UTF-8"?>'
         '<rss version="2.0"><channel>'
-        "<title>免费 LLM API 金铲子 · 变更</title>"
+        "<title>免费 LLM API · 变更</title>"
         "<link>https://freellm.local/</link>"
         "<description>免费 LLM 渠道与模型目录的每日变更</description>"
         f"<lastBuildDate>{now}</lastBuildDate>"
