@@ -2,6 +2,7 @@ import unittest
 
 from shovel.registry import (
     merge_providers,
+    normalize_model,
     normalize_provider,
     validate,
     normalize_limits,
@@ -58,6 +59,11 @@ class NormalizeProviderTest(unittest.TestCase):
             normalize_limits({"rpm": "5 RPM", "rpd": "1,000", "tpm": "未知"}),
             {"rpm": 5, "rpd": 1000, "tpm": None, "tpd": None},
         )
+
+    def test_context_units(self):
+        self.assertEqual(normalize_model({"id": "a", "context": "1M"})["context"], 1_000_000)
+        self.assertEqual(normalize_model({"id": "b", "context": "262K"})["context"], 262_000)
+        self.assertEqual(normalize_model({"id": "c", "context": "1.5M"})["context"], 1_500_000)
 
 
 class MergeProvidersTest(unittest.TestCase):
@@ -141,6 +147,32 @@ class MergeProvidersTest(unittest.TestCase):
             [{"id": "b", "name": "Beta"}],
         )
         self.assertEqual([p["id"] for p in merged], ["a", "b"])
+
+    def test_alias_names_merge(self):
+        merged = merge_providers(
+            [{"id": "zhipu", "name": "智谱 AI (BigModel)"}],
+            [{"id": "zhipu-bigmodel-china", "name": "Zhipu BigModel (China)",
+              "limits_text": "1 RPM"}],
+            [{"id": "gemini", "name": "Google Gemini", "models": [{"id": "m"}]}],
+            [{"id": "google-ai-studio", "name": "Google AI Studio"}],
+            [{"id": "deepseek-api", "name": "DeepSeek 官方 API"}],
+            [{"id": "deepseek", "name": "DeepSeek", "base_url": "https://api.deepseek.com"}],
+            [{"id": "mistral", "name": "Mistral AI"}],
+            [{"id": "mistral-la-plateforme", "name": "Mistral La Plateforme"}],
+        )
+        self.assertEqual(
+            [p["id"] for p in merged],
+            ["zhipu", "gemini", "deepseek-api", "mistral"],
+        )
+        self.assertEqual(merged[0]["limits_text"], "1 RPM")
+        self.assertEqual(merged[2]["base_url"], "https://api.deepseek.com")
+
+    def test_apps_are_not_merged_with_apis(self):
+        merged = merge_providers(
+            [{"id": "deepseek-api", "name": "DeepSeek 官方 API"}],
+            [{"id": "deepseek-app", "name": "DeepSeek App / 网页版"}],
+        )
+        self.assertEqual([p["id"] for p in merged], ["deepseek-api", "deepseek-app"])
 
 
 class ValidateTest(unittest.TestCase):

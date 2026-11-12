@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import copy
+import re
 from pathlib import Path
 
 from . import util
@@ -233,6 +234,32 @@ def _homepage_key(provider: dict) -> str:
     return str(provider.get("homepage") or "").strip().rstrip("/").lower()
 
 
+_NAME_ALIASES = {
+    "zhipu bigmodel": "zhipu",
+    "智谱 ai": "zhipu",
+    "z.ai": "zai",
+    "z.ai 国际 api": "zai",
+    "google ai studio": "gemini",
+    "google gemini": "gemini",
+    "mistral ai": "mistral",
+    "mistral la plateforme": "mistral",
+    "deepseek 官方 api": "deepseek",
+    "hugging face": "huggingface",
+    "huggingface inference providers 免费赠金": "huggingface",
+    "qwen": "alibaba",
+    "alibaba cloud model studio": "alibaba",
+    "阿里云 model studio 国际站": "alibaba",
+    "月之暗面 kimi": "moonshot",
+    "kimi 开放平台": "moonshot",
+}
+
+
+def _name_key(name: str) -> str:
+    text = re.sub(r"\([^)]*\)|（[^）]*）", "", str(name or ""))
+    text = re.sub(r"\s+", " ", text).strip().lower()
+    return _NAME_ALIASES.get(text, text)
+
+
 def merge_providers(*groups) -> list[dict]:
     by_id: dict[str, dict] = {}
     base_to_id: dict[str, str] = {}
@@ -243,7 +270,7 @@ def merge_providers(*groups) -> list[dict]:
         for raw in group or []:
             provider = normalize_provider(raw)
             key = provider["id"]
-            name_key = provider["name"].strip().lower()
+            name_key = _name_key(provider["name"])
             home_key = _homepage_key(provider)
             alias = None
             if provider["base_url"]:

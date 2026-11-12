@@ -74,7 +74,7 @@ class RenderTest(unittest.TestCase):
         text = (self.tmp / "README.md").read_text(encoding="utf-8")
         self.assertIn("python -m shovel serve", text)
         self.assertIn("127.0.0.1:8756", text)
-        self.assertIn("完整目录在哪", text)
+        self.assertIn("数据在哪", text)
         self.assertNotIn("| 渠道 | 地区 | 性质 |", text)
 
     def test_csv_rows_match_providers(self):

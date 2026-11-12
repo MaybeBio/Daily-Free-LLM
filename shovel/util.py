@@ -15,13 +15,14 @@ CONFIG_DIR = ROOT / "config"
 DATA_DIR = ROOT / "data"
 SITE_DIR = ROOT / "site"
 SNAPSHOT_DIR = DATA_DIR / "snapshots"
+DAILY_DIR = DATA_DIR / "daily"
 REFS_DIR = ROOT / "refers_template"
 
 CST = timezone(timedelta(hours=8))
 
 
 def ensure_dirs() -> None:
-    for path in (CONFIG_DIR, DATA_DIR, SNAPSHOT_DIR, SITE_DIR):
+    for path in (CONFIG_DIR, DATA_DIR, SNAPSHOT_DIR, DAILY_DIR, SITE_DIR):
         path.mkdir(parents=True, exist_ok=True)
 
 
@@ -150,5 +151,10 @@ def parse_int(value) -> int | None:
         return None
     if isinstance(value, int):
         return value
-    match = re.search(r"\d+", str(value).replace(",", ""))
-    return int(match.group(0)) if match else None
+    match = re.search(r"(\d+(?:\.\d+)?)([kKmMbB])?", str(value).replace(",", ""))
+    if not match:
+        return None
+    scale = {"k": 1_000, "m": 1_000_000, "b": 1_000_000_000}.get(
+        (match.group(2) or "").lower(), 1
+    )
+    return int(float(match.group(1)) * scale)

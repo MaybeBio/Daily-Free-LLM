@@ -164,18 +164,10 @@ def render_readme(
     path: Path | None = None,
 ) -> str:
     path = path or (util.ROOT / "README.md")
-    data = apply_status(registry, status)
-    stats = data.get("stats", {})
-    generated = util.now_cst()
-    counts = (stats.get("providers", 0), stats.get("models", 0),
-              stats.get("gateway_providers", 0))
     badge_specs = [
         ("Python 3.10+", "Python-3.10%2B-3776AB?logo=python&logoColor=white"),
         ("dependencies: 0", "dependencies-0-34d399"),
         ("OpenAI compatible", "API-OpenAI%20compatible-10a37f?logo=openai&logoColor=white"),
-        (f"providers: {counts[0]}", f"providers-{counts[0]}-3b82f6"),
-        (f"models: {counts[1]}", f"models-{counts[1]}-8b5cf6"),
-        (f"gateway: {counts[2]}", f"gateway-{counts[2]}-f59e0b"),
     ]
     panel = pages_url()
     panel_badge = (
@@ -232,44 +224,29 @@ def render_readme(
         "其他命令：`report` 重建 README/CSV/面板，`doctor` 检查配置，"
         "`bootstrap` 补种目录，`python -m unittest discover -s tests` 跑测试。",
         "",
-        "## 概览",
-        "",
-        f"**{counts[0]}** 渠道 · **{counts[1]}** 模型 · **{counts[2]}** 可网关",
-        "",
-        " · ".join(
-            f"`{key}` {value}"
-            for key, value in (stats.get("categories") or {}).items()
-            if value
-        ),
-        "",
     ]
     lines += [
-        "## 完整目录在哪",
+        "## 数据在哪",
         "",
-        "- 面板：可搜索、按分类/地区/状态筛选，并直接复制客户端配置",
+        (
+            f"- [在线面板]({panel})：搜索、筛选、实时状态"
+            if panel else "- 面板：`http://127.0.0.1:8756/`（本地运行 `serve`）"
+        ),
+        "- [完整注册表](config/providers.json)：合并后的渠道与模型数据",
+        "- [每日归档](data/daily/)：每天一个目录，含 `summary.json` 和当日各源快照",
+        "- [最新快照](data/snapshots/)：每个源最近一次快照，供下一次 diff 使用",
+        "- [变更记录](data/changes.jsonl) / [历史统计](data/history.jsonl)",
         "- `free_llm_api.csv`：扁平表，适合 Excel 或脚本处理",
-        "- `site/feed.xml`：新增/移除订阅",
+        "- [RSS](site/feed.xml)：新增/移除订阅",
         "",
         "## 说明",
         "",
-        "- README 只做入口；全量渠道与实时状态以上面的面板/CSV 为准。",
+        "- README 只做入口，不记录具体渠道数据；数据以面板和上面仓库内的文件为准。",
         "- `verified_at` 按渠道记录，没有全表统一的核实日期。",
         "- 灰色渠道只做风险记录，不进入网关。",
         "- `config/providers.json` 是唯一事实源；README、CSV、面板、RSS 都由 `report` 重建。",
         "",
-    ]
-    recent = (changes or [])[-5:]
-    if recent:
-        lines += ["## 最近变更", ""]
-        for change in reversed(recent):
-            lines.append(
-                f"- `{change.get('at', '')}` {change.get('name', change.get('source'))}："
-                f"+{change.get('added_count', 0)} / -{change.get('removed_count', 0)}"
-            )
-        lines.append("")
-    lines += [
-        f"<sub>自动生成于 {generated}（UTC+8）· 数据源 `config/providers.json` + "
-        "`data/status.json`</sub>",
+        "<sub>由 `report` 自动生成。</sub>",
         "",
     ]
 

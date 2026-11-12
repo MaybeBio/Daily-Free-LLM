@@ -48,6 +48,28 @@
       "kind": "html",
       "url": "https://freellm.net",
       "enabled": false
+    },
+    {
+      "id": "freellm-net",
+      "name": "freellm.net 免费模型目录",
+      "kind": "freellm_net",
+      "url": "https://freellm.net/models/",
+      "enabled": true
+    },
+    {
+      "id": "free-llm-com",
+      "name": "free-llm.com 渠道目录",
+      "kind": "free_llm_readme",
+      "url": "https://raw.githubusercontent.com/nejib1/Free-LLM/main/README.md",
+      "homepage": "https://free-llm.com/",
+      "enabled": true
+    },
+    {
+      "id": "free-llm-catalog",
+      "name": "free-llm.com 官方 JSON 目录",
+      "kind": "free_llm_catalog",
+      "url": "https://free-llm.com/catalog.json",
+      "enabled": true
     }
   ]
 }

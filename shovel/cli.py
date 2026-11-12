@@ -54,11 +54,27 @@ DEFAULT_SOURCES = {
             },
         },
         {
-            "id": "freellm-home",
-            "name": "freellm.net 首页",
-            "kind": "html",
-            "url": "https://freellm.net",
-            "enabled": False,
+            "id": "freellm-net",
+            "name": "freellm.net 免费模型目录",
+            "kind": "freellm_net",
+            "url": "https://freellm.net/models/",
+            "providers_url": "https://freellm.net/providers/",
+            "enabled": True,
+        },
+        {
+            "id": "free-llm-com",
+            "name": "free-llm.com 渠道目录",
+            "kind": "free_llm_readme",
+            "url": "https://raw.githubusercontent.com/nejib1/Free-LLM/main/README.md",
+            "homepage": "https://free-llm.com/",
+            "enabled": True,
+        },
+        {
+            "id": "free-llm-catalog",
+            "name": "free-llm.com 官方 JSON 目录",
+            "kind": "free_llm_catalog",
+            "url": "https://free-llm.com/catalog.json",
+            "enabled": True,
         },
     ],
 }
@@ -105,6 +121,14 @@ def ensure_configs(force: bool = False) -> None:
         path = util.CONFIG_DIR / name
         if force or not path.exists():
             util.write_json(path, content)
+
+    sources_path = util.CONFIG_DIR / "sources.json"
+    document = util.read_json(sources_path, default={"sources": []})
+    known = {item.get("id") for item in document.get("sources", [])}
+    added = [s for s in DEFAULT_SOURCES["sources"] if s.get("id") not in known]
+    if added:
+        document.setdefault("sources", []).extend(added)
+        util.write_json(sources_path, document)
 
 
 def _load_registry() -> dict:
@@ -162,6 +186,17 @@ def cmd_update(args) -> int:
         bootstrap_mod.write_aliases(merged)
     registry = _load_registry()
 
+    util.write_json(
+        util.DAILY_DIR / util.today_iso() / "summary.json",
+        {
+            "date": util.today_iso(),
+            "generated_at": util.now_utc(),
+            "registry": registry.get("stats", {}),
+            "sources": reports,
+            "changes": changes,
+        },
+    )
+
     diff.append_history(
         util.DATA_DIR / "history.jsonl",
         {
@@ -184,6 +219,8 @@ def cmd_update(args) -> int:
             )
         else:
             util.log(f"{report['name']}: 失败 {report.get('error')}")
+            if os.environ.get("GITHUB_ACTIONS"):
+                print(f"::warning::{report['name']}: {report.get('error')}")
     if not args.no_report:
         _report(registry)
     return 0

@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -27,7 +27,6 @@ jobs:
 
       - name: Update external sources
         run: python -m shovel update --timeout 30
-        continue-on-error: true
 
       - name: Probe configured providers
         run: python -m shovel probe --timeout 20 --workers 8
@@ -61,6 +60,23 @@ jobs:
 
       - name: Regenerate catalog, README, CSV and dashboard
         run: python -m shovel report
+
+      - name: Commit refreshed catalog
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add config/providers.json config/aliases.json config/sources.json README.md
+          for path in free_llm_api.csv data/snapshots data/daily \
+                      data/changes.jsonl data/history.jsonl data/status.json \
+                      data/uptime.jsonl; do
+            [ -e "$path" ] && git add -f "$path"
+          done
+          if git diff --cached --quiet; then
+            echo "目录无变化，跳过提交"
+          else
+            git commit -m "chore: daily catalog refresh $(date -u +%F)"
+            git push
+          fi
 
       - uses: actions/upload-pages-artifact@v5
         with:

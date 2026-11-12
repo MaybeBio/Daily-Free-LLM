@@ -2,7 +2,7 @@
 
 <p align="center">收集、探活、追踪免费 LLM API，聚合成一个本地 OpenAI 兼容端点。</p>
 
-<p align="center"><a href="https://maybebio.github.io/Daily-Free-LLM/"><img alt="panel: live" src="https://img.shields.io/badge/panel-live-5eead4?style=flat-square"></a> <img alt="Python 3.10+" src="https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white&style=flat-square"> <img alt="dependencies: 0" src="https://img.shields.io/badge/dependencies-0-34d399?style=flat-square"> <img alt="OpenAI compatible" src="https://img.shields.io/badge/API-OpenAI%20compatible-10a37f?logo=openai&logoColor=white&style=flat-square"> <img alt="providers: 131" src="https://img.shields.io/badge/providers-131-3b82f6?style=flat-square"> <img alt="models: 110" src="https://img.shields.io/badge/models-110-8b5cf6?style=flat-square"> <img alt="gateway: 26" src="https://img.shields.io/badge/gateway-26-f59e0b?style=flat-square"></p>
+<p align="center"><a href="https://maybebio.github.io/Daily-Free-LLM/"><img alt="panel: live" src="https://img.shields.io/badge/panel-live-5eead4?style=flat-square"></a> <img alt="Python 3.10+" src="https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white&style=flat-square"> <img alt="dependencies: 0" src="https://img.shields.io/badge/dependencies-0-34d399?style=flat-square"> <img alt="OpenAI compatible" src="https://img.shields.io/badge/API-OpenAI%20compatible-10a37f?logo=openai&logoColor=white&style=flat-square"></p>
 
 <p align="center"><code>free-llm</code> · <code>openai-api</code> · <code>gateway</code> · <code>zero-dependency</code> · <code>self-hosted</code></p>
 
@@ -32,28 +32,22 @@ curl http://127.0.0.1:8756/v1/chat/completions \
 
 其他命令：`report` 重建 README/CSV/面板，`doctor` 检查配置，`bootstrap` 补种目录，`python -m unittest discover -s tests` 跑测试。
 
-## 概览
+## 数据在哪
 
-**131** 渠道 · **110** 模型 · **26** 可网关
-
-`api` 65 · `cloud` 32 · `agent` 16 · `student` 6 · `chat` 5 · `event` 8 · `signin` 8 · `gpu` 3 · `gray` 3
-
-## 完整目录在哪
-
-- 面板：可搜索、按分类/地区/状态筛选，并直接复制客户端配置
+- [在线面板](https://maybebio.github.io/Daily-Free-LLM/)：搜索、筛选、实时状态
+- [完整注册表](config/providers.json)：合并后的渠道与模型数据
+- [每日归档](data/daily/)：每天一个目录，含 `summary.json` 和当日各源快照
+- [最新快照](data/snapshots/)：每个源最近一次快照，供下一次 diff 使用
+- [变更记录](data/changes.jsonl) / [历史统计](data/history.jsonl)
 - `free_llm_api.csv`：扁平表，适合 Excel 或脚本处理
-- `site/feed.xml`：新增/移除订阅
+- [RSS](site/feed.xml)：新增/移除订阅
 
 ## 说明
 
-- README 只做入口；全量渠道与实时状态以上面的面板/CSV 为准。
+- README 只做入口，不记录具体渠道数据；数据以面板和上面仓库内的文件为准。
 - `verified_at` 按渠道记录，没有全表统一的核实日期。
 - 灰色渠道只做风险记录，不进入网关。
 - `config/providers.json` 是唯一事实源；README、CSV、面板、RSS 都由 `report` 重建。
 
-## 最近变更
-
-- `2026-11-11T15:53:41Z` AI Horde 免 key 模型目录：+2 / -0
-
-<sub>自动生成于 2026-11-12 00:42:18（UTC+8）· 数据源 `config/providers.json` + `data/status.json`</sub>
+<sub>由 `report` 自动生成。</sub>
 

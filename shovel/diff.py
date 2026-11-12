@@ -39,12 +39,16 @@ def update_snapshot(
     source_id: str,
     content: str,
     snapshot_dir: Path | None = None,
+    min_ratio: float = 0.5,
+    archive_dir: Path | None = None,
 ) -> dict:
     snapshot_dir = snapshot_dir or util.SNAPSHOT_DIR
     path = snapshot_dir / f"{source_id}.txt"
     previous = path.read_text(encoding="utf-8") if path.exists() else None
-    util.atomic_write(path, content)
     if previous is None:
+        util.atomic_write(path, content)
+        if archive_dir is not None:
+            util.atomic_write(archive_dir / f"{source_id}.txt", content)
         return {
             "baseline": True,
             "added": [],
@@ -52,7 +56,23 @@ def update_snapshot(
             "added_count": 0,
             "removed_count": 0,
         }
-    result = diff_lines(normalize_lines(previous), normalize_lines(content))
+    old_lines = normalize_lines(previous)
+    new_lines = normalize_lines(content)
+    if len(old_lines) >= 20 and len(new_lines) < len(old_lines) * min_ratio:
+        return {
+            "baseline": False,
+            "anomaly": True,
+            "previous_items": len(old_lines),
+            "items": len(new_lines),
+            "added": [],
+            "removed": [],
+            "added_count": 0,
+            "removed_count": 0,
+        }
+    util.atomic_write(path, content)
+    if archive_dir is not None:
+        util.atomic_write(archive_dir / f"{source_id}.txt", content)
+    result = diff_lines(old_lines, new_lines)
     result["baseline"] = False
     return result
 
