@@ -1,0 +1,75 @@
+agnes-ai|Agnes AI|https://apihub.agnes-ai.com/v1|permanent|About 30 RPM per account (video 2 RPM), per third-party listings；Not published|
+ai-horde-openai-compatible-front|AI Horde (OpenAI-compatible front)|https://oai.aihorde.net/v1|permanent|Queue-based; anonymous requests have the lowest priority, registered users earn kudos for priority；No fixed cap (volunteer capacity)|
+aihubmix-free-models|AIHubMix (free models)|https://aihubmix.com/v1|unknown||
+aion-labs|Aion Labs|https://api.aionlabs.ai/v1|permanent|Not published (daily credit allowance)；Daily free credit allowance (amount not published by Aion Labs)；Free, no billing|
+anyapi|AnyAPI|https://api.anyapi.ai/v1|unknown||
+api-airforce|Api.Airforce|https://api.airforce/v1|permanent|1 RPM；1,000 requests/day；Free plan, $0/month|
+arli-ai|Arli AI|https://api.arliai.com/v1|permanent|1 request at a time; max 12K context tokens；Limited trial uses per model (about 5 requests per 2 days, per third-party list)|
+bazaarlink|BazaarLink|https://api.bazaarlink.ai/v1|unknown||
+bytez|Bytez|https://api.bytez.com/models/v2/openai/v1|unknown||
+cerebras|Cerebras|https://api.cerebras.ai/v1|unknown||
+cerebrium|Cerebrium|https://api.cortex.cerebrium.ai/v4|unknown||
+cloudflare-workers-ai|Cloudflare Workers AI|https://api.cloudflare.com/client/v4/accounts/{account_id}/ai/run/|permanent|Varies by model；10,000 neurons/day；~300,000 neurons/month|
+cohere|Cohere|https://api.cohere.ai/v1|permanent|20 requests/minute；1,000 API calls/month (trial key)；1,000 API calls/month (trial key, non-commercial)|
+dahl-inference|Dahl Inference|https://inference.dahl.global/v1|unknown||
+experiential-labs|Experiential Labs|https://api.experientiallabs.ai/v1|unknown||
+fireworks-ai|Fireworks AI|https://api.fireworks.ai/inference/v1|unknown||
+freeinference|FreeInference|https://freeinference.org/v1|permanent|Not published ("generous quota"; HTTP 429 when rate-limited)；No published daily cap|
+friendli-ai|Friendli AI|https://inference.friendli.ai/v1|unknown||
+gonka-broker|Gonka Broker|https://proxy.gonkabroker.com/v1|unknown||
+gonkarouter|GonkaRouter|https://api.gonkarouter.io/v1|unknown||
+google-ai-studio|Google AI Studio|https://generativelanguage.googleapis.com/v1beta|permanent|Varies by model (per-model limits are now shown only inside AI Studio)；Varies by model. Free: Gemini 3.x Flash / Flash-Lite and Gemini 2.5 Pro/Flash (2.5 redirect to 3.x on Dec 1, 2026); Gemini 3.x Pro and Gemini 4 are paid；Free of charge|
+google-vertex-ai-express-mode-gemini-enterprise-agent-platform|Google Vertex AI express mode (Gemini Enterprise Agent Platform)|https://aiplatform.googleapis.com/v1/publishers/google/models/MODEL_ID:generateContent|unknown||
+grokified|Grokified|https://api.grokified.com/v1|unknown||
+groq|Groq|https://api.groq.com/openai/v1|permanent|30 RPM; 8K TPM on most chat models (varies by model)；1,000 requests/day and 200K tokens/day on gpt-oss / Qwen (varies by model)；Free Forever|
+hetzner-inference-api|Hetzner Inference API|https://inference.hetzner.com/api/v1|permanent|10 requests, 4M input / 100K output tokens per 60s (per API key)；No daily cap published (free while the API is experimental); a Hetzner account with billing details is required and Hetzner may ask for a card or ID to verify it；Free during experimental phase, no billing system yet|
+hpc-ai-model-apis|HPC-AI Model APIs|https://api.hpc-ai.com/inference/v1|unknown||
+hyperbolic|Hyperbolic|https://api.hyperbolic.ai/inference/v1|unknown||
+ibm-watsonx-ai-lite-plan|IBM watsonx.ai (Lite plan)|https://us-south.ml.cloud.ibm.com/ml/v1/text/chat?version=2025-02-11|unknown||
+iflytek-spark-lite|iFlytek Spark Lite|https://spark-api-open.xf-yun.com/v1|permanent|Not published on the HTTP doc；Not published (Lite is free)|
+inception-labs|Inception Labs|https://api.inceptionlabs.ai/v1|unknown||
+inferbase|Inferbase|https://api.inferbase.ai/v1|unknown||
+iteracompute|IteraCompute|https://api.iteracompute.com/v1|unknown||
+jina-ai-embeddings-reader-api|Jina AI (Embeddings / Reader API)|https://api.jina.ai/v1/embeddings|unknown||
+kilo-ai-gateway|Kilo AI Gateway|https://ai-gateway.kilo.ai/api/v1|permanent|200 requests/hour per IP on free models (anonymous use allowed)；Default free models only；Free plan, no expiry|
+kiosapi-id|Kiosapi.id|https://api.kiosapi.id/v1|unknown||
+llm-kiwi|LLM.kiwi|https://api.llm.kiwi/v1|permanent|Baseline rate limits (figures not published)；Not published|
+llm7-io|LLM7.io|https://api.llm7.io/v1|permanent|1 req/s, 60/min, 250/hour (free token from dash.llm7.io)；100,000 tokens per 24h (free token; may be reduced without notice)；Free, no billing|
+llmtr|LLMTR|https://llmtr.com/v1|unknown||
+meganova-ai|MegaNova AI|https://api.meganova.ai/v1|unknown||
+mistral-la-plateforme|Mistral (La Plateforme)|https://api.mistral.ai/v1|permanent|1 request/second；Free|
+mixlayer|Mixlayer|https://models.mixlayer.ai/v1|permanent|Per-organization, per-model RPM/TPM (values shown in console only)；Not published|
+moark-gitee-ai|Moark (Gitee AI)|https://api.moark.com/v1|unknown||
+modelscope|ModelScope|https://api-inference.modelscope.cn/v1|permanent|500 requests/day per model；2,000 requests/day total；Free, no billing|
+nous-portal|Nous Portal|https://inference-api.nousresearch.com/v1|permanent|Standard rate limits (figures not published)；Free models only (no monthly credit)；Free tier: $0/month. A GitHub user reported (14 Sep 2026) that a payment method (Stripe, $0 charge) is required to get a key - verify|
+novai|NovAI|https://aiapi-pro.com/v1|unknown||
+novita-ai|Novita AI|https://api.novita.ai/v3/openai|unknown||
+nvidia-nim|NVIDIA NIM|https://integrate.api.nvidia.com/v1|permanent|~40 RPM (varies per model, not published)|
+ollama-cloud|Ollama Cloud|https://ollama.com/v1|permanent|Pay-as-you-go: 3 concurrent requests; only Beam (beam:cloud) is labelled free；No free monthly allowance any more (starter credits removed); other cloud models are billed per token；Weekly usage limit resets every 7 days|
+openrouter|OpenRouter|https://openrouter.ai/api/v1|unknown||
+opentyphoon-typhoon-api|OpenTyphoon (Typhoon API)|https://api.opentyphoon.ai/v1|permanent|5 requests/second, 200 RPM (text models); 20 RPM for OCR；No daily cap published|
+ovh-ai-endpoints|OVH AI Endpoints|https://oai.endpoints.kepler.ai.cloud.ovh.net/v1|permanent|2 RPM per IP per model (anonymous, free); 400 RPM with a key (pay-as-you-go)；Unspecified；Beta Access|
+pollinations-ai|Pollinations.ai|https://gen.pollinations.ai/v1|permanent|API key required (anonymous access removed); no card；Free usage paid from Quest Pollen earned in the dashboard；Free, no billing system|
+provider|Provider|Base URL|permanent|Rate Limit；Daily Limit；Monthly Limit|
+qwen-alibaba|Qwen (Alibaba)|https://dashscope-intl.aliyuncs.com/api/v1|unknown||
+regolo-ai|Regolo.ai|https://api.regolo.ai/v1|unknown||
+replicate|Replicate|https://api.replicate.com/v1|unknown||
+requesty|Requesty|https://router.requesty.ai/v1|unknown||
+routeway|Routeway|https://api.routeway.ai/v1|permanent|5 RPM on :free models；200 requests/day；Starter plan free, shared queue|
+sail-research|Sail Research|https://api.sailresearch.com/v1|unknown||
+sarvam-ai|Sarvam AI|https://api.sarvam.ai/v1|unknown||
+scaleway-generative-apis|Scaleway Generative APIs|https://api.scaleway.ai/v1|unknown||
+sea-lion-api|SEA-LION API|https://api.sea-lion.ai/v1|permanent|10 requests/minute per user (increase on request: sealion@aisingapore.org)；Not published|
+sensenova-sensetime|SenseNova (SenseTime)|https://token.sensenova.cn/v1|permanent|Not published；Not published (\"限时放量\" during public beta)|
+siliconflow|SiliconFlow|https://api.siliconflow.cn/v1|permanent|Fixed limits for free models — exact figures require login, verify on cloud.siliconflow.cn/models；Not fully published — verify on docs.siliconflow.cn；Free models available after identity verification|
+simplellm|SimpleLLM|https://api.simplellm.eu/v1|unknown||
+tencent-cloud-tokenhub|Tencent Cloud TokenHub|https://tokenhub-intl.tencentmaas.com/v1|unknown||
+token-harbor|Token Harbor|https://tokenharbor.ai/v1|unknown||
+upstage|Upstage|https://api.upstage.ai/v1/solar|unknown||
+vectoree|Vectoree|https://vectoree.ai/api/v1|unknown||
+vercel-ai-gateway|Vercel AI Gateway|https://ai-gateway.vercel.sh/v1|unknown||
+vlm-run-gateway|VLM Run Gateway|https://gateway.vlm.run/v1/openai|unknown||
+voyage-ai-embeddings-rerankers|Voyage AI (embeddings & rerankers)|https://api.voyageai.com/v1/embeddings|unknown||
+z-ai-glm|Z.AI (GLM)|https://api.z.ai/api/paas/v4|permanent|~1 request/second (Flash models)；~1,000 requests/day (Flash tier)；Free tier ongoing, subject to change|
+zhipu-bigmodel-china|Zhipu BigModel (China)|https://open.bigmodel.cn/api/paas/v4|permanent|Low concurrency on free Flash models (GLM-4.7-Flash reported at 1 concurrent request)；Not published|
+zro-moonmath|Zro (MoonMath)|https://zro.moonmath.ai/v1|unknown||

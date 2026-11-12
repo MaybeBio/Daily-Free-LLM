@@ -1,0 +1,74 @@
+{
+  "date": "2026-11-13",
+  "generated_at": "2026-11-12T16:45:42Z",
+  "registry": {
+    "providers": 174,
+    "models": 677,
+    "gateway_providers": 26,
+    "categories": {
+      "api": 102,
+      "cloud": 48,
+      "agent": 16,
+      "student": 6,
+      "chat": 13,
+      "event": 8,
+      "signin": 8,
+      "gpu": 3,
+      "gray": 3
+    }
+  },
+  "sources": [
+    {
+      "id": "openrouter-models",
+      "name": "OpenRouter 免费模型目录",
+      "ok": true,
+      "items": 16,
+      "baseline": true,
+      "added": 0,
+      "removed": 0
+    },
+    {
+      "id": "pollinations-models",
+      "name": "Pollinations 匿名模型目录",
+      "ok": true,
+      "items": 5,
+      "baseline": true,
+      "added": 0,
+      "removed": 0
+    },
+    {
+      "id": "aihorde-models",
+      "name": "AI Horde 免 key 模型目录",
+      "ok": true,
+      "items": 19,
+      "baseline": true,
+      "added": 0,
+      "removed": 0
+    },
+    {
+      "id": "freellm-net",
+      "name": "freellm.net 免费模型目录",
+      "ok": true,
+      "items": 31,
+      "baseline": true,
+      "added": 0,
+      "removed": 0
+    },
+    {
+      "id": "free-llm-com",
+      "name": "free-llm.com 渠道目录",
+      "ok": true,
+      "items": 75,
+      "baseline": true,
+      "added": 0,
+      "removed": 0
+    },
+    {
+      "id": "free-llm-catalog",
+      "name": "free-llm.com 官方 JSON 目录",
+      "ok": false,
+      "error": "HTTP 403"
+    }
+  ],
+  "changes": []
+}
