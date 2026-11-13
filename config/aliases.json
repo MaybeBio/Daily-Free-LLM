@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-12T16:45:42Z",
+  "generated_at": "2026-11-13T00:32:42Z",
   "note": "aliases 由 bootstrap 生成并随更新刷新；manual 中的同名别名优先。",
   "aliases": {
     "gpt-oss": [
@@ -600,6 +600,10 @@
       {
         "provider": "aihorde",
         "model": "lmstudio/Qwen3.5-9B"
+      },
+      {
+        "provider": "aihorde",
+        "model": "lmstudio/Qwen3.6-35B-A3B"
       },
       {
         "provider": "cerebras",

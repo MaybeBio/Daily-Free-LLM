@@ -1,2226 +1,2253 @@
 {
-  "generated_at": "2026-11-12T16:46:24Z",
-  "generated_at_cst": "2026-11-13 00:46:24",
+  "generated_at": "2026-11-13T00:32:52Z",
+  "generated_at_cst": "2026-11-13 08:32:52",
   "summary": {
     "providers_checked": 26,
-    "models_checked": 330,
+    "models_checked": 334,
     "status_counts": {
-      "ok": 7,
+      "ok": 8,
+      "error": 4,
       "not_found": 1,
-      "error": 3,
-      "network_error": 3,
-      "server_error": 12,
-      "rate_limited": 11,
-      "skipped": 293
+      "server_error": 11,
+      "rate_limited": 15,
+      "skipped": 295
     }
   },
   "providers": {
     "pollinations": {
       "status": "ok",
-      "checked_at": "2026-11-12T16:46:03Z",
+      "checked_at": "2026-11-13T00:32:43Z",
       "models": {
-        "openai-fast": {
+        "gpt-oss": {
           "status": "ok",
           "http_status": 200,
-          "latency_ms": 214,
+          "latency_ms": 265,
           "message": "",
-          "checked_at": "2026-11-12T16:45:43Z",
-          "model": "openai-fast"
+          "checked_at": "2026-11-13T00:32:43Z",
+          "model": "gpt-oss"
         },
         "openai": {
           "status": "ok",
           "http_status": 200,
-          "latency_ms": 234,
+          "latency_ms": 278,
           "message": "",
-          "checked_at": "2026-11-12T16:45:43Z",
+          "checked_at": "2026-11-13T00:32:43Z",
           "model": "openai"
         },
-        "ovh-reasoning": {
+        "openai-fast": {
           "status": "ok",
           "http_status": 200,
-          "latency_ms": 245,
+          "latency_ms": 291,
           "message": "",
-          "checked_at": "2026-11-12T16:45:43Z",
-          "model": "ovh-reasoning"
-        },
-        "gpt-oss": {
-          "status": "ok",
-          "http_status": 200,
-          "latency_ms": 267,
-          "message": "",
-          "checked_at": "2026-11-12T16:45:43Z",
-          "model": "gpt-oss"
+          "checked_at": "2026-11-13T00:32:43Z",
+          "model": "openai-fast"
         },
         "gpt-oss-20b": {
           "status": "ok",
           "http_status": 200,
-          "latency_ms": 306,
+          "latency_ms": 459,
           "message": "",
-          "checked_at": "2026-11-12T16:45:43Z",
+          "checked_at": "2026-11-13T00:32:43Z",
           "model": "gpt-oss-20b"
         },
-        "moonshotai/kimi-k2.6": {
-          "status": "not_found",
-          "http_status": 404,
-          "latency_ms": 395,
-          "message": "Model \"moonshotai/kimi-k2.6\" isn't on the Classic API. Free models: https://text.pollinations.ai/models. Every model we offer is on https://enter.pollinations.ai/?ref=classic",
-          "checked_at": "2026-11-12T16:45:43Z",
-          "model": "moonshotai/kimi-k2.6"
+        "ovh-reasoning": {
+          "status": "ok",
+          "http_status": 200,
+          "latency_ms": 514,
+          "message": "",
+          "checked_at": "2026-11-13T00:32:43Z",
+          "model": "ovh-reasoning"
+        },
+        "z-ai/glm-5.3-flash": {
+          "status": "error",
+          "http_status": 402,
+          "latency_ms": 586,
+          "message": "Free limit reached: 1 reply every 45 seconds per IP. Retry after 45s, or get unlimited replies with a pollen key at https://enter.pollinations.ai/?ref=classic",
+          "checked_at": "2026-11-13T00:32:43Z",
+          "model": "z-ai/glm-5.3-flash"
+        },
+        "deepseek/deepseek-v4-flash": {
+          "status": "error",
+          "http_status": 402,
+          "latency_ms": 577,
+          "message": "Free limit reached: 1 reply every 45 seconds per IP. Retry after 45s, or get unlimited replies with a pollen key at https://enter.pollinations.ai/?ref=classic",
+          "checked_at": "2026-11-13T00:32:43Z",
+          "model": "deepseek/deepseek-v4-flash"
         },
         "mistralai/mistral-large-3": {
           "status": "error",
           "http_status": 402,
-          "latency_ms": 401,
+          "latency_ms": 850,
           "message": "Free limit reached: 1 reply every 45 seconds per IP. Retry after 45s, or get unlimited replies with a pollen key at https://enter.pollinations.ai/?ref=classic",
-          "checked_at": "2026-11-12T16:45:43Z",
+          "checked_at": "2026-11-13T00:32:43Z",
           "model": "mistralai/mistral-large-3"
         },
         "openai/gpt-oss-20b": {
           "status": "error",
           "http_status": 402,
-          "latency_ms": 407,
+          "latency_ms": 852,
           "message": "Free limit reached: 1 reply every 45 seconds per IP. Retry after 45s, or get unlimited replies with a pollen key at https://enter.pollinations.ai/?ref=classic",
-          "checked_at": "2026-11-12T16:45:43Z",
+          "checked_at": "2026-11-13T00:32:43Z",
           "model": "openai/gpt-oss-20b"
         },
-        "deepseek/deepseek-v4-flash": {
-          "status": "error",
-          "http_status": 402,
-          "latency_ms": 252,
-          "message": "Free limit reached: 1 reply every 45 seconds per IP. Retry after 45s, or get unlimited replies with a pollen key at https://enter.pollinations.ai/?ref=classic",
-          "checked_at": "2026-11-12T16:45:43Z",
-          "model": "deepseek/deepseek-v4-flash"
-        },
-        "z-ai/glm-5.3-flash": {
-          "status": "network_error",
-          "http_status": null,
-          "latency_ms": 20029,
-          "message": "timeout",
-          "checked_at": "2026-11-12T16:46:03Z",
-          "model": "z-ai/glm-5.3-flash"
+        "moonshotai/kimi-k2.6": {
+          "status": "not_found",
+          "http_status": 404,
+          "latency_ms": 848,
+          "message": "Model \"moonshotai/kimi-k2.6\" isn't on the Classic API. Free models: https://text.pollinations.ai/models. Every model we offer is on https://enter.pollinations.ai/?ref=classic",
+          "checked_at": "2026-11-13T00:32:43Z",
+          "model": "moonshotai/kimi-k2.6"
         }
       }
     },
     "aihorde": {
       "status": "ok",
-      "checked_at": "2026-11-12T16:46:24Z",
+      "checked_at": "2026-11-13T00:32:52Z",
       "models": {
-        "koboldcpp/L3-8B-Stheno-v3.2-Q4_K_M-imat": {
+        "koboldcpp/debug-Vesper-26B-A4B-Nocturne.i1-Q4_K_M_hb16": {
           "status": "server_error",
           "http_status": 503,
-          "latency_ms": 428,
+          "latency_ms": 544,
           "message": "This front holds its maximum of open requests for this client or in total; retry shortly.",
-          "checked_at": "2026-11-12T16:46:03Z",
-          "model": "koboldcpp/L3-8B-Stheno-v3.2-Q4_K_M-imat"
+          "checked_at": "2026-11-13T00:32:44Z",
+          "model": "koboldcpp/debug-Vesper-26B-A4B-Nocturne.i1-Q4_K_M_hb16"
         },
-        "koboldcpp/L3-8B-Stheno-v3.2": {
+        "koboldcpp/Llama-3.2-1B-Instruct": {
           "status": "server_error",
           "http_status": 503,
-          "latency_ms": 429,
+          "latency_ms": 550,
           "message": "This front holds its maximum of open requests for this client or in total; retry shortly.",
-          "checked_at": "2026-11-12T16:46:03Z",
-          "model": "koboldcpp/L3-8B-Stheno-v3.2"
+          "checked_at": "2026-11-13T00:32:44Z",
+          "model": "koboldcpp/Llama-3.2-1B-Instruct"
         },
         "koboldcpp/Gemma-4-E4B-Uncensored-HauhauCS-Aggressive-Q4_K_M": {
           "status": "server_error",
           "http_status": 503,
-          "latency_ms": 430,
+          "latency_ms": 551,
           "message": "This front holds its maximum of open requests for this client or in total; retry shortly.",
-          "checked_at": "2026-11-12T16:46:03Z",
+          "checked_at": "2026-11-13T00:32:44Z",
           "model": "koboldcpp/Gemma-4-E4B-Uncensored-HauhauCS-Aggressive-Q4_K_M"
-        },
-        "koboldcpp/Llama-3.2-1B-Instruct": {
-          "status": "rate_limited",
-          "http_status": 429,
-          "latency_ms": 453,
-          "message": "2 per 1 second",
-          "checked_at": "2026-11-12T16:46:03Z",
-          "model": "koboldcpp/Llama-3.2-1B-Instruct"
         },
         "koboldcpp/debug-gemma-4-E2B-Queen-it-qat-q4_0-unquantized.i1-Q4_K_M": {
           "status": "rate_limited",
           "http_status": 429,
-          "latency_ms": 473,
+          "latency_ms": 740,
           "message": "2 per 1 second",
-          "checked_at": "2026-11-12T16:46:03Z",
+          "checked_at": "2026-11-13T00:32:44Z",
           "model": "koboldcpp/debug-gemma-4-E2B-Queen-it-qat-q4_0-unquantized.i1-Q4_K_M"
         },
-        "koboldcpp/debug-Vesper-26B-A4B-Nocturne.i1-Q4_K_M_hb16": {
+        "koboldcpp/L3-8B-Stheno-v3.2-Q4_K_M-imat": {
           "status": "rate_limited",
           "http_status": 429,
-          "latency_ms": 476,
+          "latency_ms": 739,
           "message": "2 per 1 second",
-          "checked_at": "2026-11-12T16:46:03Z",
-          "model": "koboldcpp/debug-Vesper-26B-A4B-Nocturne.i1-Q4_K_M_hb16"
+          "checked_at": "2026-11-13T00:32:44Z",
+          "model": "koboldcpp/L3-8B-Stheno-v3.2-Q4_K_M-imat"
+        },
+        "koboldcpp/L3-8B-Stheno-v3.2": {
+          "status": "rate_limited",
+          "http_status": 429,
+          "latency_ms": 746,
+          "message": "2 per 1 second",
+          "checked_at": "2026-11-13T00:32:44Z",
+          "model": "koboldcpp/L3-8B-Stheno-v3.2"
         },
         "koboldcpp/Llama-3.2-3B-Instruct": {
-          "status": "server_error",
-          "http_status": 503,
-          "latency_ms": 379,
-          "message": "This front holds its maximum of open requests for this client or in total; retry shortly.",
-          "checked_at": "2026-11-12T16:46:04Z",
+          "status": "rate_limited",
+          "http_status": 429,
+          "latency_ms": 703,
+          "message": "2 per 1 second",
+          "checked_at": "2026-11-13T00:32:45Z",
           "model": "koboldcpp/Llama-3.2-3B-Instruct"
         },
-        "koboldcpp/Sao10K/L3-8B-Stheno-v3.2": {
-          "status": "server_error",
-          "http_status": 503,
-          "latency_ms": 373,
-          "message": "This front holds its maximum of open requests for this client or in total; retry shortly.",
-          "checked_at": "2026-11-12T16:46:04Z",
-          "model": "koboldcpp/Sao10K/L3-8B-Stheno-v3.2"
-        },
-        "lmstudio/Qwen3.5-9B": {
-          "status": "server_error",
-          "http_status": 503,
-          "latency_ms": 375,
-          "message": "This front holds its maximum of open requests for this client or in total; retry shortly.",
-          "checked_at": "2026-11-12T16:46:04Z",
-          "model": "lmstudio/Qwen3.5-9B"
+        "koboldcpp/Llama-3-Lumimaid-8B-v0.1": {
+          "status": "rate_limited",
+          "http_status": 429,
+          "latency_ms": 722,
+          "message": "2 per 1 second",
+          "checked_at": "2026-11-13T00:32:45Z",
+          "model": "koboldcpp/Llama-3-Lumimaid-8B-v0.1"
         },
         "koboldcpp/mini-magnum-12b-v1.1": {
           "status": "rate_limited",
           "http_status": 429,
-          "latency_ms": 448,
+          "latency_ms": 728,
           "message": "2 per 1 second",
-          "checked_at": "2026-11-12T16:46:04Z",
+          "checked_at": "2026-11-13T00:32:45Z",
           "model": "koboldcpp/mini-magnum-12b-v1.1"
         },
         "koboldcpp/Qwen3.5-4B": {
           "status": "rate_limited",
           "http_status": 429,
-          "latency_ms": 463,
+          "latency_ms": 700,
           "message": "2 per 1 second",
-          "checked_at": "2026-11-12T16:46:04Z",
+          "checked_at": "2026-11-13T00:32:45Z",
           "model": "koboldcpp/Qwen3.5-4B"
         },
-        "koboldcpp/Llama-3-Lumimaid-8B-v0.1": {
+        "koboldcpp/Sao10K/L3-8B-Stheno-v3.2": {
           "status": "rate_limited",
           "http_status": 429,
-          "latency_ms": 489,
+          "latency_ms": 710,
           "message": "2 per 1 second",
-          "checked_at": "2026-11-12T16:46:04Z",
-          "model": "koboldcpp/Llama-3-Lumimaid-8B-v0.1"
+          "checked_at": "2026-11-13T00:32:45Z",
+          "model": "koboldcpp/Sao10K/L3-8B-Stheno-v3.2"
         },
-        "koboldcpp/gemma-3-4b-it-Q4_K_M": {
-          "status": "server_error",
-          "http_status": 503,
-          "latency_ms": 384,
-          "message": "This front holds its maximum of open requests for this client or in total; retry shortly.",
-          "checked_at": "2026-11-12T16:46:04Z",
-          "model": "koboldcpp/gemma-3-4b-it-Q4_K_M"
-        },
-        "koboldcpp/Phi-3.5-mini-instruct": {
-          "status": "server_error",
-          "http_status": 503,
-          "latency_ms": 348,
-          "message": "This front holds its maximum of open requests for this client or in total; retry shortly.",
-          "checked_at": "2026-11-12T16:46:04Z",
-          "model": "koboldcpp/Phi-3.5-mini-instruct"
-        },
-        "koboldcpp/L3-Super-Nova-RP-8B": {
-          "status": "server_error",
-          "http_status": 503,
-          "latency_ms": 360,
-          "message": "This front holds its maximum of open requests for this client or in total; retry shortly.",
-          "checked_at": "2026-11-12T16:46:04Z",
-          "model": "koboldcpp/L3-Super-Nova-RP-8B"
-        },
-        "koboldcpp/G4-MeroMero-26B-A4B-it-uncensored-heretic": {
+        "lmstudio/Qwen3.5-9B": {
           "status": "rate_limited",
           "http_status": 429,
-          "latency_ms": 454,
+          "latency_ms": 710,
           "message": "2 per 1 second",
-          "checked_at": "2026-11-12T16:46:04Z",
-          "model": "koboldcpp/G4-MeroMero-26B-A4B-it-uncensored-heretic"
+          "checked_at": "2026-11-13T00:32:45Z",
+          "model": "lmstudio/Qwen3.5-9B"
         },
-        "TheDrummer/Behemoth-128B-v3": {
-          "status": "rate_limited",
-          "http_status": 429,
-          "latency_ms": 500,
-          "message": "2 per 1 second",
-          "checked_at": "2026-11-12T16:46:04Z",
-          "model": "TheDrummer/Behemoth-128B-v3"
+        "koboldcpp/gemma-4-31B-it": {
+          "status": "server_error",
+          "http_status": 503,
+          "latency_ms": 1592,
+          "message": "No worker is currently serving the model 'koboldcpp/gemma-4-31B-it'. Retry later.",
+          "checked_at": "2026-11-13T00:32:45Z",
+          "model": "koboldcpp/gemma-4-31B-it"
         },
         "aphrodite/TheDrummer/Behemoth-128B-v3": {
           "status": "rate_limited",
           "http_status": 429,
-          "latency_ms": 465,
+          "latency_ms": 871,
           "message": "2 per 1 second",
-          "checked_at": "2026-11-12T16:46:04Z",
+          "checked_at": "2026-11-13T00:32:46Z",
           "model": "aphrodite/TheDrummer/Behemoth-128B-v3"
+        },
+        "koboldcpp/gemma-3-4b-it-Q4_K_M": {
+          "status": "server_error",
+          "http_status": 503,
+          "latency_ms": 719,
+          "message": "This front holds its maximum of open requests for this client or in total; retry shortly.",
+          "checked_at": "2026-11-13T00:32:46Z",
+          "model": "koboldcpp/gemma-3-4b-it-Q4_K_M"
+        },
+        "koboldcpp/Qwen3-0.6B": {
+          "status": "server_error",
+          "http_status": 503,
+          "latency_ms": 572,
+          "message": "This front holds its maximum of open requests for this client or in total; retry shortly.",
+          "checked_at": "2026-11-13T00:32:46Z",
+          "model": "koboldcpp/Qwen3-0.6B"
+        },
+        "koboldcpp/L3-Super-Nova-RP-8B": {
+          "status": "rate_limited",
+          "http_status": 429,
+          "latency_ms": 871,
+          "message": "2 per 1 second",
+          "checked_at": "2026-11-13T00:32:46Z",
+          "model": "koboldcpp/L3-Super-Nova-RP-8B"
+        },
+        "koboldcpp/Phi-3.5-mini-instruct": {
+          "status": "rate_limited",
+          "http_status": 429,
+          "latency_ms": 872,
+          "message": "2 per 1 second",
+          "checked_at": "2026-11-13T00:32:46Z",
+          "model": "koboldcpp/Phi-3.5-mini-instruct"
+        },
+        "koboldcpp/Qwen3-1.7B": {
+          "status": "server_error",
+          "http_status": 503,
+          "latency_ms": 556,
+          "message": "This front holds its maximum of open requests for this client or in total; retry shortly.",
+          "checked_at": "2026-11-13T00:32:46Z",
+          "model": "koboldcpp/Qwen3-1.7B"
         },
         "koboldcpp/Rocinante-XL-16B-v1": {
           "status": "server_error",
           "http_status": 503,
-          "latency_ms": 349,
+          "latency_ms": 490,
           "message": "This front holds its maximum of open requests for this client or in total; retry shortly.",
-          "checked_at": "2026-11-12T16:46:05Z",
+          "checked_at": "2026-11-13T00:32:46Z",
           "model": "koboldcpp/Rocinante-XL-16B-v1"
         },
         "koboldcpp/Qwen3-4B": {
           "status": "server_error",
           "http_status": 503,
-          "latency_ms": 358,
+          "latency_ms": 500,
           "message": "This front holds its maximum of open requests for this client or in total; retry shortly.",
-          "checked_at": "2026-11-12T16:46:05Z",
+          "checked_at": "2026-11-13T00:32:46Z",
           "model": "koboldcpp/Qwen3-4B"
         },
-        "koboldcpp/gemma-4-E4B-it": {
+        "TheDrummer/Behemoth-128B-v3": {
           "status": "server_error",
           "http_status": 503,
-          "latency_ms": 373,
-          "message": "This front holds its maximum of open requests for this client or in total; retry shortly.",
-          "checked_at": "2026-11-12T16:46:05Z",
-          "model": "koboldcpp/gemma-4-E4B-it"
+          "latency_ms": 1588,
+          "message": "No worker is currently serving the model 'TheDrummer/Behemoth-128B-v3'. Retry later.",
+          "checked_at": "2026-11-13T00:32:46Z",
+          "model": "TheDrummer/Behemoth-128B-v3"
         },
         "koboldcpp/DeepSeek-V4-Pro-Qwen3.5-9B-UNCENSORED-heretic-i1": {
           "status": "rate_limited",
           "http_status": 429,
-          "latency_ms": 483,
+          "latency_ms": 683,
           "message": "2 per 1 second",
-          "checked_at": "2026-11-12T16:46:05Z",
+          "checked_at": "2026-11-13T00:32:46Z",
           "model": "koboldcpp/DeepSeek-V4-Pro-Qwen3.5-9B-UNCENSORED-heretic-i1"
         },
-        "koboldcpp/Qwen3-14B": {
+        "koboldcpp/gemma-4-E4B-it": {
           "status": "rate_limited",
           "http_status": 429,
-          "latency_ms": 490,
+          "latency_ms": 683,
           "message": "2 per 1 second",
-          "checked_at": "2026-11-12T16:46:05Z",
+          "checked_at": "2026-11-13T00:32:46Z",
+          "model": "koboldcpp/gemma-4-E4B-it"
+        },
+        "koboldcpp/Cydonia-24B-v4zg-Q4_K_M": {
+          "status": "rate_limited",
+          "http_status": 429,
+          "latency_ms": 836,
+          "message": "2 per 1 second",
+          "checked_at": "2026-11-13T00:32:47Z",
+          "model": "koboldcpp/Cydonia-24B-v4zg-Q4_K_M"
+        },
+        "koboldcpp/Qwen3-14B": {
+          "status": "server_error",
+          "http_status": 503,
+          "latency_ms": 1653,
+          "message": "No worker is currently serving the model 'koboldcpp/Qwen3-14B'. Retry later.",
+          "checked_at": "2026-11-13T00:32:48Z",
           "model": "koboldcpp/Qwen3-14B"
+        },
+        "koboldcpp/G4-MeroMero-26B-A4B-it-uncensored-heretic": {
+          "status": "ok",
+          "http_status": 200,
+          "latency_ms": 4671,
+          "message": "",
+          "checked_at": "2026-11-13T00:32:49Z",
+          "model": "koboldcpp/G4-MeroMero-26B-A4B-it-uncensored-heretic"
+        },
+        "lmstudio/Qwen3.6-35B-A3B": {
+          "status": "ok",
+          "http_status": 200,
+          "latency_ms": 5338,
+          "message": "",
+          "checked_at": "2026-11-13T00:32:52Z",
+          "model": "lmstudio/Qwen3.6-35B-A3B"
         },
         "koboldcpp/Gemma-4-E4B-it-Ultra-Uncensored-Heretic": {
           "status": "ok",
           "http_status": 200,
-          "latency_ms": 11718,
+          "latency_ms": 8426,
           "message": "",
-          "checked_at": "2026-11-12T16:46:15Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "koboldcpp/Gemma-4-E4B-it-Ultra-Uncensored-Heretic"
-        },
-        "koboldcpp/gemma-4-31B-it": {
-          "status": "ok",
-          "http_status": 200,
-          "latency_ms": 13343,
-          "message": "",
-          "checked_at": "2026-11-12T16:46:16Z",
-          "model": "koboldcpp/gemma-4-31B-it"
-        },
-        "koboldcpp/Qwen3-0.6B": {
-          "status": "network_error",
-          "http_status": null,
-          "latency_ms": 20260,
-          "message": "timeout",
-          "checked_at": "2026-11-12T16:46:24Z",
-          "model": "koboldcpp/Qwen3-0.6B"
-        },
-        "koboldcpp/Qwen3-1.7B": {
-          "status": "network_error",
-          "http_status": null,
-          "latency_ms": 20257,
-          "message": "timeout",
-          "checked_at": "2026-11-12T16:46:24Z",
-          "model": "koboldcpp/Qwen3-1.7B"
         }
       }
     },
     "zhipu": {
       "status": "skipped",
-      "checked_at": "2026-11-12T16:46:24Z",
+      "checked_at": "2026-11-13T00:32:52Z",
       "models": {
-        "GLM-4.5-Air": {
+        "GLM-4.6V-Flash": {
           "status": "skipped",
           "message": "未配置 ZHIPU_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
-          "model": "GLM-4.5-Air"
+          "checked_at": "2026-11-13T00:32:52Z",
+          "model": "GLM-4.6V-Flash"
+        },
+        "glm-4.1v-thinking-flash": {
+          "status": "skipped",
+          "message": "未配置 ZHIPU_KEY",
+          "checked_at": "2026-11-13T00:32:52Z",
+          "model": "glm-4.1v-thinking-flash"
+        },
+        "GLM-4.5-Flash": {
+          "status": "skipped",
+          "message": "未配置 ZHIPU_KEY",
+          "checked_at": "2026-11-13T00:32:52Z",
+          "model": "GLM-4.5-Flash"
+        },
+        "glm-4.6v-flash": {
+          "status": "skipped",
+          "message": "未配置 ZHIPU_KEY",
+          "checked_at": "2026-11-13T00:32:52Z",
+          "model": "glm-4.6v-flash"
+        },
+        "glm-4.5-flash": {
+          "status": "skipped",
+          "message": "未配置 ZHIPU_KEY",
+          "checked_at": "2026-11-13T00:32:52Z",
+          "model": "glm-4.5-flash"
         },
         "GLM-4.7-Flash": {
           "status": "skipped",
           "message": "未配置 ZHIPU_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "GLM-4.7-Flash"
         },
-        "GLM-4.6V-Flash": {
+        "glm-4-flash-250414": {
           "status": "skipped",
           "message": "未配置 ZHIPU_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
-          "model": "GLM-4.6V-Flash"
+          "checked_at": "2026-11-13T00:32:52Z",
+          "model": "glm-4-flash-250414"
+        },
+        "GLM-4.5-Air": {
+          "status": "skipped",
+          "message": "未配置 ZHIPU_KEY",
+          "checked_at": "2026-11-13T00:32:52Z",
+          "model": "GLM-4.5-Air"
         },
         "glm-4v-flash": {
           "status": "skipped",
           "message": "未配置 ZHIPU_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "glm-4v-flash"
         },
         "glm-z1-flash": {
           "status": "skipped",
           "message": "未配置 ZHIPU_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "glm-z1-flash"
         },
         "glm-4.7-flash": {
           "status": "skipped",
           "message": "未配置 ZHIPU_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "glm-4.7-flash"
-        },
-        "glm-4.6v-flash": {
-          "status": "skipped",
-          "message": "未配置 ZHIPU_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
-          "model": "glm-4.6v-flash"
-        },
-        "glm-4-flash-250414": {
-          "status": "skipped",
-          "message": "未配置 ZHIPU_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
-          "model": "glm-4-flash-250414"
-        },
-        "glm-4.5-flash": {
-          "status": "skipped",
-          "message": "未配置 ZHIPU_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
-          "model": "glm-4.5-flash"
-        },
-        "GLM-4.5-Flash": {
-          "status": "skipped",
-          "message": "未配置 ZHIPU_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
-          "model": "GLM-4.5-Flash"
-        },
-        "glm-4.1v-thinking-flash": {
-          "status": "skipped",
-          "message": "未配置 ZHIPU_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
-          "model": "glm-4.1v-thinking-flash"
         }
       }
     },
     "moonshot": {
       "status": "skipped",
-      "checked_at": "2026-11-12T16:46:24Z",
+      "checked_at": "2026-11-13T00:32:52Z",
       "models": {
+        "kimi-k3": {
+          "status": "skipped",
+          "message": "未配置 MOONSHOT_KEY",
+          "checked_at": "2026-11-13T00:32:52Z",
+          "model": "kimi-k3"
+        },
         "kimi-k2.7-code": {
           "status": "skipped",
           "message": "未配置 MOONSHOT_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "kimi-k2.7-code"
         },
         "kimi-k2.5": {
           "status": "skipped",
           "message": "未配置 MOONSHOT_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "kimi-k2.5"
-        },
-        "kimi-k3": {
-          "status": "skipped",
-          "message": "未配置 MOONSHOT_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
-          "model": "kimi-k3"
         }
       }
     },
     "dashscope": {
       "status": "skipped",
-      "checked_at": "2026-11-12T16:46:24Z",
+      "checked_at": "2026-11-13T00:32:52Z",
       "models": {
-        "qwen-long": {
-          "status": "skipped",
-          "message": "未配置 DASHSCOPE_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
-          "model": "qwen-long"
-        },
-        "qwen3.8-max": {
-          "status": "skipped",
-          "message": "未配置 DASHSCOPE_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
-          "model": "qwen3.8-max"
-        },
         "qwen-turbo": {
           "status": "skipped",
           "message": "未配置 DASHSCOPE_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "qwen-turbo"
-        },
-        "qwen3.8-flash": {
-          "status": "skipped",
-          "message": "未配置 DASHSCOPE_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
-          "model": "qwen3.8-flash"
         },
         "qwen-plus": {
           "status": "skipped",
           "message": "未配置 DASHSCOPE_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "qwen-plus"
+        },
+        "qwen-long": {
+          "status": "skipped",
+          "message": "未配置 DASHSCOPE_KEY",
+          "checked_at": "2026-11-13T00:32:52Z",
+          "model": "qwen-long"
+        },
+        "qwen3.8-flash": {
+          "status": "skipped",
+          "message": "未配置 DASHSCOPE_KEY",
+          "checked_at": "2026-11-13T00:32:52Z",
+          "model": "qwen3.8-flash"
+        },
+        "qwen3.8-max": {
+          "status": "skipped",
+          "message": "未配置 DASHSCOPE_KEY",
+          "checked_at": "2026-11-13T00:32:52Z",
+          "model": "qwen3.8-max"
         }
       }
     },
     "siliconflow": {
       "status": "skipped",
-      "checked_at": "2026-11-12T16:46:24Z",
+      "checked_at": "2026-11-13T00:32:52Z",
       "models": {
-        "XingChenAGI/Xing4.0-29B": {
-          "status": "skipped",
-          "message": "未配置 SILICONFLOW_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
-          "model": "XingChenAGI/Xing4.0-29B"
-        },
         "Qwen/Qwen3-8B": {
           "status": "skipped",
           "message": "未配置 SILICONFLOW_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "Qwen/Qwen3-8B"
-        },
-        "THUDM/GLM-Z1-9B-0414": {
-          "status": "skipped",
-          "message": "未配置 SILICONFLOW_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
-          "model": "THUDM/GLM-Z1-9B-0414"
-        },
-        "Abbreviation": {
-          "status": "skipped",
-          "message": "未配置 SILICONFLOW_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
-          "model": "Abbreviation"
         },
         "tencent/Hunyuan-MT-7B": {
           "status": "skipped",
           "message": "未配置 SILICONFLOW_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "tencent/Hunyuan-MT-7B"
         },
-        "THUDM/GLM-4-9B-0414": {
+        "XingChenAGI/Xing4.0-29B": {
           "status": "skipped",
           "message": "未配置 SILICONFLOW_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
-          "model": "THUDM/GLM-4-9B-0414"
+          "checked_at": "2026-11-13T00:32:52Z",
+          "model": "XingChenAGI/Xing4.0-29B"
+        },
+        "Abbreviation": {
+          "status": "skipped",
+          "message": "未配置 SILICONFLOW_KEY",
+          "checked_at": "2026-11-13T00:32:52Z",
+          "model": "Abbreviation"
         },
         "Qwen/Qwen2.5-7B-Instruct": {
           "status": "skipped",
           "message": "未配置 SILICONFLOW_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "Qwen/Qwen2.5-7B-Instruct"
+        },
+        "THUDM/GLM-4-9B-0414": {
+          "status": "skipped",
+          "message": "未配置 SILICONFLOW_KEY",
+          "checked_at": "2026-11-13T00:32:52Z",
+          "model": "THUDM/GLM-4-9B-0414"
         },
         "Qwen/Qwen3.5-4B": {
           "status": "skipped",
           "message": "未配置 SILICONFLOW_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "Qwen/Qwen3.5-4B"
         },
         "deepseek-ai/DeepSeek-R1-0528-Qwen3-8B": {
           "status": "skipped",
           "message": "未配置 SILICONFLOW_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "deepseek-ai/DeepSeek-R1-0528-Qwen3-8B"
+        },
+        "THUDM/GLM-Z1-9B-0414": {
+          "status": "skipped",
+          "message": "未配置 SILICONFLOW_KEY",
+          "checked_at": "2026-11-13T00:32:52Z",
+          "model": "THUDM/GLM-Z1-9B-0414"
         }
       }
     },
     "modelscope": {
       "status": "skipped",
-      "checked_at": "2026-11-12T16:46:24Z",
+      "checked_at": "2026-11-13T00:32:52Z",
       "models": {
-        "Qwen/Qwen3.5-397B-A17B": {
-          "status": "skipped",
-          "message": "未配置 MODELSCOPE_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
-          "model": "Qwen/Qwen3.5-397B-A17B"
-        },
-        "GLM-5.1": {
-          "status": "skipped",
-          "message": "未配置 MODELSCOPE_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
-          "model": "GLM-5.1"
-        },
-        "Qwen/Qwen3.8-Flash-Next": {
-          "status": "skipped",
-          "message": "未配置 MODELSCOPE_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
-          "model": "Qwen/Qwen3.8-Flash-Next"
-        },
-        "XGenerationLab/XiYanSQL-QwenCoder-32B-2412": {
-          "status": "skipped",
-          "message": "未配置 MODELSCOPE_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
-          "model": "XGenerationLab/XiYanSQL-QwenCoder-32B-2412"
-        },
         "MiniMax-M3": {
           "status": "skipped",
           "message": "未配置 MODELSCOPE_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "MiniMax-M3"
-        },
-        "deepseek-ai/DeepSeek-V4-Pro": {
-          "status": "skipped",
-          "message": "未配置 MODELSCOPE_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
-          "model": "deepseek-ai/DeepSeek-V4-Pro"
-        },
-        "deepseek-ai/DeepSeek-V4.1-Flash": {
-          "status": "skipped",
-          "message": "未配置 MODELSCOPE_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
-          "model": "deepseek-ai/DeepSeek-V4.1-Flash"
-        },
-        "stepfun-ai/Step-3.7-Flash": {
-          "status": "skipped",
-          "message": "未配置 MODELSCOPE_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
-          "model": "stepfun-ai/Step-3.7-Flash"
-        },
-        "Qwen/Qwen3.8-27B": {
-          "status": "skipped",
-          "message": "未配置 MODELSCOPE_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
-          "model": "Qwen/Qwen3.8-27B"
         },
         "nex-agi/Nex-N2.5-Pro": {
           "status": "skipped",
           "message": "未配置 MODELSCOPE_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "nex-agi/Nex-N2.5-Pro"
         },
-        "Qwen/Qwen3.5-122B-A10B": {
+        "stepfun-ai/Step-3.7-Flash": {
           "status": "skipped",
           "message": "未配置 MODELSCOPE_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
-          "model": "Qwen/Qwen3.5-122B-A10B"
+          "checked_at": "2026-11-13T00:32:52Z",
+          "model": "stepfun-ai/Step-3.7-Flash"
         },
-        "ZhipuAI/GLM-4.7-Flash": {
+        "GLM-5.1": {
           "status": "skipped",
           "message": "未配置 MODELSCOPE_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
-          "model": "ZhipuAI/GLM-4.7-Flash"
-        },
-        "deepseek-ai/DeepSeek-V4-Pro-0813": {
-          "status": "skipped",
-          "message": "未配置 MODELSCOPE_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
-          "model": "deepseek-ai/DeepSeek-V4-Pro-0813"
+          "checked_at": "2026-11-13T00:32:52Z",
+          "model": "GLM-5.1"
         },
         "opencompass/CompassJudger-1-32B-Instruct": {
           "status": "skipped",
           "message": "未配置 MODELSCOPE_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "opencompass/CompassJudger-1-32B-Instruct"
+        },
+        "ZhipuAI/GLM-4.7-Flash": {
+          "status": "skipped",
+          "message": "未配置 MODELSCOPE_KEY",
+          "checked_at": "2026-11-13T00:32:52Z",
+          "model": "ZhipuAI/GLM-4.7-Flash"
         },
         "deepseek-ai/DeepSeek-V4-Flash": {
           "status": "skipped",
           "message": "未配置 MODELSCOPE_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "deepseek-ai/DeepSeek-V4-Flash"
+        },
+        "deepseek-ai/DeepSeek-V4-Pro": {
+          "status": "skipped",
+          "message": "未配置 MODELSCOPE_KEY",
+          "checked_at": "2026-11-13T00:32:52Z",
+          "model": "deepseek-ai/DeepSeek-V4-Pro"
+        },
+        "XGenerationLab/XiYanSQL-QwenCoder-32B-2412": {
+          "status": "skipped",
+          "message": "未配置 MODELSCOPE_KEY",
+          "checked_at": "2026-11-13T00:32:52Z",
+          "model": "XGenerationLab/XiYanSQL-QwenCoder-32B-2412"
+        },
+        "Qwen/Qwen3.8-Flash-Next": {
+          "status": "skipped",
+          "message": "未配置 MODELSCOPE_KEY",
+          "checked_at": "2026-11-13T00:32:52Z",
+          "model": "Qwen/Qwen3.8-Flash-Next"
+        },
+        "Qwen/Qwen3.5-397B-A17B": {
+          "status": "skipped",
+          "message": "未配置 MODELSCOPE_KEY",
+          "checked_at": "2026-11-13T00:32:52Z",
+          "model": "Qwen/Qwen3.5-397B-A17B"
+        },
+        "deepseek-ai/DeepSeek-V4-Pro-0813": {
+          "status": "skipped",
+          "message": "未配置 MODELSCOPE_KEY",
+          "checked_at": "2026-11-13T00:32:52Z",
+          "model": "deepseek-ai/DeepSeek-V4-Pro-0813"
+        },
+        "Qwen/Qwen3.8-27B": {
+          "status": "skipped",
+          "message": "未配置 MODELSCOPE_KEY",
+          "checked_at": "2026-11-13T00:32:52Z",
+          "model": "Qwen/Qwen3.8-27B"
+        },
+        "deepseek-ai/DeepSeek-V4.1-Flash": {
+          "status": "skipped",
+          "message": "未配置 MODELSCOPE_KEY",
+          "checked_at": "2026-11-13T00:32:52Z",
+          "model": "deepseek-ai/DeepSeek-V4.1-Flash"
+        },
+        "Qwen/Qwen3.5-122B-A10B": {
+          "status": "skipped",
+          "message": "未配置 MODELSCOPE_KEY",
+          "checked_at": "2026-11-13T00:32:52Z",
+          "model": "Qwen/Qwen3.5-122B-A10B"
         },
         "XGenerationLab/XiYanSQL-QwenCoder-32B-2504": {
           "status": "skipped",
           "message": "未配置 MODELSCOPE_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "XGenerationLab/XiYanSQL-QwenCoder-32B-2504"
         },
         "stepfun-ai/Step-3.5-Flash": {
           "status": "skipped",
           "message": "未配置 MODELSCOPE_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "stepfun-ai/Step-3.5-Flash"
         },
         "GLM-4.7-FlashX": {
           "status": "skipped",
           "message": "未配置 MODELSCOPE_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "GLM-4.7-FlashX"
         },
         "MedAIBase/AntAngelMed": {
           "status": "skipped",
           "message": "未配置 MODELSCOPE_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "MedAIBase/AntAngelMed"
         },
         "MusePublic/Qwen-Image-Edit": {
           "status": "skipped",
           "message": "未配置 MODELSCOPE_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "MusePublic/Qwen-Image-Edit"
         },
         "OpenGVLab/InternVL3_5-241B-A28B": {
           "status": "skipped",
           "message": "未配置 MODELSCOPE_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "OpenGVLab/InternVL3_5-241B-A28B"
         },
         "PaddlePaddle/ERNIE-4.5-21B-A3B-PT": {
           "status": "skipped",
           "message": "未配置 MODELSCOPE_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "PaddlePaddle/ERNIE-4.5-21B-A3B-PT"
         },
         "PaddlePaddle/ERNIE-4.5-300B-A47B-PT": {
           "status": "skipped",
           "message": "未配置 MODELSCOPE_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "PaddlePaddle/ERNIE-4.5-300B-A47B-PT"
         },
         "PaddlePaddle/ERNIE-4.5-VL-28B-A3B-PT": {
           "status": "skipped",
           "message": "未配置 MODELSCOPE_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "PaddlePaddle/ERNIE-4.5-VL-28B-A3B-PT"
         },
         "Qwen/Qwen-Image-Edit": {
           "status": "skipped",
           "message": "未配置 MODELSCOPE_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "Qwen/Qwen-Image-Edit"
         },
         "Shanghai_AI_Laboratory/Intern-S1": {
           "status": "skipped",
           "message": "未配置 MODELSCOPE_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "Shanghai_AI_Laboratory/Intern-S1"
         },
         "Shanghai_AI_Laboratory/Intern-S2-Preview": {
           "status": "skipped",
           "message": "未配置 MODELSCOPE_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "Shanghai_AI_Laboratory/Intern-S2-Preview"
         },
         "early-access/EA-29B-A4B": {
           "status": "skipped",
           "message": "未配置 MODELSCOPE_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "early-access/EA-29B-A4B"
         },
         "Shanghai_AI_Laboratory/Intern-S1-mini": {
           "status": "skipped",
           "message": "未配置 MODELSCOPE_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "Shanghai_AI_Laboratory/Intern-S1-mini"
         },
         "nex-agi/Nex-N2.5-mini": {
           "status": "skipped",
           "message": "未配置 MODELSCOPE_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "nex-agi/Nex-N2.5-mini"
         },
         "meituan-longcat/LongCat-Flash-Lite": {
           "status": "skipped",
           "message": "未配置 MODELSCOPE_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "meituan-longcat/LongCat-Flash-Lite"
         },
         "MiniMax/MiniMax-M1-80k": {
           "status": "skipped",
           "message": "未配置 MODELSCOPE_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "MiniMax/MiniMax-M1-80k"
         },
         "PaddlePaddle/ERNIE-4.5-0.3B-PT": {
           "status": "skipped",
           "message": "未配置 MODELSCOPE_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "PaddlePaddle/ERNIE-4.5-0.3B-PT"
         },
         "mistralai/Mistral-Large-Instruct-2407": {
           "status": "skipped",
           "message": "未配置 MODELSCOPE_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "mistralai/Mistral-Large-Instruct-2407"
         },
         "Qwen/Qwen3.5-35B-A3B": {
           "status": "skipped",
           "message": "未配置 MODELSCOPE_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "Qwen/Qwen3.5-35B-A3B"
         },
         "Qwen/Qwen3.5-27B": {
           "status": "skipped",
           "message": "未配置 MODELSCOPE_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "Qwen/Qwen3.5-27B"
         },
         "deepseek-ai/DeepSeek-V4-Flash-0731": {
           "status": "skipped",
           "message": "未配置 MODELSCOPE_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "deepseek-ai/DeepSeek-V4-Flash-0731"
         },
         "stepfun-ai/Step-5-Preview": {
           "status": "skipped",
           "message": "未配置 MODELSCOPE_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "stepfun-ai/Step-5-Preview"
         },
         "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
           "status": "skipped",
           "message": "未配置 MODELSCOPE_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017"
         },
         "MiniMax/MiniMax-M3": {
           "status": "skipped",
           "message": "未配置 MODELSCOPE_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "MiniMax/MiniMax-M3"
         },
         "ZhipuAI/GLM-5.2": {
           "status": "skipped",
           "message": "未配置 MODELSCOPE_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "ZhipuAI/GLM-5.2"
         }
       }
     },
     "hunyuan": {
       "status": "skipped",
-      "checked_at": "2026-11-12T16:46:24Z",
+      "checked_at": "2026-11-13T00:32:52Z",
       "models": {
         "hy4-preview": {
           "status": "skipped",
           "message": "未配置 HUNYUAN_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "hy4-preview"
         },
         "hy3-preview": {
           "status": "skipped",
           "message": "未配置 HUNYUAN_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "hy3-preview"
         }
       }
     },
     "qianfan": {
       "status": "skipped",
-      "checked_at": "2026-11-12T16:46:24Z",
+      "checked_at": "2026-11-13T00:32:52Z",
       "models": {
         "DeepSeek-R1": {
           "status": "skipped",
           "message": "未配置 QIANFAN_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "DeepSeek-R1"
         },
         "ERNIE-4.5-Turbo-32K": {
           "status": "skipped",
           "message": "未配置 QIANFAN_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "ERNIE-4.5-Turbo-32K"
         },
         "ERNIE-4.5-Turbo-128K": {
           "status": "skipped",
           "message": "未配置 QIANFAN_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "ERNIE-4.5-Turbo-128K"
         },
         "Kimi-K2-Instruct": {
           "status": "skipped",
           "message": "未配置 QIANFAN_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "Kimi-K2-Instruct"
         }
       }
     },
     "volc-ark": {
       "status": "skipped",
-      "checked_at": "2026-11-12T16:46:24Z",
+      "checked_at": "2026-11-13T00:32:52Z",
       "models": {
-        "doubao-seed-2-1-turbo-260628": {
+        "doubao-seed-2-1-lite-260915": {
           "status": "skipped",
           "message": "未配置 VOLC_ARK_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
-          "model": "doubao-seed-2-1-turbo-260628"
+          "checked_at": "2026-11-13T00:32:52Z",
+          "model": "doubao-seed-2-1-lite-260915"
+        },
+        "doubao-seed-2-1-pro-260628": {
+          "status": "skipped",
+          "message": "未配置 VOLC_ARK_KEY",
+          "checked_at": "2026-11-13T00:32:52Z",
+          "model": "doubao-seed-2-1-pro-260628"
         },
         "deepseek-v4-1-flash-261017": {
           "status": "skipped",
           "message": "未配置 VOLC_ARK_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "deepseek-v4-1-flash-261017"
         },
         "doubao-seed-2-1-pro-260915": {
           "status": "skipped",
           "message": "未配置 VOLC_ARK_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "doubao-seed-2-1-pro-260915"
         },
-        "doubao-seed-2-1-pro-260628": {
+        "doubao-seed-2-1-turbo-260628": {
           "status": "skipped",
           "message": "未配置 VOLC_ARK_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
-          "model": "doubao-seed-2-1-pro-260628"
-        },
-        "doubao-seed-2-1-lite-260915": {
-          "status": "skipped",
-          "message": "未配置 VOLC_ARK_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
-          "model": "doubao-seed-2-1-lite-260915"
+          "checked_at": "2026-11-13T00:32:52Z",
+          "model": "doubao-seed-2-1-turbo-260628"
         },
         "glm-5-3-flash-260828": {
           "status": "skipped",
           "message": "未配置 VOLC_ARK_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "glm-5-3-flash-260828"
         },
         "kimi-k3-1-pro-261024": {
           "status": "skipped",
           "message": "未配置 VOLC_ARK_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "kimi-k3-1-pro-261024"
         }
       }
     },
     "spark": {
       "status": "skipped",
-      "checked_at": "2026-11-12T16:46:24Z",
+      "checked_at": "2026-11-13T00:32:52Z",
       "models": {
         "lite": {
           "status": "skipped",
           "message": "未配置 SPARK_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "lite"
         }
       }
     },
     "minimax": {
       "status": "skipped",
-      "checked_at": "2026-11-12T16:46:24Z",
+      "checked_at": "2026-11-13T00:32:52Z",
       "models": {
-        "MiniMax-M2.5": {
+        "MiniMax-M3": {
           "status": "skipped",
           "message": "未配置 MINIMAX_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
-          "model": "MiniMax-M2.5"
+          "checked_at": "2026-11-13T00:32:52Z",
+          "model": "MiniMax-M3"
         },
         "MiniMax-M2.7": {
           "status": "skipped",
           "message": "未配置 MINIMAX_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "MiniMax-M2.7"
         },
-        "MiniMax-M3": {
+        "MiniMax-M2.5": {
           "status": "skipped",
           "message": "未配置 MINIMAX_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
-          "model": "MiniMax-M3"
+          "checked_at": "2026-11-13T00:32:52Z",
+          "model": "MiniMax-M2.5"
         }
       }
     },
     "stepfun": {
       "status": "skipped",
-      "checked_at": "2026-11-12T16:46:24Z",
+      "checked_at": "2026-11-13T00:32:52Z",
       "models": {
         "step-gui": {
           "status": "skipped",
           "message": "未配置 STEPFUN_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "step-gui"
         }
       }
     },
     "yi": {
       "status": "skipped",
-      "checked_at": "2026-11-12T16:46:24Z",
+      "checked_at": "2026-11-13T00:32:52Z",
       "models": {
         "yi-lightning": {
           "status": "skipped",
           "message": "未配置 YI_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "yi-lightning"
         },
         "yi-vision-v2": {
           "status": "skipped",
           "message": "未配置 YI_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "yi-vision-v2"
         }
       }
     },
     "baichuan": {
       "status": "skipped",
-      "checked_at": "2026-11-12T16:46:24Z",
+      "checked_at": "2026-11-13T00:32:52Z",
       "models": {
         "Baichuan4-Turbo": {
           "status": "skipped",
           "message": "未配置 BAICHUAN_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "Baichuan4-Turbo"
         },
         "Baichuan-M3-Plus": {
           "status": "skipped",
           "message": "未配置 BAICHUAN_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "Baichuan-M3-Plus"
         }
       }
     },
     "openrouter": {
       "status": "skipped",
-      "checked_at": "2026-11-12T16:46:24Z",
+      "checked_at": "2026-11-13T00:32:52Z",
       "models": {
-        "nvidia/nemotron-3.5-super-vl:free": {
+        "google/gemma-4-31b-it:free": {
           "status": "skipped",
           "message": "未配置 OPENROUTER_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
-          "model": "nvidia/nemotron-3.5-super-vl:free"
-        },
-        "cohere/north-mini-code:free": {
-          "status": "skipped",
-          "message": "未配置 OPENROUTER_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
-          "model": "cohere/north-mini-code:free"
-        },
-        "google/gemma-4-26b-a4b-it:free": {
-          "status": "skipped",
-          "message": "未配置 OPENROUTER_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
-          "model": "google/gemma-4-26b-a4b-it:free"
+          "checked_at": "2026-11-13T00:32:52Z",
+          "model": "google/gemma-4-31b-it:free"
         },
         "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free": {
           "status": "skipped",
           "message": "未配置 OPENROUTER_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
         },
-        "qwen/qwen3.8-27b:free": {
+        "nvidia/nemotron-3.5-super-vl:free": {
           "status": "skipped",
           "message": "未配置 OPENROUTER_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
-          "model": "qwen/qwen3.8-27b:free"
-        },
-        "nvidia/nemotron-3-ultra-550b-a55b:free": {
-          "status": "skipped",
-          "message": "未配置 OPENROUTER_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
-          "model": "nvidia/nemotron-3-ultra-550b-a55b:free"
-        },
-        "liquid/lfm-3-1.7b:free": {
-          "status": "skipped",
-          "message": "未配置 OPENROUTER_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
-          "model": "liquid/lfm-3-1.7b:free"
-        },
-        "google/gemma-4-31b-it:free": {
-          "status": "skipped",
-          "message": "未配置 OPENROUTER_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
-          "model": "google/gemma-4-31b-it:free"
+          "checked_at": "2026-11-13T00:32:52Z",
+          "model": "nvidia/nemotron-3.5-super-vl:free"
         },
         "openrouter/free": {
           "status": "skipped",
           "message": "未配置 OPENROUTER_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "openrouter/free"
-        },
-        "dots-studio/dots-3-note-preview:free": {
-          "status": "skipped",
-          "message": "未配置 OPENROUTER_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
-          "model": "dots-studio/dots-3-note-preview:free"
-        },
-        "recursive/flint-v1.0:free": {
-          "status": "skipped",
-          "message": "未配置 OPENROUTER_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
-          "model": "recursive/flint-v1.0:free"
-        },
-        "nvidia/nemotron-3.5-lightning:free": {
-          "status": "skipped",
-          "message": "未配置 OPENROUTER_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
-          "model": "nvidia/nemotron-3.5-lightning:free"
-        },
-        "liquid/lfm-2.5-2.6b:free": {
-          "status": "skipped",
-          "message": "未配置 OPENROUTER_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
-          "model": "liquid/lfm-2.5-2.6b:free"
-        },
-        "thinkingmachines/inkling-2-small:free": {
-          "status": "skipped",
-          "message": "未配置 OPENROUTER_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
-          "model": "thinkingmachines/inkling-2-small:free"
-        },
-        "baidu/ernie-5.5-flash-preview:free": {
-          "status": "skipped",
-          "message": "未配置 OPENROUTER_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
-          "model": "baidu/ernie-5.5-flash-preview:free"
-        },
-        "google/lyria-3-pro-preview": {
-          "status": "skipped",
-          "message": "未配置 OPENROUTER_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
-          "model": "google/lyria-3-pro-preview"
         },
         "google/lyria-3-clip-preview": {
           "status": "skipped",
           "message": "未配置 OPENROUTER_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "google/lyria-3-clip-preview"
+        },
+        "liquid/lfm-2.5-2.6b:free": {
+          "status": "skipped",
+          "message": "未配置 OPENROUTER_KEY",
+          "checked_at": "2026-11-13T00:32:52Z",
+          "model": "liquid/lfm-2.5-2.6b:free"
+        },
+        "qwen/qwen3.8-27b:free": {
+          "status": "skipped",
+          "message": "未配置 OPENROUTER_KEY",
+          "checked_at": "2026-11-13T00:32:52Z",
+          "model": "qwen/qwen3.8-27b:free"
+        },
+        "google/lyria-3-pro-preview": {
+          "status": "skipped",
+          "message": "未配置 OPENROUTER_KEY",
+          "checked_at": "2026-11-13T00:32:52Z",
+          "model": "google/lyria-3-pro-preview"
+        },
+        "recursive/flint-v1.0:free": {
+          "status": "skipped",
+          "message": "未配置 OPENROUTER_KEY",
+          "checked_at": "2026-11-13T00:32:52Z",
+          "model": "recursive/flint-v1.0:free"
+        },
+        "cohere/north-mini-code:free": {
+          "status": "skipped",
+          "message": "未配置 OPENROUTER_KEY",
+          "checked_at": "2026-11-13T00:32:52Z",
+          "model": "cohere/north-mini-code:free"
+        },
+        "dots-studio/dots-3-note-preview:free": {
+          "status": "skipped",
+          "message": "未配置 OPENROUTER_KEY",
+          "checked_at": "2026-11-13T00:32:52Z",
+          "model": "dots-studio/dots-3-note-preview:free"
+        },
+        "google/gemma-4-26b-a4b-it:free": {
+          "status": "skipped",
+          "message": "未配置 OPENROUTER_KEY",
+          "checked_at": "2026-11-13T00:32:52Z",
+          "model": "google/gemma-4-26b-a4b-it:free"
+        },
+        "liquid/lfm-3-1.7b:free": {
+          "status": "skipped",
+          "message": "未配置 OPENROUTER_KEY",
+          "checked_at": "2026-11-13T00:32:52Z",
+          "model": "liquid/lfm-3-1.7b:free"
+        },
+        "nvidia/nemotron-3-ultra-550b-a55b:free": {
+          "status": "skipped",
+          "message": "未配置 OPENROUTER_KEY",
+          "checked_at": "2026-11-13T00:32:52Z",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free"
+        },
+        "thinkingmachines/inkling-2-small:free": {
+          "status": "skipped",
+          "message": "未配置 OPENROUTER_KEY",
+          "checked_at": "2026-11-13T00:32:52Z",
+          "model": "thinkingmachines/inkling-2-small:free"
+        },
+        "nvidia/nemotron-3.5-lightning:free": {
+          "status": "skipped",
+          "message": "未配置 OPENROUTER_KEY",
+          "checked_at": "2026-11-13T00:32:52Z",
+          "model": "nvidia/nemotron-3.5-lightning:free"
+        },
+        "baidu/ernie-5.5-flash-preview:free": {
+          "status": "skipped",
+          "message": "未配置 OPENROUTER_KEY",
+          "checked_at": "2026-11-13T00:32:52Z",
+          "model": "baidu/ernie-5.5-flash-preview:free"
         },
         "xingchen-agi/xing4.0-29b-a4b:free": {
           "status": "skipped",
           "message": "未配置 OPENROUTER_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "xingchen-agi/xing4.0-29b-a4b:free"
         },
         "stealth/crouton-alpha": {
           "status": "skipped",
           "message": "未配置 OPENROUTER_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "stealth/crouton-alpha"
+        },
+        "particle-ai/particle-1:free": {
+          "status": "skipped",
+          "message": "未配置 OPENROUTER_KEY",
+          "checked_at": "2026-11-13T00:32:52Z",
+          "model": "particle-ai/particle-1:free"
+        },
+        "apodex/apodex-1.1-mini:free": {
+          "status": "skipped",
+          "message": "未配置 OPENROUTER_KEY",
+          "checked_at": "2026-11-13T00:32:52Z",
+          "model": "apodex/apodex-1.1-mini:free"
         }
       }
     },
     "groq": {
       "status": "skipped",
-      "checked_at": "2026-11-12T16:46:24Z",
+      "checked_at": "2026-11-13T00:32:52Z",
       "models": {
-        "openai/gpt-oss-120b": {
-          "status": "skipped",
-          "message": "未配置 GROQ_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
-          "model": "openai/gpt-oss-120b"
-        },
-        "meta-llama/llama-prompt-guard-2-22m": {
-          "status": "skipped",
-          "message": "未配置 GROQ_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
-          "model": "meta-llama/llama-prompt-guard-2-22m"
-        },
-        "qwen/qwen3.8-27b": {
-          "status": "skipped",
-          "message": "未配置 GROQ_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
-          "model": "qwen/qwen3.8-27b"
-        },
         "allam-2-7b": {
           "status": "skipped",
           "message": "未配置 GROQ_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "allam-2-7b"
-        },
-        "whisper-large-v3": {
-          "status": "skipped",
-          "message": "未配置 GROQ_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
-          "model": "whisper-large-v3"
-        },
-        "openai/gpt-oss-20b": {
-          "status": "skipped",
-          "message": "未配置 GROQ_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
-          "model": "openai/gpt-oss-20b"
         },
         "whisper-large-v3-turbo": {
           "status": "skipped",
           "message": "未配置 GROQ_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "whisper-large-v3-turbo"
+        },
+        "qwen/qwen3.8-27b": {
+          "status": "skipped",
+          "message": "未配置 GROQ_KEY",
+          "checked_at": "2026-11-13T00:32:52Z",
+          "model": "qwen/qwen3.8-27b"
         },
         "meta-llama/llama-prompt-guard-2-86m": {
           "status": "skipped",
           "message": "未配置 GROQ_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "meta-llama/llama-prompt-guard-2-86m"
+        },
+        "whisper-large-v3": {
+          "status": "skipped",
+          "message": "未配置 GROQ_KEY",
+          "checked_at": "2026-11-13T00:32:52Z",
+          "model": "whisper-large-v3"
         },
         "openai/gpt-oss-safeguard-20b": {
           "status": "skipped",
           "message": "未配置 GROQ_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "openai/gpt-oss-safeguard-20b"
+        },
+        "meta-llama/llama-prompt-guard-2-22m": {
+          "status": "skipped",
+          "message": "未配置 GROQ_KEY",
+          "checked_at": "2026-11-13T00:32:52Z",
+          "model": "meta-llama/llama-prompt-guard-2-22m"
+        },
+        "openai/gpt-oss-20b": {
+          "status": "skipped",
+          "message": "未配置 GROQ_KEY",
+          "checked_at": "2026-11-13T00:32:52Z",
+          "model": "openai/gpt-oss-20b"
+        },
+        "openai/gpt-oss-120b": {
+          "status": "skipped",
+          "message": "未配置 GROQ_KEY",
+          "checked_at": "2026-11-13T00:32:52Z",
+          "model": "openai/gpt-oss-120b"
         }
       }
     },
     "gemini": {
       "status": "skipped",
-      "checked_at": "2026-11-12T16:46:24Z",
+      "checked_at": "2026-11-13T00:32:52Z",
       "models": {
-        "gemini-3.5-flash-lite": {
+        "gemma-4-26b-a4b-it": {
           "status": "skipped",
           "message": "未配置 GEMINI_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
-          "model": "gemini-3.5-flash-lite"
+          "checked_at": "2026-11-13T00:32:52Z",
+          "model": "gemma-4-26b-a4b-it"
         },
-        "aion-labs/aion-3.0": {
+        "gemini-2.5-pro": {
           "status": "skipped",
           "message": "未配置 GEMINI_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
-          "model": "aion-labs/aion-3.0"
-        },
-        "aion-labs/aion-3.0-mini": {
-          "status": "skipped",
-          "message": "未配置 GEMINI_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
-          "model": "aion-labs/aion-3.0-mini"
+          "checked_at": "2026-11-13T00:32:52Z",
+          "model": "gemini-2.5-pro"
         },
         "gemini-2.5-flash-lite": {
           "status": "skipped",
           "message": "未配置 GEMINI_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "gemini-2.5-flash-lite"
+        },
+        "gemini-3.6-flash": {
+          "status": "skipped",
+          "message": "未配置 GEMINI_KEY",
+          "checked_at": "2026-11-13T00:32:52Z",
+          "model": "gemini-3.6-flash"
+        },
+        "aion-labs/aion-3.5-mini": {
+          "status": "skipped",
+          "message": "未配置 GEMINI_KEY",
+          "checked_at": "2026-11-13T00:32:52Z",
+          "model": "aion-labs/aion-3.5-mini"
+        },
+        "aion-labs/aion-2.0": {
+          "status": "skipped",
+          "message": "未配置 GEMINI_KEY",
+          "checked_at": "2026-11-13T00:32:52Z",
+          "model": "aion-labs/aion-2.0"
+        },
+        "aion-labs/aion-3.0": {
+          "status": "skipped",
+          "message": "未配置 GEMINI_KEY",
+          "checked_at": "2026-11-13T00:32:52Z",
+          "model": "aion-labs/aion-3.0"
         },
         "gemini-3-flash-preview": {
           "status": "skipped",
           "message": "未配置 GEMINI_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "gemini-3-flash-preview"
         },
-        "gemini-3.1-flash-lite": {
+        "gemma-4-31b-it": {
           "status": "skipped",
           "message": "未配置 GEMINI_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
-          "model": "gemini-3.1-flash-lite"
+          "checked_at": "2026-11-13T00:32:52Z",
+          "model": "gemma-4-31b-it"
+        },
+        "aion-labs/aion-3.0-mini": {
+          "status": "skipped",
+          "message": "未配置 GEMINI_KEY",
+          "checked_at": "2026-11-13T00:32:52Z",
+          "model": "aion-labs/aion-3.0-mini"
         },
         "aion-labs/aion-rp-llama-3.1-8b": {
           "status": "skipped",
           "message": "未配置 GEMINI_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "aion-labs/aion-rp-llama-3.1-8b"
         },
         "gemini-2.5-flash": {
           "status": "skipped",
           "message": "未配置 GEMINI_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "gemini-2.5-flash"
         },
-        "aion-labs/aion-2.0": {
+        "gemini-3.1-flash-lite": {
           "status": "skipped",
           "message": "未配置 GEMINI_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
-          "model": "aion-labs/aion-2.0"
-        },
-        "gemini-3.6-flash": {
-          "status": "skipped",
-          "message": "未配置 GEMINI_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
-          "model": "gemini-3.6-flash"
-        },
-        "gemini-2.5-pro": {
-          "status": "skipped",
-          "message": "未配置 GEMINI_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
-          "model": "gemini-2.5-pro"
-        },
-        "gemma-4-26b-a4b-it": {
-          "status": "skipped",
-          "message": "未配置 GEMINI_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
-          "model": "gemma-4-26b-a4b-it"
-        },
-        "aion-labs/aion-3.5-mini": {
-          "status": "skipped",
-          "message": "未配置 GEMINI_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
-          "model": "aion-labs/aion-3.5-mini"
-        },
-        "gemma-4-31b-it": {
-          "status": "skipped",
-          "message": "未配置 GEMINI_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
-          "model": "gemma-4-31b-it"
+          "checked_at": "2026-11-13T00:32:52Z",
+          "model": "gemini-3.1-flash-lite"
         },
         "gemini-3.5-flash": {
           "status": "skipped",
           "message": "未配置 GEMINI_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "gemini-3.5-flash"
         },
         "gemini-3.8-flash": {
           "status": "skipped",
           "message": "未配置 GEMINI_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "gemini-3.8-flash"
+        },
+        "gemini-3.5-flash-lite": {
+          "status": "skipped",
+          "message": "未配置 GEMINI_KEY",
+          "checked_at": "2026-11-13T00:32:52Z",
+          "model": "gemini-3.5-flash-lite"
         }
       }
     },
     "cerebras": {
       "status": "skipped",
-      "checked_at": "2026-11-12T16:46:24Z",
+      "checked_at": "2026-11-13T00:32:52Z",
       "models": {
         "gpt-oss-120b": {
           "status": "skipped",
           "message": "未配置 CEREBRAS_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "gpt-oss-120b"
         },
         "qwen-3.8-27b": {
           "status": "skipped",
           "message": "未配置 CEREBRAS_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "qwen-3.8-27b"
         }
       }
     },
     "mistral": {
       "status": "skipped",
-      "checked_at": "2026-11-12T16:46:24Z",
+      "checked_at": "2026-11-13T00:32:52Z",
       "models": {
-        "ministral-8b-2512": {
-          "status": "skipped",
-          "message": "未配置 MISTRAL_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
-          "model": "ministral-8b-2512"
-        },
         "ministral-14b-2512": {
           "status": "skipped",
           "message": "未配置 MISTRAL_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "ministral-14b-2512"
-        },
-        "mistral-small-latest": {
-          "status": "skipped",
-          "message": "未配置 MISTRAL_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
-          "model": "mistral-small-latest"
-        },
-        "mistral-large-2512": {
-          "status": "skipped",
-          "message": "未配置 MISTRAL_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
-          "model": "mistral-large-2512"
         },
         "mistral-large-4": {
           "status": "skipped",
           "message": "未配置 MISTRAL_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "mistral-large-4"
-        },
-        "mistral-large-latest": {
-          "status": "skipped",
-          "message": "未配置 MISTRAL_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
-          "model": "mistral-large-latest"
-        },
-        "mistral-small-2603": {
-          "status": "skipped",
-          "message": "未配置 MISTRAL_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
-          "model": "mistral-small-2603"
-        },
-        "mistral-medium-3-5": {
-          "status": "skipped",
-          "message": "未配置 MISTRAL_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
-          "model": "mistral-medium-3-5"
-        },
-        "codestral-2508": {
-          "status": "skipped",
-          "message": "未配置 MISTRAL_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
-          "model": "codestral-2508"
         },
         "Codestral": {
           "status": "skipped",
           "message": "未配置 MISTRAL_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "Codestral"
+        },
+        "mistral-large-2512": {
+          "status": "skipped",
+          "message": "未配置 MISTRAL_KEY",
+          "checked_at": "2026-11-13T00:32:52Z",
+          "model": "mistral-large-2512"
+        },
+        "mistral-small-latest": {
+          "status": "skipped",
+          "message": "未配置 MISTRAL_KEY",
+          "checked_at": "2026-11-13T00:32:52Z",
+          "model": "mistral-small-latest"
+        },
+        "mistral-medium-3-5": {
+          "status": "skipped",
+          "message": "未配置 MISTRAL_KEY",
+          "checked_at": "2026-11-13T00:32:52Z",
+          "model": "mistral-medium-3-5"
+        },
+        "mistral-small-2603": {
+          "status": "skipped",
+          "message": "未配置 MISTRAL_KEY",
+          "checked_at": "2026-11-13T00:32:52Z",
+          "model": "mistral-small-2603"
+        },
+        "codestral-2508": {
+          "status": "skipped",
+          "message": "未配置 MISTRAL_KEY",
+          "checked_at": "2026-11-13T00:32:52Z",
+          "model": "codestral-2508"
+        },
+        "ministral-8b-2512": {
+          "status": "skipped",
+          "message": "未配置 MISTRAL_KEY",
+          "checked_at": "2026-11-13T00:32:52Z",
+          "model": "ministral-8b-2512"
         },
         "mistral-moderation-2603": {
           "status": "skipped",
           "message": "未配置 MISTRAL_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "mistral-moderation-2603"
+        },
+        "mistral-large-latest": {
+          "status": "skipped",
+          "message": "未配置 MISTRAL_KEY",
+          "checked_at": "2026-11-13T00:32:52Z",
+          "model": "mistral-large-latest"
         },
         "codestral-latest": {
           "status": "skipped",
           "message": "未配置 MISTRAL_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "codestral-latest"
         }
       }
     },
     "together": {
       "status": "skipped",
-      "checked_at": "2026-11-12T16:46:24Z",
+      "checked_at": "2026-11-13T00:32:52Z",
       "models": {
         "Prism-ML/Ternary-Bonsai-27B": {
           "status": "skipped",
           "message": "未配置 TOGETHER_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "Prism-ML/Ternary-Bonsai-27B"
         },
         "together/Tev1-4B-experimental": {
           "status": "skipped",
           "message": "未配置 TOGETHER_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "together/Tev1-4B-experimental"
         }
       }
     },
     "nvidia": {
       "status": "skipped",
-      "checked_at": "2026-11-12T16:46:24Z",
+      "checked_at": "2026-11-13T00:32:52Z",
       "models": {
-        "writer/palmyra-fin-70b-32k": {
+        "writer/palmyra-med-70b": {
           "status": "skipped",
           "message": "未配置 NVIDIA_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
-          "model": "writer/palmyra-fin-70b-32k"
-        },
-        "nvidia/nemotron-3-ultra-550b-a55b": {
-          "status": "skipped",
-          "message": "未配置 NVIDIA_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
-          "model": "nvidia/nemotron-3-ultra-550b-a55b"
-        },
-        "minimaxai/minimax-m3.1-flash": {
-          "status": "skipped",
-          "message": "未配置 NVIDIA_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
-          "model": "minimaxai/minimax-m3.1-flash"
-        },
-        "moonshotai/kimi-k2.6": {
-          "status": "skipped",
-          "message": "未配置 NVIDIA_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
-          "model": "moonshotai/kimi-k2.6"
-        },
-        "z-ai/glm-5-3": {
-          "status": "skipped",
-          "message": "未配置 NVIDIA_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
-          "model": "z-ai/glm-5-3"
-        },
-        "deepseek-ai/deepseek-v4.1-flash": {
-          "status": "skipped",
-          "message": "未配置 NVIDIA_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
-          "model": "deepseek-ai/deepseek-v4.1-flash"
-        },
-        "nvidia/llama3-chatqa-1.5-70b": {
-          "status": "skipped",
-          "message": "未配置 NVIDIA_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
-          "model": "nvidia/llama3-chatqa-1.5-70b"
+          "checked_at": "2026-11-13T00:32:52Z",
+          "model": "writer/palmyra-med-70b"
         },
         "moonshotai/kimi-k3": {
           "status": "skipped",
           "message": "未配置 NVIDIA_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "moonshotai/kimi-k3"
         },
-        "meta/codellama-70b": {
+        "writer/palmyra-fin-70b-32k": {
           "status": "skipped",
           "message": "未配置 NVIDIA_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
-          "model": "meta/codellama-70b"
+          "checked_at": "2026-11-13T00:32:52Z",
+          "model": "writer/palmyra-fin-70b-32k"
         },
-        "z-ai/glm-5.3-flash": {
+        "nvidia/llama3-chatqa-1.5-70b": {
           "status": "skipped",
           "message": "未配置 NVIDIA_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
-          "model": "z-ai/glm-5.3-flash"
+          "checked_at": "2026-11-13T00:32:52Z",
+          "model": "nvidia/llama3-chatqa-1.5-70b"
         },
-        "01-ai/yi-large": {
+        "moonshotai/kimi-k2.6": {
           "status": "skipped",
           "message": "未配置 NVIDIA_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
-          "model": "01-ai/yi-large"
-        },
-        "writer/palmyra-med-70b-32k": {
-          "status": "skipped",
-          "message": "未配置 NVIDIA_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
-          "model": "writer/palmyra-med-70b-32k"
+          "checked_at": "2026-11-13T00:32:52Z",
+          "model": "moonshotai/kimi-k2.6"
         },
         "openai/gpt-oss-20b": {
           "status": "skipped",
           "message": "未配置 NVIDIA_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "openai/gpt-oss-20b"
         },
-        "writer/palmyra-med-70b": {
+        "minimaxai/minimax-m3.1-flash": {
           "status": "skipped",
           "message": "未配置 NVIDIA_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
-          "model": "writer/palmyra-med-70b"
+          "checked_at": "2026-11-13T00:32:52Z",
+          "model": "minimaxai/minimax-m3.1-flash"
+        },
+        "01-ai/yi-large": {
+          "status": "skipped",
+          "message": "未配置 NVIDIA_KEY",
+          "checked_at": "2026-11-13T00:32:52Z",
+          "model": "01-ai/yi-large"
         },
         "stepfun-ai/step-5-preview": {
           "status": "skipped",
           "message": "未配置 NVIDIA_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "stepfun-ai/step-5-preview"
         },
-        "poolside/laguna-xs-2.1": {
+        "deepseek-ai/deepseek-v4.1-flash": {
           "status": "skipped",
           "message": "未配置 NVIDIA_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
-          "model": "poolside/laguna-xs-2.1"
+          "checked_at": "2026-11-13T00:32:52Z",
+          "model": "deepseek-ai/deepseek-v4.1-flash"
         },
         "mistralai/mistral-large-4-1t-a52b": {
           "status": "skipped",
           "message": "未配置 NVIDIA_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "mistralai/mistral-large-4-1t-a52b"
+        },
+        "writer/palmyra-med-70b-32k": {
+          "status": "skipped",
+          "message": "未配置 NVIDIA_KEY",
+          "checked_at": "2026-11-13T00:32:52Z",
+          "model": "writer/palmyra-med-70b-32k"
+        },
+        "poolside/laguna-xs-2.1": {
+          "status": "skipped",
+          "message": "未配置 NVIDIA_KEY",
+          "checked_at": "2026-11-13T00:32:52Z",
+          "model": "poolside/laguna-xs-2.1"
+        },
+        "z-ai/glm-5.3-flash": {
+          "status": "skipped",
+          "message": "未配置 NVIDIA_KEY",
+          "checked_at": "2026-11-13T00:32:52Z",
+          "model": "z-ai/glm-5.3-flash"
+        },
+        "meta/codellama-70b": {
+          "status": "skipped",
+          "message": "未配置 NVIDIA_KEY",
+          "checked_at": "2026-11-13T00:32:52Z",
+          "model": "meta/codellama-70b"
+        },
+        "z-ai/glm-5-3": {
+          "status": "skipped",
+          "message": "未配置 NVIDIA_KEY",
+          "checked_at": "2026-11-13T00:32:52Z",
+          "model": "z-ai/glm-5-3"
+        },
+        "nvidia/nemotron-3-ultra-550b-a55b": {
+          "status": "skipped",
+          "message": "未配置 NVIDIA_KEY",
+          "checked_at": "2026-11-13T00:32:52Z",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b"
         },
         "ibm/granite-34b-code-instruct": {
           "status": "skipped",
           "message": "未配置 NVIDIA_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "ibm/granite-34b-code-instruct"
         },
         "bigcode/starcoder2-15b": {
           "status": "skipped",
           "message": "未配置 NVIDIA_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "bigcode/starcoder2-15b"
         },
         "google/deplot": {
           "status": "skipped",
           "message": "未配置 NVIDIA_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "google/deplot"
         },
         "google/gemma-2b": {
           "status": "skipped",
           "message": "未配置 NVIDIA_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "google/gemma-2b"
         },
         "google/recurrentgemma-2b": {
           "status": "skipped",
           "message": "未配置 NVIDIA_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "google/recurrentgemma-2b"
         },
         "microsoft/kosmos-2": {
           "status": "skipped",
           "message": "未配置 NVIDIA_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "microsoft/kosmos-2"
         },
         "microsoft/phi-3-vision-128k-instruct": {
           "status": "skipped",
           "message": "未配置 NVIDIA_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "microsoft/phi-3-vision-128k-instruct"
         },
         "microsoft/phi-3.5-moe-instruct": {
           "status": "skipped",
           "message": "未配置 NVIDIA_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "microsoft/phi-3.5-moe-instruct"
         },
         "mistralai/mixtral-8x22b-v0.1": {
           "status": "skipped",
           "message": "未配置 NVIDIA_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "mistralai/mixtral-8x22b-v0.1"
         },
         "nvidia/llama-3.1-nemotron-51b-instruct": {
           "status": "skipped",
           "message": "未配置 NVIDIA_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "nvidia/llama-3.1-nemotron-51b-instruct"
         },
         "nvidia/nemotron-4-340b-instruct": {
           "status": "skipped",
           "message": "未配置 NVIDIA_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "nvidia/nemotron-4-340b-instruct"
         },
         "nvidia/nemotron-4-340b-reward": {
           "status": "skipped",
           "message": "未配置 NVIDIA_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "nvidia/nemotron-4-340b-reward"
         },
         "nvidia/nemotron-parse": {
           "status": "skipped",
           "message": "未配置 NVIDIA_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "nvidia/nemotron-parse"
         },
         "nvidia/neva-22b": {
           "status": "skipped",
           "message": "未配置 NVIDIA_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "nvidia/neva-22b"
         },
         "nvidia/nvclip": {
           "status": "skipped",
           "message": "未配置 NVIDIA_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "nvidia/nvclip"
         },
         "nvidia/riva-translate-4b-instruct": {
           "status": "skipped",
           "message": "未配置 NVIDIA_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "nvidia/riva-translate-4b-instruct"
         },
         "nvidia/vila": {
           "status": "skipped",
           "message": "未配置 NVIDIA_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "nvidia/vila"
         },
         "writer/palmyra-creative-122b": {
           "status": "skipped",
           "message": "未配置 NVIDIA_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "writer/palmyra-creative-122b"
         },
         "adept/fuyu-8b": {
           "status": "skipped",
           "message": "未配置 NVIDIA_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "adept/fuyu-8b"
         },
         "aisingapore/sea-lion-7b-instruct": {
           "status": "skipped",
           "message": "未配置 NVIDIA_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "aisingapore/sea-lion-7b-instruct"
         },
         "deepseek-ai/deepseek-coder-6.7b-instruct": {
           "status": "skipped",
           "message": "未配置 NVIDIA_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "deepseek-ai/deepseek-coder-6.7b-instruct"
         },
         "google/codegemma-1.1-7b": {
           "status": "skipped",
           "message": "未配置 NVIDIA_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "google/codegemma-1.1-7b"
         },
         "google/codegemma-7b": {
           "status": "skipped",
           "message": "未配置 NVIDIA_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "google/codegemma-7b"
         },
         "ibm/granite-3.0-8b-instruct": {
           "status": "skipped",
           "message": "未配置 NVIDIA_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "ibm/granite-3.0-8b-instruct"
         },
         "ibm/granite-8b-code-instruct": {
           "status": "skipped",
           "message": "未配置 NVIDIA_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "ibm/granite-8b-code-instruct"
         },
         "nv-mistralai/mistral-nemo-12b-instruct": {
           "status": "skipped",
           "message": "未配置 NVIDIA_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "nv-mistralai/mistral-nemo-12b-instruct"
         },
         "nvidia/mistral-nemo-minitron-8b-8k-instruct": {
           "status": "skipped",
           "message": "未配置 NVIDIA_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "nvidia/mistral-nemo-minitron-8b-8k-instruct"
         },
         "zyphra/zamba2-7b-instruct": {
           "status": "skipped",
           "message": "未配置 NVIDIA_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "zyphra/zamba2-7b-instruct"
         },
         "google/diffusiongemma-26b-a4b-it": {
           "status": "skipped",
           "message": "未配置 NVIDIA_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "google/diffusiongemma-26b-a4b-it"
         },
         "mistralai/codestral-22b-instruct-v0.1": {
           "status": "skipped",
           "message": "未配置 NVIDIA_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "mistralai/codestral-22b-instruct-v0.1"
         },
         "nvidia/cosmos-reason2-8b": {
           "status": "skipped",
           "message": "未配置 NVIDIA_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "nvidia/cosmos-reason2-8b"
         },
         "nvidia/ising-calibration-1.5-31b": {
           "status": "skipped",
           "message": "未配置 NVIDIA_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "nvidia/ising-calibration-1.5-31b"
         },
         "nvidia/riva-translate-4b-instruct-v2": {
           "status": "skipped",
           "message": "未配置 NVIDIA_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "nvidia/riva-translate-4b-instruct-v2"
         },
         "nvidia/nemotron-3.5-lightning-30b-a3b": {
           "status": "skipped",
           "message": "未配置 NVIDIA_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "nvidia/nemotron-3.5-lightning-30b-a3b"
         },
         "nvidia/nemotron-parse-2.0": {
           "status": "skipped",
           "message": "未配置 NVIDIA_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "nvidia/nemotron-parse-2.0"
         },
         "nvidia/nemotron-3.5-bolt-e4b": {
           "status": "skipped",
           "message": "未配置 NVIDIA_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "nvidia/nemotron-3.5-bolt-e4b"
         },
         "ibm/granite-3.0-3b-a800m-instruct": {
           "status": "skipped",
           "message": "未配置 NVIDIA_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "ibm/granite-3.0-3b-a800m-instruct"
         },
         "nvidia/nemotron-3.5-content-safety": {
           "status": "skipped",
           "message": "未配置 NVIDIA_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "nvidia/nemotron-3.5-content-safety"
         },
         "mistralai/mistral-large-2-instruct": {
           "status": "skipped",
           "message": "未配置 NVIDIA_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "mistralai/mistral-large-2-instruct"
         },
         "nvidia/llama-3.1-nemotron-ultra-253b-v1": {
           "status": "skipped",
           "message": "未配置 NVIDIA_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "nvidia/llama-3.1-nemotron-ultra-253b-v1"
         },
         "nvidia/nemotron-nano-3-30b-a3b": {
           "status": "skipped",
           "message": "未配置 NVIDIA_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "nvidia/nemotron-nano-3-30b-a3b"
         },
         "nvidia/llama-3.1-nemotron-70b-instruct": {
           "status": "skipped",
           "message": "未配置 NVIDIA_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "nvidia/llama-3.1-nemotron-70b-instruct"
         },
         "ai21labs/jamba-1.5-large-instruct": {
           "status": "skipped",
           "message": "未配置 NVIDIA_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "ai21labs/jamba-1.5-large-instruct"
         },
         "databricks/dbrx-instruct": {
           "status": "skipped",
           "message": "未配置 NVIDIA_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "databricks/dbrx-instruct"
         },
         "meta/llama2-70b": {
           "status": "skipped",
           "message": "未配置 NVIDIA_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "meta/llama2-70b"
         },
         "mistralai/mistral-7b-instruct-v0.3": {
           "status": "skipped",
           "message": "未配置 NVIDIA_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "mistralai/mistral-7b-instruct-v0.3"
         },
         "nvidia/embed-qa-4": {
           "status": "skipped",
           "message": "未配置 NVIDIA_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "nvidia/embed-qa-4"
         },
         "nvidia/llama-3.2-nemoretriever-1b-vlm-embed-v1": {
           "status": "skipped",
           "message": "未配置 NVIDIA_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "nvidia/llama-3.2-nemoretriever-1b-vlm-embed-v1"
         },
         "nvidia/llama-3.2-nv-embedqa-1b-v1": {
           "status": "skipped",
           "message": "未配置 NVIDIA_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "nvidia/llama-3.2-nv-embedqa-1b-v1"
         },
         "nvidia/nemotron-3-embed-1b": {
           "status": "skipped",
           "message": "未配置 NVIDIA_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "nvidia/nemotron-3-embed-1b"
         },
         "nvidia/nemotron-3.5-embed-1b": {
           "status": "skipped",
           "message": "未配置 NVIDIA_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "nvidia/nemotron-3.5-embed-1b"
         },
         "nvidia/nemotron-3.5-embed-8b": {
           "status": "skipped",
           "message": "未配置 NVIDIA_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "nvidia/nemotron-3.5-embed-8b"
         },
         "nvidia/nv-embedqa-mistral-7b-v2": {
           "status": "skipped",
           "message": "未配置 NVIDIA_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "nvidia/nv-embedqa-mistral-7b-v2"
         },
         "snowflake/arctic-embed-l": {
           "status": "skipped",
           "message": "未配置 NVIDIA_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "snowflake/arctic-embed-l"
         },
         "meta/llama-3.2-90b-vision-instruct": {
           "status": "skipped",
           "message": "未配置 NVIDIA_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "meta/llama-3.2-90b-vision-instruct"
         },
         "nvidia/llama-nemotron-embed-vl-1b-v2": {
           "status": "skipped",
           "message": "未配置 NVIDIA_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "nvidia/llama-nemotron-embed-vl-1b-v2"
         },
         "meta/llama-guard-4-12b": {
           "status": "skipped",
           "message": "未配置 NVIDIA_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "meta/llama-guard-4-12b"
         },
         "nvidia/llama-3.1-nemoguard-8b-content-safety": {
           "status": "skipped",
           "message": "未配置 NVIDIA_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "nvidia/llama-3.1-nemoguard-8b-content-safety"
         },
         "mistralai/mistral-large-3-675b-instruct-2512": {
           "status": "skipped",
           "message": "未配置 NVIDIA_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "mistralai/mistral-large-3-675b-instruct-2512"
         },
         "nvidia/llama-3.1-nemoguard-8b-topic-control": {
           "status": "skipped",
           "message": "未配置 NVIDIA_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "nvidia/llama-3.1-nemoguard-8b-topic-control"
         },
         "meta/muse-glimmer-30b": {
           "status": "skipped",
           "message": "未配置 NVIDIA_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "meta/muse-glimmer-30b"
         },
         "google/gemma-3-12b-it": {
           "status": "skipped",
           "message": "未配置 NVIDIA_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "google/gemma-3-12b-it"
         },
         "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning": {
           "status": "skipped",
           "message": "未配置 NVIDIA_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning"
         },
         "nvidia/nemotron-3-super-120b-a12b": {
           "status": "skipped",
           "message": "未配置 NVIDIA_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "nvidia/nemotron-3-super-120b-a12b"
         },
         "google/gemma-4-31b-it": {
           "status": "skipped",
           "message": "未配置 NVIDIA_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "google/gemma-4-31b-it"
         },
         "nvidia/nemotron-3.5-super-vl-120b-a12b": {
           "status": "skipped",
           "message": "未配置 NVIDIA_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "nvidia/nemotron-3.5-super-vl-120b-a12b"
         }
       }
     },
     "sambanova": {
       "status": "skipped",
-      "checked_at": "2026-11-12T16:46:24Z",
+      "checked_at": "2026-11-13T00:32:52Z",
       "models": {
         "DeepSeek-V3.2": {
           "status": "skipped",
           "message": "未配置 SAMBANOVA_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "DeepSeek-V3.2"
         },
         "Meta-Llama-3.3-70B-Instruct": {
           "status": "skipped",
           "message": "未配置 SAMBANOVA_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "Meta-Llama-3.3-70B-Instruct"
         },
         "DeepSeek-V3.1": {
           "status": "skipped",
           "message": "未配置 SAMBANOVA_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "DeepSeek-V3.1"
         },
         "gpt-oss-120b": {
           "status": "skipped",
           "message": "未配置 SAMBANOVA_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "gpt-oss-120b"
         }
       }
     },
     "nebius": {
       "status": "skipped",
-      "checked_at": "2026-11-12T16:46:24Z",
+      "checked_at": "2026-11-13T00:32:52Z",
       "models": {
         "Qwen/Qwen3-235B-A22B": {
           "status": "skipped",
           "message": "未配置 NEBIUS_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "Qwen/Qwen3-235B-A22B"
         },
         "moonshotai/Kimi-K2.5": {
           "status": "skipped",
           "message": "未配置 NEBIUS_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "moonshotai/Kimi-K2.5"
         }
       }
     },
     "novita": {
       "status": "skipped",
-      "checked_at": "2026-11-12T16:46:24Z",
+      "checked_at": "2026-11-13T00:32:52Z",
       "models": {
-        "zai-org/glm-5.3": {
+        "inclusionai/ling-3.0-flash-vl": {
           "status": "skipped",
           "message": "未配置 NOVITA_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
-          "model": "zai-org/glm-5.3"
+          "checked_at": "2026-11-13T00:32:52Z",
+          "model": "inclusionai/ling-3.0-flash-vl"
         },
         "inclusionai/ling-3.0-flash-sante": {
           "status": "skipped",
           "message": "未配置 NOVITA_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "inclusionai/ling-3.0-flash-sante"
         },
         "inclusionai/ling-3.1-flash": {
           "status": "skipped",
           "message": "未配置 NOVITA_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "inclusionai/ling-3.1-flash"
         },
         "deepseek/deepseek-v4.1-flash": {
           "status": "skipped",
           "message": "未配置 NOVITA_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "deepseek/deepseek-v4.1-flash"
-        },
-        "inclusionai/ling-3.0-flash-vl": {
-          "status": "skipped",
-          "message": "未配置 NOVITA_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
-          "model": "inclusionai/ling-3.0-flash-vl"
         },
         "moonshotai/kimi-k3": {
           "status": "skipped",
           "message": "未配置 NOVITA_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "moonshotai/kimi-k3"
         },
         "qwen/qwen3.8-27b": {
           "status": "skipped",
           "message": "未配置 NOVITA_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "qwen/qwen3.8-27b"
+        },
+        "zai-org/glm-5.3": {
+          "status": "skipped",
+          "message": "未配置 NOVITA_KEY",
+          "checked_at": "2026-11-13T00:32:52Z",
+          "model": "zai-org/glm-5.3"
         },
         "meta-llama/llama-3.3-70b-instruct": {
           "status": "skipped",
           "message": "未配置 NOVITA_KEY",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "meta-llama/llama-3.3-70b-instruct"
         }
       }
     },
     "cloudflare": {
       "status": "skipped",
-      "checked_at": "2026-11-12T16:46:24Z",
+      "checked_at": "2026-11-13T00:32:52Z",
       "models": {
-        "@cf/zai-org/glm-4.7-flash": {
-          "status": "skipped",
-          "message": "未配置 CLOUDFLARE_API_TOKEN",
-          "checked_at": "2026-11-12T16:46:24Z",
-          "model": "@cf/zai-org/glm-4.7-flash"
-        },
-        "@cf/meta/llama-3.3-70b-instruct-fp8-fast": {
-          "status": "skipped",
-          "message": "未配置 CLOUDFLARE_API_TOKEN",
-          "checked_at": "2026-11-12T16:46:24Z",
-          "model": "@cf/meta/llama-3.3-70b-instruct-fp8-fast"
-        },
-        "@cf/mistralai/mistral-small-3.1-24b-instruct": {
-          "status": "skipped",
-          "message": "未配置 CLOUDFLARE_API_TOKEN",
-          "checked_at": "2026-11-12T16:46:24Z",
-          "model": "@cf/mistralai/mistral-small-3.1-24b-instruct"
-        },
-        "@cf/deepseek-ai/deepseek-v4-flash-0731": {
-          "status": "skipped",
-          "message": "未配置 CLOUDFLARE_API_TOKEN",
-          "checked_at": "2026-11-12T16:46:24Z",
-          "model": "@cf/deepseek-ai/deepseek-v4-flash-0731"
-        },
-        "@cf/meta/llama-4-scout-17b-16e-instruct": {
-          "status": "skipped",
-          "message": "未配置 CLOUDFLARE_API_TOKEN",
-          "checked_at": "2026-11-12T16:46:24Z",
-          "model": "@cf/meta/llama-4-scout-17b-16e-instruct"
-        },
-        "@cf/openai/gpt-oss-120b": {
-          "status": "skipped",
-          "message": "未配置 CLOUDFLARE_API_TOKEN",
-          "checked_at": "2026-11-12T16:46:24Z",
-          "model": "@cf/openai/gpt-oss-120b"
-        },
-        "@cf/zai-org/glm-5.3-flash": {
-          "status": "skipped",
-          "message": "未配置 CLOUDFLARE_API_TOKEN",
-          "checked_at": "2026-11-12T16:46:24Z",
-          "model": "@cf/zai-org/glm-5.3-flash"
-        },
-        "@cf/baai/bge-m3": {
-          "status": "skipped",
-          "message": "未配置 CLOUDFLARE_API_TOKEN",
-          "checked_at": "2026-11-12T16:46:24Z",
-          "model": "@cf/baai/bge-m3"
-        },
-        "@cf/deepseek-ai/deepseek-v4-pro-0813": {
-          "status": "skipped",
-          "message": "未配置 CLOUDFLARE_API_TOKEN",
-          "checked_at": "2026-11-12T16:46:24Z",
-          "model": "@cf/deepseek-ai/deepseek-v4-pro-0813"
-        },
         "@cf/nvidia/nemotron-3-120b-a12b": {
           "status": "skipped",
           "message": "未配置 CLOUDFLARE_API_TOKEN",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "@cf/nvidia/nemotron-3-120b-a12b"
-        },
-        "@cf/moonshotai/kimi-k2.7-code": {
-          "status": "skipped",
-          "message": "未配置 CLOUDFLARE_API_TOKEN",
-          "checked_at": "2026-11-12T16:46:24Z",
-          "model": "@cf/moonshotai/kimi-k2.7-code"
-        },
-        "@cf/google/gemma-4-26b-a4b-it": {
-          "status": "skipped",
-          "message": "未配置 CLOUDFLARE_API_TOKEN",
-          "checked_at": "2026-11-12T16:46:24Z",
-          "model": "@cf/google/gemma-4-26b-a4b-it"
         },
         "@cf/baai/bge-large-en-v1.5": {
           "status": "skipped",
           "message": "未配置 CLOUDFLARE_API_TOKEN",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "@cf/baai/bge-large-en-v1.5"
+        },
+        "@cf/meta/llama-4-scout-17b-16e-instruct": {
+          "status": "skipped",
+          "message": "未配置 CLOUDFLARE_API_TOKEN",
+          "checked_at": "2026-11-13T00:32:52Z",
+          "model": "@cf/meta/llama-4-scout-17b-16e-instruct"
+        },
+        "@cf/zai-org/glm-4.7-flash": {
+          "status": "skipped",
+          "message": "未配置 CLOUDFLARE_API_TOKEN",
+          "checked_at": "2026-11-13T00:32:52Z",
+          "model": "@cf/zai-org/glm-4.7-flash"
+        },
+        "@cf/deepseek-ai/deepseek-v4-flash-0731": {
+          "status": "skipped",
+          "message": "未配置 CLOUDFLARE_API_TOKEN",
+          "checked_at": "2026-11-13T00:32:52Z",
+          "model": "@cf/deepseek-ai/deepseek-v4-flash-0731"
+        },
+        "@cf/google/gemma-4-26b-a4b-it": {
+          "status": "skipped",
+          "message": "未配置 CLOUDFLARE_API_TOKEN",
+          "checked_at": "2026-11-13T00:32:52Z",
+          "model": "@cf/google/gemma-4-26b-a4b-it"
+        },
+        "@cf/deepseek-ai/deepseek-v4-pro-0813": {
+          "status": "skipped",
+          "message": "未配置 CLOUDFLARE_API_TOKEN",
+          "checked_at": "2026-11-13T00:32:52Z",
+          "model": "@cf/deepseek-ai/deepseek-v4-pro-0813"
+        },
+        "@cf/baai/bge-m3": {
+          "status": "skipped",
+          "message": "未配置 CLOUDFLARE_API_TOKEN",
+          "checked_at": "2026-11-13T00:32:52Z",
+          "model": "@cf/baai/bge-m3"
+        },
+        "@cf/mistralai/mistral-small-3.1-24b-instruct": {
+          "status": "skipped",
+          "message": "未配置 CLOUDFLARE_API_TOKEN",
+          "checked_at": "2026-11-13T00:32:52Z",
+          "model": "@cf/mistralai/mistral-small-3.1-24b-instruct"
         },
         "@cf/deepseek-ai/deepseek-v4.1-flash-1017": {
           "status": "skipped",
           "message": "未配置 CLOUDFLARE_API_TOKEN",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "@cf/deepseek-ai/deepseek-v4.1-flash-1017"
         },
         "@cf/qwen/qwen3.8-27b": {
           "status": "skipped",
           "message": "未配置 CLOUDFLARE_API_TOKEN",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "@cf/qwen/qwen3.8-27b"
+        },
+        "@cf/meta/llama-3.3-70b-instruct-fp8-fast": {
+          "status": "skipped",
+          "message": "未配置 CLOUDFLARE_API_TOKEN",
+          "checked_at": "2026-11-13T00:32:52Z",
+          "model": "@cf/meta/llama-3.3-70b-instruct-fp8-fast"
+        },
+        "@cf/zai-org/glm-5.3-flash": {
+          "status": "skipped",
+          "message": "未配置 CLOUDFLARE_API_TOKEN",
+          "checked_at": "2026-11-13T00:32:52Z",
+          "model": "@cf/zai-org/glm-5.3-flash"
+        },
+        "@cf/moonshotai/kimi-k2.7-code": {
+          "status": "skipped",
+          "message": "未配置 CLOUDFLARE_API_TOKEN",
+          "checked_at": "2026-11-13T00:32:52Z",
+          "model": "@cf/moonshotai/kimi-k2.7-code"
+        },
+        "@cf/openai/gpt-oss-120b": {
+          "status": "skipped",
+          "message": "未配置 CLOUDFLARE_API_TOKEN",
+          "checked_at": "2026-11-13T00:32:52Z",
+          "model": "@cf/openai/gpt-oss-120b"
         },
         "@cf/google/gemma-2b-it-lora": {
           "status": "skipped",
           "message": "未配置 CLOUDFLARE_API_TOKEN",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "@cf/google/gemma-2b-it-lora"
         },
         "@cf/moonshotai/kimi-k2.6": {
           "status": "skipped",
           "message": "未配置 CLOUDFLARE_API_TOKEN",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "@cf/moonshotai/kimi-k2.6"
         },
         "@cf/ibm-granite/granite-4.0-h-micro": {
           "status": "skipped",
           "message": "未配置 CLOUDFLARE_API_TOKEN",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "@cf/ibm-granite/granite-4.0-h-micro"
         },
         "@cf/baai/bge-small-en-v1.5": {
           "status": "skipped",
           "message": "未配置 CLOUDFLARE_API_TOKEN",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "@cf/baai/bge-small-en-v1.5"
         },
         "@cf/zai-org/glm-5.2": {
           "status": "skipped",
           "message": "未配置 CLOUDFLARE_API_TOKEN",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "@cf/zai-org/glm-5.2"
         },
         "@cf/baai/bge-base-en-v1.5": {
           "status": "skipped",
           "message": "未配置 CLOUDFLARE_API_TOKEN",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "@cf/baai/bge-base-en-v1.5"
         },
         "@cf/aisingapore/gemma-sea-lion-v4-27b-it": {
           "status": "skipped",
           "message": "未配置 CLOUDFLARE_API_TOKEN",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "@cf/aisingapore/gemma-sea-lion-v4-27b-it"
         },
         "@cf/openai/gpt-oss-20b": {
           "status": "skipped",
           "message": "未配置 CLOUDFLARE_API_TOKEN",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "@cf/openai/gpt-oss-20b"
         },
         "@cf/moondream/moondream3.1-9B-A2B": {
           "status": "skipped",
           "message": "未配置 CLOUDFLARE_API_TOKEN",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "@cf/moondream/moondream3.1-9B-A2B"
         },
         "@cf/zai-org/glm-5.3": {
           "status": "skipped",
           "message": "未配置 CLOUDFLARE_API_TOKEN",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "@cf/zai-org/glm-5.3"
         },
         "@cf/mistral/mistral-7b-instruct-v0.2-lora": {
           "status": "skipped",
           "message": "未配置 CLOUDFLARE_API_TOKEN",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "@cf/mistral/mistral-7b-instruct-v0.2-lora"
         },
         "@cf/meta-llama/llama-2-7b-chat-hf-lora": {
           "status": "skipped",
           "message": "未配置 CLOUDFLARE_API_TOKEN",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "@cf/meta-llama/llama-2-7b-chat-hf-lora"
         },
         "@cf/google/gemma-7b-it-lora": {
           "status": "skipped",
           "message": "未配置 CLOUDFLARE_API_TOKEN",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "@cf/google/gemma-7b-it-lora"
         },
         "@cf/daily-co/phonellm-mini-alpha-2": {
           "status": "skipped",
           "message": "未配置 CLOUDFLARE_API_TOKEN",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "@cf/daily-co/phonellm-mini-alpha-2"
         },
         "@cf/deepseek-ai/deepseek-r1-distill-qwen-32b": {
           "status": "skipped",
           "message": "未配置 CLOUDFLARE_API_TOKEN",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "@cf/deepseek-ai/deepseek-r1-distill-qwen-32b"
         },
         "@cf/qwen/qwen3-30b-a3b-fp8": {
           "status": "skipped",
           "message": "未配置 CLOUDFLARE_API_TOKEN",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "@cf/qwen/qwen3-30b-a3b-fp8"
         },
         "@cf/qwen/qwq-32b": {
           "status": "skipped",
           "message": "未配置 CLOUDFLARE_API_TOKEN",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "@cf/qwen/qwq-32b"
         },
         "@cf/qwen/qwen2.5-coder-32b-instruct": {
           "status": "skipped",
           "message": "未配置 CLOUDFLARE_API_TOKEN",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "@cf/qwen/qwen2.5-coder-32b-instruct"
         },
         "@cf/meta/llama-3.2-3b-instruct": {
           "status": "skipped",
           "message": "未配置 CLOUDFLARE_API_TOKEN",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "@cf/meta/llama-3.2-3b-instruct"
         },
         "@cf/meta/llama-3.1-8b-instruct-fp8": {
           "status": "skipped",
           "message": "未配置 CLOUDFLARE_API_TOKEN",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "@cf/meta/llama-3.1-8b-instruct-fp8"
         },
         "@cf/meta/llama-guard-3-8b": {
           "status": "skipped",
           "message": "未配置 CLOUDFLARE_API_TOKEN",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "@cf/meta/llama-guard-3-8b"
         },
         "@cf/qwen/qwen3-embedding-0.6b": {
           "status": "skipped",
           "message": "未配置 CLOUDFLARE_API_TOKEN",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "@cf/qwen/qwen3-embedding-0.6b"
         },
         "@cf/pfnet/plamo-embedding-1b": {
           "status": "skipped",
           "message": "未配置 CLOUDFLARE_API_TOKEN",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "@cf/pfnet/plamo-embedding-1b"
         },
         "@cf/google/embeddinggemma-300m": {
           "status": "skipped",
           "message": "未配置 CLOUDFLARE_API_TOKEN",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "@cf/google/embeddinggemma-300m"
         },
         "@cf/meta/llama-3.2-1b-instruct": {
           "status": "skipped",
           "message": "未配置 CLOUDFLARE_API_TOKEN",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "@cf/meta/llama-3.2-1b-instruct"
         },
         "@cf/black-forest-labs/flux-2-dev": {
           "status": "skipped",
           "message": "未配置 CLOUDFLARE_API_TOKEN",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "@cf/black-forest-labs/flux-2-dev"
         },
         "@cf/openai/whisper-large-v3-turbo": {
           "status": "skipped",
           "message": "未配置 CLOUDFLARE_API_TOKEN",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "@cf/openai/whisper-large-v3-turbo"
         },
         "@cf/utter-project/eurollm-9b-it": {
           "status": "skipped",
           "message": "未配置 CLOUDFLARE_API_TOKEN",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "@cf/utter-project/eurollm-9b-it"
         },
         "@cf/swiss-ai/apertus-v1.5-8b": {
           "status": "skipped",
           "message": "未配置 CLOUDFLARE_API_TOKEN",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "@cf/swiss-ai/apertus-v1.5-8b"
         },
         "@cf/meta/llama-3.2-11b-vision-instruct": {
           "status": "skipped",
           "message": "未配置 CLOUDFLARE_API_TOKEN",
-          "checked_at": "2026-11-12T16:46:24Z",
+          "checked_at": "2026-11-13T00:32:52Z",
           "model": "@cf/meta/llama-3.2-11b-vision-instruct"
         }
       }

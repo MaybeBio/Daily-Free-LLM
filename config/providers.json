@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-12T16:45:42Z",
+  "updated_at": "2026-11-13T00:32:42Z",
   "note": "唯一事实源。可手动编辑；bootstrap 只补缺，不覆盖已有非空字段（--force 除外）。",
   "providers": [
     {
@@ -540,7 +540,7 @@
           "id": "koboldcpp/gemma-4-E4B-it",
           "name": "Gemma 4 E4B IT",
           "context": 65000,
-          "tools": null,
+          "tools": true,
           "modalities": [
             "text"
           ],
@@ -582,6 +582,35 @@
           "id": "koboldcpp/Qwen3-14B",
           "name": "koboldcpp/Qwen3-14B",
           "context": 4096,
+          "tools": true,
+          "modalities": [
+            "text"
+          ],
+          "note": "",
+          "status": null,
+          "http_status": null,
+          "latency_ms": null,
+          "checked_at": null
+        },
+        {
+          "id": "koboldcpp/Cydonia-24B-v4zg-Q4_K_M",
+          "name": "koboldcpp/Cydonia-24B-v4zg-Q4_K_M",
+          "context": 12288,
+          "tools": false,
+          "modalities": [
+            "text",
+            "image"
+          ],
+          "note": "",
+          "status": null,
+          "http_status": null,
+          "latency_ms": null,
+          "checked_at": null
+        },
+        {
+          "id": "lmstudio/Qwen3.6-35B-A3B",
+          "name": "lmstudio/Qwen3.6-35B-A3B",
+          "context": 8192,
           "tools": true,
           "modalities": [
             "text"
@@ -3729,6 +3758,35 @@
             "text"
           ],
           "note": "",
+          "status": null,
+          "http_status": null,
+          "latency_ms": null,
+          "checked_at": null
+        },
+        {
+          "id": "particle-ai/particle-1:free",
+          "name": "Particle AI: Particle-1 (free)",
+          "context": 1048576,
+          "tools": true,
+          "modalities": [
+            "text",
+            "image"
+          ],
+          "note": "OpenRouter 免费模型（prompt/completion 单价均为 0）",
+          "status": null,
+          "http_status": null,
+          "latency_ms": null,
+          "checked_at": null
+        },
+        {
+          "id": "apodex/apodex-1.1-mini:free",
+          "name": "Apodex: Apodex 1.1 Mini (free)",
+          "context": 262144,
+          "tools": true,
+          "modalities": [
+            "text"
+          ],
+          "note": "OpenRouter 免费模型（prompt/completion 单价均为 0）",
           "status": null,
           "http_status": null,
           "latency_ms": null,
@@ -8002,7 +8060,7 @@
       "region": "global",
       "free_nature": "monthly",
       "access": {
-        "phone": "unknown",
+        "phone": "not_required",
         "realname": "unknown",
         "card": "unknown",
         "email": "required",
@@ -8016,6 +8074,8 @@
         "https://docs.cohere.com/docs/rate-limits",
         "https://free-llm.com/",
         "https://free-llm.com/catalog.json",
+        "https://freellm.net/models/",
+        "https://freellm.net/providers/cohere",
         "https://raw.githubusercontent.com/nejib1/Free-LLM/main/README.md"
       ],
       "homepage": "https://docs.cohere.com/docs/rate-limits",
@@ -11461,7 +11521,7 @@
       ],
       "region": "global",
       "access": {
-        "phone": "unknown",
+        "phone": "not_required",
         "realname": "unknown",
         "card": "unknown",
         "email": "unknown",
@@ -11471,14 +11531,78 @@
       "notes": "额度性质: Free, no billing",
       "representative_models": "Aion 2.0, Aion 3.0 Mini, Aion 3.5 Mini",
       "sources": [
+        "https://free-llm.com/",
+        "https://freellm.net/models/",
+        "https://freellm.net/providers/aion-labs",
+        "https://raw.githubusercontent.com/nejib1/Free-LLM/main/README.md",
         "https://www.aionlabs.ai/app/api-keys/",
         "https://www.aionlabs.ai/pricing/"
       ],
       "gateway": false,
-      "models": [],
-      "base_url": "",
+      "models": [
+        {
+          "id": "aion-labs/aion-3.0",
+          "name": "aion-labs/aion-3.0",
+          "context": 128000,
+          "tools": null,
+          "modalities": [
+            "text",
+            "reasoning"
+          ],
+          "note": "freellm.net 目录（permanent 层）",
+          "status": null,
+          "http_status": null,
+          "latency_ms": null,
+          "checked_at": null
+        },
+        {
+          "id": "aion-labs/aion-3.0-mini",
+          "name": "aion-labs/aion-3.0-mini",
+          "context": 128000,
+          "tools": null,
+          "modalities": [
+            "text",
+            "reasoning"
+          ],
+          "note": "freellm.net 目录（permanent 层）",
+          "status": null,
+          "http_status": null,
+          "latency_ms": null,
+          "checked_at": null
+        },
+        {
+          "id": "aion-labs/aion-2.0",
+          "name": "aion-labs/aion-2.0",
+          "context": 128000,
+          "tools": null,
+          "modalities": [
+            "text",
+            "reasoning"
+          ],
+          "note": "freellm.net 目录（permanent 层）",
+          "status": null,
+          "http_status": null,
+          "latency_ms": null,
+          "checked_at": null
+        },
+        {
+          "id": "aion-labs/aion-rp-llama-3.1-8b",
+          "name": "aion-labs/aion-rp-llama-3.1-8b",
+          "context": 32000,
+          "tools": null,
+          "modalities": [
+            "text"
+          ],
+          "note": "freellm.net 目录（permanent 层）",
+          "status": null,
+          "http_status": null,
+          "latency_ms": null,
+          "checked_at": null
+        }
+      ],
+      "base_url": "https://api.aionlabs.ai/v1",
       "env": "",
-      "api_style": "",
+      "api_style": "openai",
       "keyless": false,
       "free_nature": "unknown",
       "limits": {
@@ -11488,7 +11612,8 @@
         "tpd": null
       },
       "verified_at": "",
-      "headers": {}
+      "headers": {},
+      "key_url": "https://www.aionlabs.ai/app/api-keys/"
     },
     {
       "id": "api-airforce",
