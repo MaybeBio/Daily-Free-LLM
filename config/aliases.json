@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-14T00:22:10Z",
+  "generated_at": "2026-11-14T23:02:27Z",
   "note": "aliases 由 bootstrap 生成并随更新刷新；manual 中的同名别名优先。",
   "aliases": {
     "gpt-oss": [
@@ -514,6 +514,10 @@
       {
         "provider": "aihorde",
         "model": "koboldcpp/gemma-4-E4B-it"
+      },
+      {
+        "provider": "aihorde",
+        "model": "koboldcpp/gemma-4-E4B-it-Q4_K_M"
       },
       {
         "provider": "cloudflare",

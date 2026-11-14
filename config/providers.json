@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-14T00:22:10Z",
+  "updated_at": "2026-11-14T23:02:27Z",
   "note": "唯一事实源。可手动编辑；bootstrap 只补缺，不覆盖已有非空字段（--force 除外）。",
   "providers": [
     {
@@ -15,7 +15,7 @@
       ],
       "region": "global",
       "free_nature": "permanent",
-      "verified_at": "2026-11-14",
+      "verified_at": "2026-11-15",
       "sources": [
         "https://free-llm.com/",
         "https://free-llm.com/catalog.json",
@@ -199,7 +199,7 @@
       ],
       "region": "global",
       "free_nature": "permanent",
-      "verified_at": "2026-11-14",
+      "verified_at": "2026-11-15",
       "sources": [
         "https://aihorde.net",
         "https://free-llm.com/",
@@ -683,8 +683,50 @@
           "context": 262144,
           "tools": true,
           "modalities": [
-            "text",
-            "image"
+            "image",
+            "text"
+          ],
+          "note": "",
+          "status": null,
+          "http_status": null,
+          "latency_ms": null,
+          "checked_at": null
+        },
+        {
+          "id": "koboldcpp/Orion-26B-A4B-v1.1",
+          "name": "koboldcpp/Orion-26B-A4B-v1.1",
+          "context": 16384,
+          "tools": true,
+          "modalities": [
+            "text"
+          ],
+          "note": "",
+          "status": null,
+          "http_status": null,
+          "latency_ms": null,
+          "checked_at": null
+        },
+        {
+          "id": "koboldcpp/Rocinante-X-12B-v1",
+          "name": "koboldcpp/Rocinante-X-12B-v1",
+          "context": 32768,
+          "tools": true,
+          "modalities": [
+            "text"
+          ],
+          "note": "",
+          "status": null,
+          "http_status": null,
+          "latency_ms": null,
+          "checked_at": null
+        },
+        {
+          "id": "koboldcpp/gemma-4-E4B-it-Q4_K_M",
+          "name": "koboldcpp/gemma-4-E4B-it-Q4_K_M",
+          "context": 32768,
+          "tools": true,
+          "modalities": [
+            "text"
           ],
           "note": "",
           "status": null,
@@ -3468,7 +3510,7 @@
         "email": "required",
         "student": "unknown"
       },
-      "verified_at": "2026-11-14",
+      "verified_at": "2026-11-15",
       "confidence": "partial",
       "sources": [
         "https://free-llm.com/",
@@ -3869,8 +3911,8 @@
           "context": 1048576,
           "tools": true,
           "modalities": [
-            "text",
-            "image"
+            "image",
+            "text"
           ],
           "note": "OpenRouter 免费模型（prompt/completion 单价均为 0）",
           "status": null,
@@ -7665,6 +7707,20 @@
             "text"
           ],
           "note": "",
+          "status": null,
+          "http_status": null,
+          "latency_ms": null,
+          "checked_at": null
+        },
+        {
+          "id": "@cf/thinkingmachines/inkling-2-small",
+          "name": "@cf/thinkingmachines/inkling-2-small",
+          "context": 8192,
+          "tools": null,
+          "modalities": [
+            "reasoning"
+          ],
+          "note": "freellm.net 目录（permanent 层）",
           "status": null,
           "http_status": null,
           "latency_ms": null,
@@ -12401,9 +12457,10 @@
           "context": 512000,
           "tools": null,
           "modalities": [
-            "text"
+            "text",
+            "vision"
           ],
-          "note": "",
+          "note": "freellm.net 目录（permanent 层）",
           "status": null,
           "http_status": null,
           "latency_ms": null,
@@ -12415,9 +12472,38 @@
           "context": 512000,
           "tools": null,
           "modalities": [
-            "text"
+            "text",
+            "vision"
           ],
-          "note": "",
+          "note": "freellm.net 目录（permanent 层）",
+          "status": null,
+          "http_status": null,
+          "latency_ms": null,
+          "checked_at": null
+        },
+        {
+          "id": "agnes-image-2.5-flash",
+          "name": "agnes-image-2.5-flash",
+          "context": 4096,
+          "tools": null,
+          "modalities": [
+            "image"
+          ],
+          "note": "freellm.net 目录（permanent 层）",
+          "status": null,
+          "http_status": null,
+          "latency_ms": null,
+          "checked_at": null
+        },
+        {
+          "id": "agnes-video-2.5-flash",
+          "name": "agnes-video-2.5-flash",
+          "context": 4096,
+          "tools": null,
+          "modalities": [
+            "video"
+          ],
+          "note": "freellm.net 目录（permanent 层）",
           "status": null,
           "http_status": null,
           "latency_ms": null,
