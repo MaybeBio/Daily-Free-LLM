@@ -1,0 +1,17 @@
+Nimbz/Gemma-4-Dark-Orthia-31B
+aphrodite/TheDrummer/Behemoth-128B-v3
+koboldcpp/Cydonia-24B-v4zg-Q4_K_M
+koboldcpp/G4-MeroMero-26B-A4B-it-uncensored-heretic
+koboldcpp/Gemma-4-E4B-it-Ultra-Uncensored-Heretic
+koboldcpp/Glistening-Gem-31B-v2.2.IQ4_XS
+koboldcpp/L3-8B-Stheno-v3.2
+koboldcpp/L3-8B-Stheno-v3.2-Q4_K_S
+koboldcpp/Qwen/Qwen2.5-0.5B
+koboldcpp/Qwen3-14B
+koboldcpp/Qwen3.5-4B
+koboldcpp/TheDrummer/Rocinante-XL-16B-v1
+koboldcpp/debug-Vesper-26B-A4B-Nocturne.i1-Q4_K_M_hb16
+koboldcpp/debug-gemma-4-E2B-Queen-it-qat-q4_0-unquantized.i1-Q4_K_M
+koboldcpp/gemma-3-4b-it-Q4_K_M
+koboldcpp/gemma-4-E4B-it
+koboldcpp/mini-magnum-12b-v1.1

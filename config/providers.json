@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-13T00:32:42Z",
+  "updated_at": "2026-11-14T00:22:10Z",
   "note": "唯一事实源。可手动编辑；bootstrap 只补缺，不覆盖已有非空字段（--force 除外）。",
   "providers": [
     {
@@ -15,7 +15,7 @@
       ],
       "region": "global",
       "free_nature": "permanent",
-      "verified_at": "2026-11-13",
+      "verified_at": "2026-11-14",
       "sources": [
         "https://free-llm.com/",
         "https://free-llm.com/catalog.json",
@@ -199,7 +199,7 @@
       ],
       "region": "global",
       "free_nature": "permanent",
-      "verified_at": "2026-11-13",
+      "verified_at": "2026-11-14",
       "sources": [
         "https://aihorde.net",
         "https://free-llm.com/",
@@ -598,8 +598,8 @@
           "context": 12288,
           "tools": false,
           "modalities": [
-            "text",
-            "image"
+            "image",
+            "text"
           ],
           "note": "",
           "status": null,
@@ -614,6 +614,77 @@
           "tools": true,
           "modalities": [
             "text"
+          ],
+          "note": "",
+          "status": null,
+          "http_status": null,
+          "latency_ms": null,
+          "checked_at": null
+        },
+        {
+          "id": "koboldcpp/Glistening-Gem-31B-v2.2.IQ4_XS",
+          "name": "koboldcpp/Glistening-Gem-31B-v2.2.IQ4_XS",
+          "context": 65536,
+          "tools": true,
+          "modalities": [
+            "text"
+          ],
+          "note": "",
+          "status": null,
+          "http_status": null,
+          "latency_ms": null,
+          "checked_at": null
+        },
+        {
+          "id": "koboldcpp/L3-8B-Stheno-v3.2-Q4_K_S",
+          "name": "koboldcpp/L3-8B-Stheno-v3.2-Q4_K_S",
+          "context": 4096,
+          "tools": true,
+          "modalities": [
+            "text"
+          ],
+          "note": "",
+          "status": null,
+          "http_status": null,
+          "latency_ms": null,
+          "checked_at": null
+        },
+        {
+          "id": "koboldcpp/Qwen/Qwen2.5-0.5B",
+          "name": "koboldcpp/Qwen/Qwen2.5-0.5B",
+          "context": 2048,
+          "tools": true,
+          "modalities": [
+            "text"
+          ],
+          "note": "",
+          "status": null,
+          "http_status": null,
+          "latency_ms": null,
+          "checked_at": null
+        },
+        {
+          "id": "koboldcpp/TheDrummer/Rocinante-XL-16B-v1",
+          "name": "koboldcpp/TheDrummer/Rocinante-XL-16B-v1",
+          "context": 24576,
+          "tools": true,
+          "modalities": [
+            "text"
+          ],
+          "note": "",
+          "status": null,
+          "http_status": null,
+          "latency_ms": null,
+          "checked_at": null
+        },
+        {
+          "id": "Nimbz/Gemma-4-Dark-Orthia-31B",
+          "name": "Nimbz/Gemma-4-Dark-Orthia-31B",
+          "context": 262144,
+          "tools": true,
+          "modalities": [
+            "text",
+            "image"
           ],
           "note": "",
           "status": null,
@@ -3397,7 +3468,7 @@
         "email": "required",
         "student": "unknown"
       },
-      "verified_at": "2026-11-13",
+      "verified_at": "2026-11-14",
       "confidence": "partial",
       "sources": [
         "https://free-llm.com/",
@@ -3769,8 +3840,8 @@
           "context": 1048576,
           "tools": true,
           "modalities": [
-            "text",
-            "image"
+            "image",
+            "text"
           ],
           "note": "OpenRouter 免费模型（prompt/completion 单价均为 0）",
           "status": null,
@@ -3785,6 +3856,21 @@
           "tools": true,
           "modalities": [
             "text"
+          ],
+          "note": "OpenRouter 免费模型（prompt/completion 单价均为 0）",
+          "status": null,
+          "http_status": null,
+          "latency_ms": null,
+          "checked_at": null
+        },
+        {
+          "id": "inclusionai/ling-3.2-flash:free",
+          "name": "inclusionAI: Ling 3.2 Flash (free)",
+          "context": 1048576,
+          "tools": true,
+          "modalities": [
+            "text",
+            "image"
           ],
           "note": "OpenRouter 免费模型（prompt/completion 单价均为 0）",
           "status": null,
@@ -11546,8 +11632,8 @@
           "context": 128000,
           "tools": null,
           "modalities": [
-            "text",
-            "reasoning"
+            "reasoning",
+            "text"
           ],
           "note": "freellm.net 目录（permanent 层）",
           "status": null,
@@ -11561,8 +11647,8 @@
           "context": 128000,
           "tools": null,
           "modalities": [
-            "text",
-            "reasoning"
+            "reasoning",
+            "text"
           ],
           "note": "freellm.net 目录（permanent 层）",
           "status": null,
@@ -11576,8 +11662,8 @@
           "context": 128000,
           "tools": null,
           "modalities": [
-            "text",
-            "reasoning"
+            "reasoning",
+            "text"
           ],
           "note": "freellm.net 目录（permanent 层）",
           "status": null,
