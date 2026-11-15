@@ -1,0 +1,114 @@
+{
+  "date": "2026-11-16",
+  "generated_at": "2026-11-15T23:25:01Z",
+  "registry": {
+    "providers": 174,
+    "models": 701,
+    "gateway_providers": 26,
+    "categories": {
+      "api": 102,
+      "cloud": 48,
+      "agent": 16,
+      "student": 6,
+      "chat": 13,
+      "event": 8,
+      "signin": 8,
+      "gpu": 3,
+      "gray": 3
+    }
+  },
+  "sources": [
+    {
+      "id": "openrouter-models",
+      "name": "OpenRouter 免费模型目录",
+      "ok": true,
+      "items": 17,
+      "baseline": false,
+      "added": 0,
+      "removed": 0
+    },
+    {
+      "id": "pollinations-models",
+      "name": "Pollinations 匿名模型目录",
+      "ok": true,
+      "items": 5,
+      "baseline": false,
+      "added": 0,
+      "removed": 0
+    },
+    {
+      "id": "aihorde-models",
+      "name": "AI Horde 免 key 模型目录",
+      "ok": true,
+      "items": 21,
+      "baseline": false,
+      "added": 7,
+      "removed": 5
+    },
+    {
+      "id": "freellm-net",
+      "name": "freellm.net 免费模型目录",
+      "ok": true,
+      "items": 31,
+      "baseline": false,
+      "added": 1,
+      "removed": 1
+    },
+    {
+      "id": "free-llm-com",
+      "name": "free-llm.com 渠道目录",
+      "ok": true,
+      "items": 75,
+      "baseline": false,
+      "added": 0,
+      "removed": 0
+    },
+    {
+      "id": "free-llm-catalog",
+      "name": "free-llm.com 官方 JSON 目录",
+      "ok": true,
+      "items": 83,
+      "baseline": true,
+      "added": 0,
+      "removed": 0
+    }
+  ],
+  "changes": [
+    {
+      "at": "2026-11-15T23:24:56Z",
+      "source": "aihorde-models",
+      "name": "AI Horde 免 key 模型目录",
+      "added_count": 7,
+      "removed_count": 5,
+      "added": [
+        "ReadyArt/Wicked-Tutu-31B-Final",
+        "koboldcpp/Gemma-4-E4B-Uncensored-HauhauCS-Aggressive-Q4_K_M",
+        "koboldcpp/Gemma-4-E4B-it-Ultra-Uncensored-Heretic",
+        "koboldcpp/LFM3-1.7B-Uncensored-AD-Q6_K",
+        "koboldcpp/Sao10K/L3-8B-Stheno-v3.2",
+        "koboldcpp/TheDrummer/Cydonia-24B-v4.3",
+        "koboldcpp/debug-Vesper-26B-A4B-Nocturne.i1-Q4_K_M_hb16"
+      ],
+      "removed": [
+        "aphrodite/TheDrummer/Behemoth-128B-v3",
+        "koboldcpp/Rocinante-X-12B-v1",
+        "koboldcpp/gemma-4-E4B-it",
+        "koboldcpp/gemma-4-E4B-it-Q4_K_M",
+        "lmstudio/Qwen3.5-9B"
+      ]
+    },
+    {
+      "at": "2026-11-15T23:25:01Z",
+      "source": "freellm-net",
+      "name": "freellm.net 免费模型目录",
+      "added_count": 1,
+      "removed_count": 1,
+      "added": [
+        "llm7-io|LLM7.io|https://api.llm7.io/v1|permanent|60 RPM, 250 req/hr (free token)|DeepSeek-V4-Flash-0731,GLM-5.2,GLM-5.3-Flash,MiniMax-M3,codestral-latest,gpt-oss:20b,minimax-m2.7,mistral-Nemo-Instruct-2407,nemotron-3-nano:30b"
+      ],
+      "removed": [
+        "llm7-io|LLM7.io|https://api.llm7.io/v1|permanent|60 RPM, 250 req/hr (free token)|codestral-latest,gpt-oss:20b,mistral-Nemo-Instruct-2407,nemotron-3-nano:30b"
+      ]
+    }
+  ]
+}
