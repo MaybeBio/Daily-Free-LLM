@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-15T23:25:01Z",
+  "generated_at": "2026-11-17T02:30:39Z",
   "note": "aliases 由 bootstrap 生成并随更新刷新；manual 中的同名别名优先。",
   "aliases": {
     "gpt-oss": [
@@ -493,6 +493,10 @@
       },
       {
         "provider": "aihorde",
+        "model": "koboldcpp/Gemma-4-E4B-Uncensored-HauhauCS-Aggressive-IQ3_M"
+      },
+      {
+        "provider": "aihorde",
         "model": "koboldcpp/Gemma-4-E4B-Uncensored-HauhauCS-Aggressive-Q4_K_M"
       },
       {
@@ -585,6 +589,10 @@
       }
     ],
     "qwen": [
+      {
+        "provider": "aihorde",
+        "model": "Qwen/Qwen3.5-397B-A17B::dumbstupiddecisions#522132"
+      },
       {
         "provider": "aihorde",
         "model": "koboldcpp/Qwen/Qwen2.5-0.5B"
