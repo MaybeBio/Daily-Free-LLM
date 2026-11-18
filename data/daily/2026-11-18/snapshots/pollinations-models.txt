@@ -1,0 +1,5 @@
+gpt-oss
+gpt-oss-20b
+openai
+openai-fast
+ovh-reasoning

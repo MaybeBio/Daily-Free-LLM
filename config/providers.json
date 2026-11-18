@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-17T02:30:39Z",
+  "updated_at": "2026-11-18T01:40:06Z",
   "note": "唯一事实源。可手动编辑；bootstrap 只补缺，不覆盖已有非空字段（--force 除外）。",
   "providers": [
     {
@@ -15,7 +15,7 @@
       ],
       "region": "global",
       "free_nature": "permanent",
-      "verified_at": "2026-11-17",
+      "verified_at": "2026-11-18",
       "sources": [
         "https://free-llm.com/",
         "https://free-llm.com/catalog.json",
@@ -199,7 +199,7 @@
       ],
       "region": "global",
       "free_nature": "permanent",
-      "verified_at": "2026-11-17",
+      "verified_at": "2026-11-18",
       "sources": [
         "https://aihorde.net",
         "https://free-llm.com/",
@@ -810,6 +810,34 @@
           "id": "Qwen/Qwen3.5-397B-A17B::dumbstupiddecisions#522132",
           "name": "Qwen/Qwen3.5-397B-A17B::dumbstupiddecisions#522132",
           "context": 262144,
+          "tools": true,
+          "modalities": [
+            "text"
+          ],
+          "note": "",
+          "status": null,
+          "http_status": null,
+          "latency_ms": null,
+          "checked_at": null
+        },
+        {
+          "id": "Qwen/Qwen3.8-Flash-Next",
+          "name": "Qwen/Qwen3.8-Flash-Next",
+          "context": 262144,
+          "tools": true,
+          "modalities": [
+            "text"
+          ],
+          "note": "",
+          "status": null,
+          "http_status": null,
+          "latency_ms": null,
+          "checked_at": null
+        },
+        {
+          "id": "koboldcpp/Rocinante-X-12B",
+          "name": "koboldcpp/Rocinante-X-12B",
+          "context": 20408,
           "tools": true,
           "modalities": [
             "text"
@@ -3596,7 +3624,7 @@
         "email": "required",
         "student": "unknown"
       },
-      "verified_at": "2026-11-17",
+      "verified_at": "2026-11-18",
       "confidence": "partial",
       "sources": [
         "https://free-llm.com/",

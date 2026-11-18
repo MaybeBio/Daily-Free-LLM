@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-17T02:30:39Z",
+  "generated_at": "2026-11-18T01:40:06Z",
   "note": "aliases 由 bootstrap 生成并随更新刷新；manual 中的同名别名优先。",
   "aliases": {
     "gpt-oss": [
@@ -592,6 +592,10 @@
       {
         "provider": "aihorde",
         "model": "Qwen/Qwen3.5-397B-A17B::dumbstupiddecisions#522132"
+      },
+      {
+        "provider": "aihorde",
+        "model": "Qwen/Qwen3.8-Flash-Next"
       },
       {
         "provider": "aihorde",
