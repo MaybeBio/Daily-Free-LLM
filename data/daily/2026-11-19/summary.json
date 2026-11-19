@@ -1,0 +1,99 @@
+{
+  "date": "2026-11-19",
+  "generated_at": "2026-11-19T01:16:55Z",
+  "registry": {
+    "providers": 174,
+    "models": 708,
+    "gateway_providers": 26,
+    "categories": {
+      "api": 102,
+      "cloud": 48,
+      "agent": 16,
+      "student": 6,
+      "chat": 13,
+      "event": 8,
+      "signin": 8,
+      "gpu": 3,
+      "gray": 3
+    }
+  },
+  "sources": [
+    {
+      "id": "openrouter-models",
+      "name": "OpenRouter 免费模型目录",
+      "ok": true,
+      "items": 17,
+      "baseline": false,
+      "added": 0,
+      "removed": 0
+    },
+    {
+      "id": "pollinations-models",
+      "name": "Pollinations 匿名模型目录",
+      "ok": true,
+      "items": 5,
+      "baseline": false,
+      "added": 0,
+      "removed": 0
+    },
+    {
+      "id": "aihorde-models",
+      "name": "AI Horde 免 key 模型目录",
+      "ok": true,
+      "items": 19,
+      "baseline": false,
+      "added": 7,
+      "removed": 9
+    },
+    {
+      "id": "freellm-net",
+      "name": "freellm.net 免费模型目录",
+      "ok": true,
+      "items": 31,
+      "baseline": false,
+      "added": 0,
+      "removed": 0
+    },
+    {
+      "id": "free-llm-com",
+      "name": "free-llm.com 渠道目录",
+      "ok": false,
+      "error": "内容异常: 0 < 30"
+    },
+    {
+      "id": "free-llm-catalog",
+      "name": "free-llm.com 官方 JSON 目录",
+      "ok": false,
+      "error": "HTTP 403"
+    }
+  ],
+  "changes": [
+    {
+      "at": "2026-11-19T01:16:47Z",
+      "source": "aihorde-models",
+      "name": "AI Horde 免 key 模型目录",
+      "added_count": 7,
+      "removed_count": 9,
+      "added": [
+        "koboldcpp/L3-8B-Stheno-v3.2-Q4_K_S",
+        "koboldcpp/Llama-3-Lumimaid-8B-v0.1",
+        "koboldcpp/Qwen3-0.6B",
+        "koboldcpp/Qwen3-1.7B",
+        "koboldcpp/Qwen3-14B",
+        "koboldcpp/debug-HauhauCS/Qwen3.5-9B-Uncensored-HauhauCS-Aggressive",
+        "llamacpp/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive"
+      ],
+      "removed": [
+        "ReadyArt/Wicked-Tutu-31B-Final",
+        "koboldcpp/Gemma-4-E4B-it-Ultra-Uncensored-Heretic",
+        "koboldcpp/Qwen3.5-4B",
+        "koboldcpp/Rocinante-X-12B",
+        "koboldcpp/Sao10K/L3-8B-Stheno-v3.2",
+        "koboldcpp/Skyfall-31B-v4.2",
+        "koboldcpp/gemma-4-E4B-it",
+        "lmstudio/Qwen3.5-9B",
+        "lmstudio/Qwen3.6-35B-A3B"
+      ]
+    }
+  ]
+}
