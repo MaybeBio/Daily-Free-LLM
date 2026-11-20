@@ -1,0 +1,110 @@
+{
+  "date": "2026-11-20",
+  "generated_at": "2026-11-20T01:19:57Z",
+  "registry": {
+    "providers": 174,
+    "models": 716,
+    "gateway_providers": 26,
+    "categories": {
+      "api": 102,
+      "cloud": 48,
+      "agent": 16,
+      "student": 6,
+      "chat": 13,
+      "event": 8,
+      "signin": 8,
+      "gpu": 3,
+      "gray": 3
+    }
+  },
+  "sources": [
+    {
+      "id": "openrouter-models",
+      "name": "OpenRouter 免费模型目录",
+      "ok": true,
+      "items": 16,
+      "baseline": false,
+      "added": 0,
+      "removed": 1
+    },
+    {
+      "id": "pollinations-models",
+      "name": "Pollinations 匿名模型目录",
+      "ok": true,
+      "items": 5,
+      "baseline": false,
+      "added": 0,
+      "removed": 0
+    },
+    {
+      "id": "aihorde-models",
+      "name": "AI Horde 免 key 模型目录",
+      "ok": true,
+      "items": 19,
+      "baseline": false,
+      "added": 8,
+      "removed": 8
+    },
+    {
+      "id": "freellm-net",
+      "name": "freellm.net 免费模型目录",
+      "ok": true,
+      "items": 31,
+      "baseline": false,
+      "added": 0,
+      "removed": 0
+    },
+    {
+      "id": "free-llm-com",
+      "name": "free-llm.com 渠道目录",
+      "ok": false,
+      "error": "内容异常: 0 < 30"
+    },
+    {
+      "id": "free-llm-catalog",
+      "name": "free-llm.com 官方 JSON 目录",
+      "ok": false,
+      "error": "HTTP 403"
+    }
+  ],
+  "changes": [
+    {
+      "at": "2026-11-20T01:19:46Z",
+      "source": "openrouter-models",
+      "name": "OpenRouter 免费模型目录",
+      "added_count": 0,
+      "removed_count": 1,
+      "added": [],
+      "removed": [
+        "thinkingmachines/inkling-2-small:free"
+      ]
+    },
+    {
+      "at": "2026-11-20T01:19:47Z",
+      "source": "aihorde-models",
+      "name": "AI Horde 免 key 模型目录",
+      "added_count": 8,
+      "removed_count": 8,
+      "added": [
+        "Qwen3.8-Flash-Next-IQ3_S",
+        "koboldcpp/.\\LFM3-1.7B-Q8_0.gguf",
+        "koboldcpp/HauhauCS/Qwen3.5-9B-Uncensored-HauhauCS-Aggressive",
+        "koboldcpp/Llama-3.2-1B-Instruct-Q4_K_M",
+        "koboldcpp/Muse-12B",
+        "koboldcpp/Qwen3.5-4B-Uncensored-HauhauCS-Aggressive",
+        "lmstudio/Qwen3.5-9B-Uncensored-HauhauCS-Aggressive",
+        "lmstudio/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive"
+      ],
+      "removed": [
+        "Nimbz/Gemma-4-Dark-Orthia-31B",
+        "aphrodite/TheDrummer/Behemoth-128B-v3",
+        "koboldcpp/Gemma-4-E4B-Uncensored-HauhauCS-Aggressive-Q4_K_M",
+        "koboldcpp/L3-8B-Stheno-v3.2-Q4_K_S",
+        "koboldcpp/Llama-3-Lumimaid-8B-v0.1",
+        "koboldcpp/Qwen3-0.6B",
+        "koboldcpp/Qwen3-1.7B",
+        "koboldcpp/debug-HauhauCS/Qwen3.5-9B-Uncensored-HauhauCS-Aggressive"
+      ]
+    }
+  ]
+}

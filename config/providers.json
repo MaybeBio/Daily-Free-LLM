@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-19T01:16:55Z",
+  "updated_at": "2026-11-20T01:19:57Z",
   "note": "唯一事实源。可手动编辑；bootstrap 只补缺，不覆盖已有非空字段（--force 除外）。",
   "providers": [
     {
@@ -15,7 +15,7 @@
       ],
       "region": "global",
       "free_nature": "permanent",
-      "verified_at": "2026-11-19",
+      "verified_at": "2026-11-20",
       "sources": [
         "https://free-llm.com/",
         "https://free-llm.com/catalog.json",
@@ -199,7 +199,7 @@
       ],
       "region": "global",
       "free_nature": "permanent",
-      "verified_at": "2026-11-19",
+      "verified_at": "2026-11-20",
       "sources": [
         "https://aihorde.net",
         "https://free-llm.com/",
@@ -869,6 +869,118 @@
           "name": "llamacpp/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive",
           "context": 8192,
           "tools": false,
+          "modalities": [
+            "text"
+          ],
+          "note": "",
+          "status": null,
+          "http_status": null,
+          "latency_ms": null,
+          "checked_at": null
+        },
+        {
+          "id": "koboldcpp/HauhauCS/Qwen3.5-9B-Uncensored-HauhauCS-Aggressive",
+          "name": "koboldcpp/HauhauCS/Qwen3.5-9B-Uncensored-HauhauCS-Aggressive",
+          "context": 16384,
+          "tools": true,
+          "modalities": [
+            "text"
+          ],
+          "note": "",
+          "status": null,
+          "http_status": null,
+          "latency_ms": null,
+          "checked_at": null
+        },
+        {
+          "id": "koboldcpp/.\\LFM3-1.7B-Q8_0.gguf",
+          "name": "koboldcpp/.\\LFM3-1.7B-Q8_0.gguf",
+          "context": 16384,
+          "tools": true,
+          "modalities": [
+            "text"
+          ],
+          "note": "",
+          "status": null,
+          "http_status": null,
+          "latency_ms": null,
+          "checked_at": null
+        },
+        {
+          "id": "koboldcpp/Llama-3.2-1B-Instruct-Q4_K_M",
+          "name": "koboldcpp/Llama-3.2-1B-Instruct-Q4_K_M",
+          "context": 16384,
+          "tools": true,
+          "modalities": [
+            "text"
+          ],
+          "note": "",
+          "status": null,
+          "http_status": null,
+          "latency_ms": null,
+          "checked_at": null
+        },
+        {
+          "id": "koboldcpp/Muse-12B",
+          "name": "koboldcpp/Muse-12B",
+          "context": 10240,
+          "tools": true,
+          "modalities": [
+            "text"
+          ],
+          "note": "",
+          "status": null,
+          "http_status": null,
+          "latency_ms": null,
+          "checked_at": null
+        },
+        {
+          "id": "koboldcpp/Qwen3.5-4B-Uncensored-HauhauCS-Aggressive",
+          "name": "koboldcpp/Qwen3.5-4B-Uncensored-HauhauCS-Aggressive",
+          "context": 4096,
+          "tools": true,
+          "modalities": [
+            "text"
+          ],
+          "note": "",
+          "status": null,
+          "http_status": null,
+          "latency_ms": null,
+          "checked_at": null
+        },
+        {
+          "id": "lmstudio/Qwen3.5-9B-Uncensored-HauhauCS-Aggressive",
+          "name": "lmstudio/Qwen3.5-9B-Uncensored-HauhauCS-Aggressive",
+          "context": 8192,
+          "tools": false,
+          "modalities": [
+            "text"
+          ],
+          "note": "",
+          "status": null,
+          "http_status": null,
+          "latency_ms": null,
+          "checked_at": null
+        },
+        {
+          "id": "lmstudio/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive",
+          "name": "lmstudio/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive",
+          "context": 16384,
+          "tools": true,
+          "modalities": [
+            "text"
+          ],
+          "note": "",
+          "status": null,
+          "http_status": null,
+          "latency_ms": null,
+          "checked_at": null
+        },
+        {
+          "id": "Qwen3.8-Flash-Next-IQ3_S",
+          "name": "Qwen3.8-Flash-Next-IQ3_S",
+          "context": 204544,
+          "tools": true,
           "modalities": [
             "text"
           ],
@@ -3654,7 +3766,7 @@
         "email": "required",
         "student": "unknown"
       },
-      "verified_at": "2026-11-19",
+      "verified_at": "2026-11-20",
       "confidence": "partial",
       "sources": [
         "https://free-llm.com/",

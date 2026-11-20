@@ -14,4 +14,3 @@ nvidia/nemotron-3.5-super-vl:free
 openrouter/free
 particle-ai/particle-1:free
 recursive/flint-v1.0:free
-thinkingmachines/inkling-2-small:free

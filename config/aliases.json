@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-19T01:16:55Z",
+  "generated_at": "2026-11-20T01:19:57Z",
   "note": "aliases 由 bootstrap 生成并随更新刷新；manual 中的同名别名优先。",
   "aliases": {
     "gpt-oss": [
@@ -379,6 +379,10 @@
       },
       {
         "provider": "aihorde",
+        "model": "koboldcpp/Llama-3.2-1B-Instruct-Q4_K_M"
+      },
+      {
+        "provider": "aihorde",
         "model": "koboldcpp/Llama-3.2-3B-Instruct"
       },
       {
@@ -599,6 +603,14 @@
       },
       {
         "provider": "aihorde",
+        "model": "Qwen3.8-Flash-Next-IQ3_S"
+      },
+      {
+        "provider": "aihorde",
+        "model": "koboldcpp/HauhauCS/Qwen3.5-9B-Uncensored-HauhauCS-Aggressive"
+      },
+      {
+        "provider": "aihorde",
         "model": "koboldcpp/Qwen/Qwen2.5-0.5B"
       },
       {
@@ -623,6 +635,10 @@
       },
       {
         "provider": "aihorde",
+        "model": "koboldcpp/Qwen3.5-4B-Uncensored-HauhauCS-Aggressive"
+      },
+      {
+        "provider": "aihorde",
         "model": "koboldcpp/debug-HauhauCS/Qwen3.5-9B-Uncensored-HauhauCS-Aggressive"
       },
       {
@@ -635,7 +651,15 @@
       },
       {
         "provider": "aihorde",
+        "model": "lmstudio/Qwen3.5-9B-Uncensored-HauhauCS-Aggressive"
+      },
+      {
+        "provider": "aihorde",
         "model": "lmstudio/Qwen3.6-35B-A3B"
+      },
+      {
+        "provider": "aihorde",
+        "model": "lmstudio/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive"
       },
       {
         "provider": "cerebras",
