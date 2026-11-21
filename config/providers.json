@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-20T01:19:57Z",
+  "updated_at": "2026-11-21T00:51:28Z",
   "note": "唯一事实源。可手动编辑；bootstrap 只补缺，不覆盖已有非空字段（--force 除外）。",
   "providers": [
     {
@@ -15,7 +15,7 @@
       ],
       "region": "global",
       "free_nature": "permanent",
-      "verified_at": "2026-11-20",
+      "verified_at": "2026-11-21",
       "sources": [
         "https://free-llm.com/",
         "https://free-llm.com/catalog.json",
@@ -199,7 +199,7 @@
       ],
       "region": "global",
       "free_nature": "permanent",
-      "verified_at": "2026-11-20",
+      "verified_at": "2026-11-21",
       "sources": [
         "https://aihorde.net",
         "https://free-llm.com/",
@@ -980,6 +980,48 @@
           "id": "Qwen3.8-Flash-Next-IQ3_S",
           "name": "Qwen3.8-Flash-Next-IQ3_S",
           "context": 204544,
+          "tools": true,
+          "modalities": [
+            "text"
+          ],
+          "note": "",
+          "status": null,
+          "http_status": null,
+          "latency_ms": null,
+          "checked_at": null
+        },
+        {
+          "id": "koboldcpp/Artemis-31B-v1.2",
+          "name": "koboldcpp/Artemis-31B-v1.2",
+          "context": 65536,
+          "tools": true,
+          "modalities": [
+            "text"
+          ],
+          "note": "",
+          "status": null,
+          "http_status": null,
+          "latency_ms": null,
+          "checked_at": null
+        },
+        {
+          "id": "koboldcpp/Llama-3.2-1B-Instruct-Uncensored.",
+          "name": "koboldcpp/Llama-3.2-1B-Instruct-Uncensored.",
+          "context": 16384,
+          "tools": true,
+          "modalities": [
+            "text"
+          ],
+          "note": "",
+          "status": null,
+          "http_status": null,
+          "latency_ms": null,
+          "checked_at": null
+        },
+        {
+          "id": "koboldcpp/gemma-4-31B-it-Q4_K_M.gguf",
+          "name": "koboldcpp/gemma-4-31B-it-Q4_K_M.gguf",
+          "context": 8192,
           "tools": true,
           "modalities": [
             "text"
@@ -3766,7 +3808,7 @@
         "email": "required",
         "student": "unknown"
       },
-      "verified_at": "2026-11-20",
+      "verified_at": "2026-11-21",
       "confidence": "partial",
       "sources": [
         "https://free-llm.com/",

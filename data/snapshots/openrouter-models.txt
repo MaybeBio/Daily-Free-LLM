@@ -1,5 +1,4 @@
 baidu/ernie-5.5-flash-preview:free
-cohere/north-mini-code:free
 dots-studio/dots-3-note-preview:free
 google/gemma-4-26b-a4b-it:free
 google/gemma-4-31b-it:free
